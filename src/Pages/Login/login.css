@@ -1,13 +1,23 @@
 /* src/pages/login.css */
+.main-container {
+  background-color: hsl(240, 100%, 50%);
+  padding: 5%;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .login-container {
   display: flex;
-  height: 100vh;
+  height: 100%;
+}
+
+#weblink {
+  color: white;
 }
 
 .login-left {
   flex: 1;
-  background-color: #d0e0f0;
+  background-color: #9ab9fc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +29,7 @@
 .login-left h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: #0000ff;
+  color: #ffffff;
 }
 
 .login-left p {
@@ -70,4 +80,6 @@ button {
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
+  width: 100%;
+  
 }

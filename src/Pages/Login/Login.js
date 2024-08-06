@@ -27,10 +27,12 @@ const Login = () => {
 };
 
   return (
+    <div className='main-container'>
     <div className="login-container">
       <div className="login-left">
         <h1>Grow up your skills by online courses with Digit Educator</h1>
-        <p>Visit www.digiteducator.com for more</p>
+        <img src="/DE-logo.png" alt="1k+ Reviews" />
+        <p id='weblink'>Visit www.digiteducator.com for more</p>
       </div>
       <div className="login-right">
         <h2>Sign-in</h2>
@@ -58,6 +60,9 @@ const Login = () => {
         </form>
       </div>
     </div>
+   
+    </div>
+    
   );
 };
 
