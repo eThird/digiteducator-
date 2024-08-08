@@ -1,0 +1,111 @@
+.task-tracker {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-tracker-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-tracker-header .ge-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .task-tracker-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .task-list {
+    margin-top: 20px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .task-item:last-child {
+    border-bottom: none;
+  }
+  
+  .task-index {
+    margin-right: 10px;
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .circle.active {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .task-content {
+    flex: 1;
+  }
+  
+  .task-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .task-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .task-meta {
+    display: flex;
+    align-items: center;
+  }
+  
+
+
+  .task-meta .difficulty {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .task-meta .clock-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  .finish-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .finish-icon img {
+    width: 24px;
+    height: 24px;
+  }

@@ -1,0 +1,136 @@
+.overview-container {
+  display: flex;
+  
+}
+
+.task-tracker {
+  width: 80%; /* Adjust as needed */
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  
+}
+
+.task-detail {
+  width: 180%; /* Adjust as needed */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  height: 100vh;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-content {
+  flex-grow: 1;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding: 10px 0;
+}
+
+.pagination-controls button {
+  margin-left: 10px;
+}
+
+.learn, .do {
+  margin-bottom: 20px;
+}
+
+.learn ul, .do ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+.assignment-download {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.assignment-download img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+.resources-section {
+  background-color: lightgrey;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.resources-section h3, .resources-section h4 {
+  margin-top: 0;
+}
+
+.resources-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resources-section li {
+  margin-bottom: 10px;
+}
+
+.resources-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.resources-section a:hover {
+  text-decoration: underline;
+}
+
+.submission-section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.upload-section {
+  border: 1px solid lightpurple;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.submission-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.upload-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-section label {
+  margin-bottom: 10px;
+}
+
+.upload-section input {
+  margin-top: 5px;
+}
+
+.upload-section button {
+  margin-top: 10px;
+}
+
+.focus-icon {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px; /* Adjust as needed */
+}

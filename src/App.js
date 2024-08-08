@@ -4,7 +4,11 @@ import Login from './Pages/Login/Login';
 import Home from './Pages/Home/Home';
 import Coursepage from './Pages/Course/Coursepage'
 import Footer from './Components/Footer/Footer';
-import Overviewpage from './Pages/Overviewpage/Overviewpage';
+import Overview from './Pages/Overviewpage/Overview';
+import Pagination from './Components/Paginations/Pagination';
+
+import Tasktracker from './Components/Tasktracker/Tasktracker';
+
 
 const App = () => {
   return (
@@ -15,7 +19,10 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/Coursepage" element={<Coursepage/>} />
         <Route path="/Footer" element={<Footer/>} />
-        <Route path="/Overviewpage" element={<Overviewpage/>}/>
+        <Route path="/Overview" element={<Overview/>} />
+        <Route path="/Pagination" element={<Pagination/>} />
+        <Route path="/Tasktracker" element={<Tasktracker/>}/>
+        
 
       </Routes>
     </Router>

@@ -13,6 +13,11 @@ const Navbar = () => {
       .catch(error => console.error('Error fetching username:', error));
   }, []);
 
+  const handleLogout = () => {
+    // Implement logout functionality here
+    console.log('Logout button clicked');
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -20,12 +25,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-links">
         <Link to="/home">Home</Link>
-        <Link to="/explore-courses">Explore Courses</Link>
-        <Link to="/our-educators">Our Educators</Link>
-        <Link to="/menu">Menu</Link>
       </div>
       <div className="navbar-user">
         <button>Hello {username}</button>
+        <button className="logout-button" onClick={handleLogout}>Logout</button>
       </div>
     </nav>
   );

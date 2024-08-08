@@ -1,0 +1,117 @@
+{
+  "courseTitle": "Advanced Energy Source Design",
+  "courseImage": "/instagram.png",
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Energy source design and performance implications",
+      "description": "Understand the impact of different energy sources on engine performance.",
+      "difficulty": "Medium",
+      "time": "2 hours",
+      "current": true,
+      "pages": [
+        {
+          "id": 1,
+          "title": "Task overview",
+          "whatYouLearn": [
+            "Relationship between aviation and greenhouse gases",
+            "The different types of alternative jet fuels"
+          ],
+          "whatYouDo": [
+            "Compare and select a new energy source for the advanced concept engine program",
+            "Generate a comprehensive list of alternative energy sources",
+            "Draft a short memo (<300 words) to your lead engineer with your recommendation"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Task introduction video",
+          "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        },
+        {
+          "id": 3,
+          "title": "Welcome! Before we get started...",
+          "content": "This is some introductory text that will help you get started. It provides an overview of the course and what to expect."
+        },
+        {
+          "id": 4,
+          "topicTitle": "Topic Title",
+          "topicExplanation": "This is the explanation for the topic. It provides detailed information about the topic and its relevance."
+        },
+        {
+          "id": 5,
+          "title": "What you'll need to do",
+          "assignmentExplanation": "This page provides detailed instructions on how to complete the assignment, including any specific requirements and steps to follow."
+        },
+        {
+          "id": 6,
+          "title": "Time to get to work",
+          "content": "This is where the main content goes.",
+          "downloadLink": "/path/to/assignment.docx",
+          "resourcesTitle": "Here are some resources to help you",
+          "resourcesContent": "This is some content to help with the assignment.",
+          "usefulLinksTitle": "Useful Links:",
+          "usefulLinks": [
+            { "url": "https://example.com", "text": "Example Link" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Next Generation Fuels",
+      "description": "Explore and evaluate next-gen fuels for aviation.",
+      "difficulty": "High",
+      "time": "3 hours",
+      "current": false,
+      "pages": [
+        {
+          "id": 1,
+          "title": "Task overview",
+          "whatYouLearn": [
+            "Relationship between aviation and greenhouse gases",
+            "The different types of alternative jet fuels"
+          ],
+          "whatYouDo": [
+            "Compare and select a new energy source for the advanced concept engine program",
+            "Generate a comprehensive list of alternative energy sources",
+            "Draft a short memo (<300 words) to your lead engineer with your recommendation"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Task introduction video",
+          "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        },
+        {
+          "id": 3,
+          "title": "Welcome! Before we get started...",
+          "content": "This is some introductory text that will help you get started. It provides an overview of the course and what to expect."
+        },
+        {
+          "id": 4,
+          "topicTitle": "Topic Title",
+          "topicExplanation": "This is the explanation for the topic. It provides detailed information about the topic and its relevance."
+        },
+        {
+          "id": 5,
+          "title": "What you'll need to do",
+          "assignmentExplanation": "This page provides detailed instructions on how to complete the assignment, including any specific requirements and steps to follow."
+        },
+        {
+          "id": 6,
+          "title": "Time to get to work",
+          "content": "This is where the main content goes.",
+          "downloadLink": "/path/to/assignment.docx",
+          "resourcesTitle": "Here are some resources to help you",
+          "resourcesContent": "This is some content to help with the assignment.",
+          "usefulLinksTitle": "Useful Links:",
+          "usefulLinks": [
+            { "url": "https://example.com", "text": "Example Link" }
+          ]
+        }
+        
+      ]
+    }
+  ]
+}
