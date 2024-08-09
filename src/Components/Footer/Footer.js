@@ -12,29 +12,29 @@ const Footer = () => {
           </div>
           <div className="footer-address">
             
-            <p>Address: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Tel: +92 2934 1037</p>
-            <p>Response hours: 8 to 20</p>
-            <p>Email: info@onlearn.com</p>
+            <p>Learn. Master. Succeed Empowering the digital generation through expert education and real-world projects</p>
+            <p>Tel: 0124-4908281</p>
+            <p>Response hours: Mon-Fri: 10:00am - 6:00pm</p>
+            <p>Email: Admissions@Digiteducator.com</p>
           </div>
         </div>
         <div className="footer-right">
           <div className="footer-categories-links">
             <div className="footer-categories">
-              <h3>Categories</h3>
+              {/* <h3>Categories</h3>
               <ul>
                 <li>Counseling</li>
                 <li>Health and fitness</li>
                 <li>Individual development</li>
                 <li>more</li>
-              </ul>
+              </ul> */}
             </div>
             <div className="footer-links">
-              <h3>Links</h3>
+              {/* <h3>Links</h3>
               <ul>
                 <li>About us</li>
                 <li>Blog</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

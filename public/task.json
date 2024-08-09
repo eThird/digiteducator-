@@ -8,7 +8,7 @@
       "description": "Understand the impact of different energy sources on engine performance.",
       "difficulty": "Medium",
       "time": "2 hours",
-      "current": false,
+      "current": true,
       "pages": [
         {
           "id": 1,

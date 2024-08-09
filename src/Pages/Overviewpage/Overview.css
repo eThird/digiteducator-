@@ -10,13 +10,13 @@
 }
 
 .task-tracker {
-  width: 80%; /* Adjust as needed */
-  padding: 20px;
+   /* Adjust as needed */
+  
   border-right: 1px solid #ccc;
 }
 
 .task-detail {
-  width: 160%; /* Adjust as needed */
+  width: 120%; /* Adjust as needed */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -39,13 +39,17 @@
   justify-content: flex-end;
   position: sticky;
   bottom: 0;
-  background-color: white;
-  padding: 10px 0;
+
+  padding: 10px 5px;
+
+  
 }
 
 .pagination-controls button {
   margin-left: 10px;
-  max-width: 10vw;
+  width: 10vw;
+  height: 4vh;
+  color: aliceblue;
   background-color: black;
 }
 
@@ -85,7 +89,9 @@
   margin-top: 20px;
 }
 .submission-section button {
-  max-width: 10vw;
+  width: 10vw;
+  height: 4vh;
+  color: aliceblue;
   background-color: black;
 }
 
