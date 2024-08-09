@@ -58,6 +58,7 @@
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    max-width: 10vw;
   }
   
   .enroll-button:hover {

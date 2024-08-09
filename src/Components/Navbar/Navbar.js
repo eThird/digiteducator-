@@ -21,13 +21,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
+        <img src="/DE-logo.png" alt="Digit Educator Logo" className="logo-image" />
         <Link to="/home">Digit Educator</Link>
       </div>
       <div className="navbar-links">
-        <Link to="/home">Home</Link>
+       {/* Add navbar links here in future */}
       </div>
       <div className="navbar-user">
-        <button>Hello {username}</button>
+        <span>Hello, {username}</span>
         <button className="logout-button" onClick={handleLogout}>Logout</button>
       </div>
     </nav>

@@ -1,21 +1,25 @@
+.overview-page {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
 .overview-container {
   display: flex;
-  
+  margin-top: 20px; /* Adjust according to your navbar height */
 }
 
 .task-tracker {
   width: 80%; /* Adjust as needed */
   padding: 20px;
   border-right: 1px solid #ccc;
-  
 }
 
 .task-detail {
-  width: 180%; /* Adjust as needed */
+  width: 160%; /* Adjust as needed */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   height: 100vh;
 }
 
@@ -41,6 +45,8 @@
 
 .pagination-controls button {
   margin-left: 10px;
+  max-width: 10vw;
+  background-color: black;
 }
 
 .learn, .do {
@@ -51,7 +57,6 @@
   list-style-type: disc;
   padding-left: 20px;
 }
-
 
 .assignment-download {
   display: flex;
@@ -64,6 +69,7 @@
   height: 150px;
   margin-right: 10px;
 }
+
 .resources-section {
   background-color: lightgrey;
   border: 1px solid #ccc;
@@ -75,62 +81,32 @@
   margin-top: 0;
 }
 
-.resources-section ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.resources-section li {
-  margin-bottom: 10px;
-}
-
-.resources-section a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.resources-section a:hover {
-  text-decoration: underline;
-}
-
 .submission-section {
-  border: 1px solid #ccc;
-  padding: 15px;
   margin-top: 20px;
+}
+.submission-section button {
+  max-width: 10vw;
+  background-color: black;
 }
 
 .upload-section {
-  border: 1px solid lightpurple;
-  padding: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.upload-section label {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .submission-message {
-  color: green;
+  color: rgb(28, 247, 28);
   font-weight: bold;
   margin-top: 10px;
 }
 
-.upload-section form {
-  display: flex;
-  flex-direction: column;
-}
-
-.upload-section label {
-  margin-bottom: 10px;
-}
-
-.upload-section input {
-  margin-top: 5px;
-}
-
-.upload-section button {
-  margin-top: 10px;
-}
-
 .focus-icon {
-  display: block;
-  margin: 20px auto;
-  width: 200px;
-  height: 200px; /* Adjust as needed */
+  /* width: 200px;
+  height: 200px; */
+
+  margin-top: 20px;
 }

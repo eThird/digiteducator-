@@ -10,6 +10,17 @@
   border-radius: 25px;
 }
 
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and text */
+}
+
+.navbar-logo .logo-image {
+  height: 40px; /* Adjust size as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
 .navbar-logo a {
   font-size: 24px;
   font-weight: bold;
@@ -35,33 +46,19 @@
 .navbar-user {
   display: flex;
   align-items: center;
-  gap: 10px; /* Add space between buttons */
-}
-
-.navbar-user button {
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.navbar-user button:hover {
-  background-color: darkblue;
+  gap: 10px; /* Add space between elements */
 }
 
 /* Style for the logout button */
 .logout-button {
-  background-color: transparent;
-  color: blue;
-  border: 2px solid red;
+  background-color: red;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
+  color: white;
 }
 
-.logout-button:hover {
-  background-color: red;
-  color: white;
+.navbar-user span {
+  font-size: 18px;
+  color: black;
 }

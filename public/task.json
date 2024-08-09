@@ -8,7 +8,7 @@
       "description": "Understand the impact of different energy sources on engine performance.",
       "difficulty": "Medium",
       "time": "2 hours",
-      "current": true,
+      "current": false,
       "pages": [
         {
           "id": 1,
@@ -63,7 +63,7 @@
       "description": "Explore and evaluate next-gen fuels for aviation.",
       "difficulty": "High",
       "time": "3 hours",
-      "current": false,
+      "current": true,
       "pages": [
         {
           "id": 1,

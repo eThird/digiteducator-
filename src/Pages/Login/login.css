@@ -25,6 +25,10 @@
   text-align: center;
   padding: 20px;
 }
+.login-left img{
+  max-width: 50vw;
+  max-height: 50vh;
+}
 
 .login-left h1 {
   font-family: 'Poppins', sans-serif;
@@ -60,8 +64,8 @@
 .input-container input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -80,6 +84,7 @@ button {
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  width: 100%;
+  max-width: 15vw;
+  
   
 }
