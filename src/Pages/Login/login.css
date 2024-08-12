@@ -1,15 +1,20 @@
 /* src/pages/Login.css */
 .main-container {
   background-color: hsl(240, 100%, 50%);
-  padding: 2%;
-  height: 100vh;
+ 
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   position: fixed;
 }
 
 .login-container {
   display: flex;
-  height: 90vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  width: 90%;
+  height: 90%;
+  background-color: #9ab9fc;
 }
 
 #weblink {
@@ -24,7 +29,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  
 }
 
 .login-left img {
@@ -51,11 +56,14 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  height: 92.5%;
+  border-radius: 15px 0px 0px 15px; 
 }
 
 .login-left a {
   color: #ffffff;
   text-decoration: none;
+
 }
 
 
