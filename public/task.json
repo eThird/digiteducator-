@@ -1,6 +1,6 @@
 {
   "courseTitle": "Advanced Energy Source Design",
-  "courseImage": "/instagram.png",
+  "companyLogo": "/instagram.png",
   "tasks": [
     {
       "id": 1,
@@ -8,7 +8,7 @@
       "description": "Understand the impact of different energy sources on engine performance.",
       "difficulty": "Medium",
       "time": "2 hours",
-      "current": true,
+      "current": false,
       "pages": [
         {
           "id": 1,

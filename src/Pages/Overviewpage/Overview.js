@@ -21,7 +21,7 @@ const Overview = () => {
   }, []);
 
   if (!tasks || !currentTask) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>;//
   }
 
   const handlePageChange = (pageNumber) => {
