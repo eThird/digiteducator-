@@ -123,21 +123,7 @@
     height: 150px;
 }
 
-.social-media-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
 
-.social-media-icons a img {
-    width: 30px;
-    height: 30px;
-}
-
-.social-media-icons a:hover img {
-    filter: brightness(0.8);
-}
 
 @media (max-width: 600px) {
     .home-content {
