@@ -3,7 +3,7 @@ import './Home.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import Coursepage from '../Course/Coursepage';
-
+import Socicalmedialinks_coloured from '../../Components/Socialmedia/Socialmedialinks_coloured';
 const Home = () => {
   const coursePageRef = useRef(null);
 
@@ -42,22 +42,8 @@ const Home = () => {
         <img src="/ExploreMore.png" alt="Explore More" />
       </button>
 
-      <div className="social-media-icons">
-        <a href="https://x.com/DigitEducator" target="_blank" rel="noopener noreferrer">
-          <img src="/Twitter.png" alt="Twitter" />
-        </a>
-        <a href="https://www.instagram.com/digiteducator/" target="_blank" rel="noopener noreferrer">
-          <img src="/Instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://www.linkedin.com/company/digiteducator/" target="_blank" rel="noopener noreferrer">
-          <img src="/LinkedIn.png" alt="LinkedIn" />
-        </a>
-        <a href="https://www.youtube.com/@DigitEducator" target="_blank" rel="noopener noreferrer">
-          <img src="/YouTube.png" alt="YouTube" />
-        </a>
-        <a href="https://reddit.com" target="_blank" rel="noopener noreferrer">
-          <img src="/Reddit.png" alt="Reddit" />
-        </a>
+      <div>
+        <Socicalmedialinks_coloured />
       </div>
 
       <div ref={coursePageRef}>
