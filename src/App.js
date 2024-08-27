@@ -6,9 +6,10 @@ import Coursepage from './Pages/Course/Coursepage'
 import Footer from './Components/Footer/Footer';
 import Overview from './Pages/Overviewpage/Overview';
 import Pagination from './Components/Paginations/Pagination';
-
+import Admin from './Pages/Admin/Admin';
 import Tasktracker from './Components/Tasktracker/Tasktracker';
-
+import Admincoursepage from './Pages/Admin/Admin-Coursepage/Admin-coursepage';
+import CreateNewCourse from './Pages/Admin/Admin-Coursepage/CreateNewCourse/CreateNewCourse';
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
         <Route path="/Overview" element={<Overview/>} />
         <Route path="/Pagination" element={<Pagination/>} />
         <Route path="/Tasktracker" element={<Tasktracker/>}/>
+        <Route path="/Admin" element={<Admin/>}/>
+        <Route path="/Admincoursepage" element={<Admincoursepage/>}/>
+        <Route path="/CreateNewCourse" element={<CreateNewCourse/>}/>
         
 
       </Routes>

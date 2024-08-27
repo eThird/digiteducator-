@@ -1,0 +1,27 @@
+.container{
+    height: 100%;
+}
+
+.side-container {
+    display: none; /* hidden */
+}
+
+
+
+.side-container{
+    height: 100%; /* h-full */
+    max-width: 30%;
+    width: 14rem; /* w-56 (56 * 0.25rem = 14rem) */
+    flex-direction: column; /* flex-col */
+    position: fixed; /* fixed */
+    top: 0; /* inset-y-0 */
+    bottom: 0; /* inset-y-0 */
+    z-index: 50; /* z-50 */
+}
+
+
+@media (min-width: 768px) {
+    .side-container {
+        display: flex; /* md:flex */
+    }
+}
