@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';  // Import Link for navigation
 const Tasktracker = () => {
   const [tasks, setTasks] = useState([]);
   const [courseTitle, setCourseTitle] = useState('');
-  const [courseImage, setCourseImage] = useState('');
+  const [companyLogo, setCompanyLogo] = useState('');  // Renamed state variable
 
   useEffect(() => {
     fetch('/task.json')
@@ -19,7 +19,7 @@ const Tasktracker = () => {
         console.log('Fetched data:', data);
         setTasks(data.tasks);
         setCourseTitle(data.courseTitle);
-        setCourseImage(data.courseImage);
+        setCompanyLogo(data.companyLogo);  // Updated to companyLogo
       })
       .catch(error => console.error('Error fetching tasks:', error));
   }, []);
@@ -31,7 +31,7 @@ const Tasktracker = () => {
   return (
     <div className="task-tracker">
       <div className="task-tracker-header">
-        <img src={courseImage} alt={courseTitle} className="ge-logo" />
+        <img src={companyLogo} alt={courseTitle} className="company-logo" /> {/* Updated className */}
         <h2>{courseTitle}</h2>
       </div>
       <div className="task-list">
@@ -43,9 +43,11 @@ const Tasktracker = () => {
             <div className="task-index">
               <div className={`circle ${task.current ? 'active' : ''}`}>
                 {index + 1}
+                
               </div>
             </div>
             <div className="task-content">
+              <h4>Task {task.id}</h4>
               <h5>{task.title}</h5>
               <p>{task.description}</p>
               <div className="task-meta">
