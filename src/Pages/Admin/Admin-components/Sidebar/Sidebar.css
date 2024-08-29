@@ -1,0 +1,85 @@
+.outer-container{
+    padding: 1%;
+    position: fixed;
+    background-color: #0F172A;
+    max-width: 20vw;
+    width: 13vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: aliceblue;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+    margin-bottom: 5%;
+    
+  }
+  
+  .logo-image {
+    height: 40px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+  }
+
+ 
+  .Options {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.Courses{
+    height: 5%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #ffffff; /* White color */
+    font-size: 14px;
+   
+    
+    transition: background-color 0.3s, color 0.3s;
+}
+.Courses a{
+    color: inherit; /* Inherit white color */
+    text-decoration: none; /* Remove underline */
+}
+
+.Courses:hover{
+    background-color: #ffffff; /* Change background to white */
+    color: #000000; /* Change text to black */
+}
+
+
+  .Bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 15vw;
+    padding: 10px;
+    margin-bottom: 3vh;
+    background-color: #1e293b; /* Slightly lighter navy */
+    color: #ffffff; /* White color */
+    font-size: 12px;
+    text-align: center;
+}
+.Bottom img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

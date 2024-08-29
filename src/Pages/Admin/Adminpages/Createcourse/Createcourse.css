@@ -1,0 +1,134 @@
+/* General Container */
+.create-course-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+  }
+  
+  /* Course Details Form */
+  .course-details {
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Headings */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #2d3748;
+  }
+  
+  /* Form Group Styles */
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    color: #5787da;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Input Fields */
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Active Field Styles */
+  input:focus + label,
+  textarea:focus + label,
+  input:focus,
+  textarea:focus {
+    border-color: #3182ce;
+  }
+  
+  input:focus + label,
+  textarea:focus + label {
+    color: #3182ce;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 8px; /* adjust padding to accommodate underline */
+  }
+  
+  /* Image Upload Section */
+  .upload-image {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .upload-area {
+    border: 1px dashed #cbd5e0;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f7fafc;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+    color: #4a5568;
+    display: block;
+  }
+  
+  .upload-label span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .browse-link {
+    color: #3182ce;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .file-info {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 10px;
+  }
+  
+  /* Continue Button */
+  .continue-button {
+    width: 20%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3182ce;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 80%;
+  }
+  
+  .continue-button:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+  }
+  

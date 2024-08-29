@@ -1,0 +1,42 @@
+.admin-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    max-height: 5vh;
+  }
+  
+  .page-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+  }
+
+  .button-cintainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .add-course-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+  }
+  
+  .add-course-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .options {
+    font-size: 24px;
+    color: #1f2937;
+    cursor: pointer;
+  }
+  

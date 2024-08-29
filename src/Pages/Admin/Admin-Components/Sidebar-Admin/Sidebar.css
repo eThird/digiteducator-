@@ -1,9 +1,0 @@
-.Sidebar-main{
-    height: 100%; /* h-full */
-    border-right: 1px solid; /* border-r */
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col */
-    overflow-y: auto; /* overflow-y-auto (note there was a typo in your original code: "overlow" should be "overflow") */
-    background-color: rgb(255, 255, 255); /* bg-white */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
-}
