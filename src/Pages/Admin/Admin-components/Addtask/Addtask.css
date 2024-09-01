@@ -1,0 +1,106 @@
+.add-task-container {
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.task-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.task-details {
+    margin-top: 10px;
+}
+
+.task-section {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+.task-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+    margin-top: 20px;
+}
+
+.task-left, .task-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.task-left {
+    margin-right: auto;
+}
+
+.task-right {
+    margin-left: auto;
+    width: 200px;
+}
+
+.task-input label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.task-input input, 
+.task-input textarea, 
+.task-input select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-input textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.delete-button {
+    background-color: #DC3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.save-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}

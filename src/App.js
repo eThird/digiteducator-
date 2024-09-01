@@ -13,6 +13,8 @@ import Createcourse from './Pages/Admin/Adminpages/Createcourse/Createcourse';
 import AdminNavbar from './Pages/Admin/Admin-components/AdminNavbar/AdminNavbar';
 import AdminDashboard from './Pages/Admin/Adminpages/AdminDashboard/AdminDashboard';
 import Coursesdisplay from './Pages/Admin/Adminpages/Coursesdisplay/Coursesdisplay';
+import Addtask from './Pages/Admin/Admin-components/Addtask/Addtask';
+import Taskdisplay from './Pages/Admin/Adminpages/Taskdisplay/Taskdisplay';
 
 
 const App = () => {
@@ -33,6 +35,8 @@ const App = () => {
         <Route path="/AdminNavbar" element={<AdminNavbar/>}/>
         <Route path="/AdminDashboard" element={<AdminDashboard/>}/>
         <Route path="/Coursesdisplay" element={<Coursesdisplay/>}/>
+        <Route path="/Addtask" element={<Addtask/>}/>
+        <Route path="/Taskdisplay" element={<Taskdisplay/>}/>
         
         
  

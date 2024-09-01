@@ -1,0 +1,44 @@
+.task-container {
+    padding: 20px;
+    background-color: #F5F8FA;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+}
+
+.add-task-button {
+    background-color: #28A745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+
+.task-table th {
+    background-color: #F5F8FA;
+    font-weight: bold;
+}
+
+.task-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.task-table td {
+    background-color: #fff;
+    color: #333;
+}
