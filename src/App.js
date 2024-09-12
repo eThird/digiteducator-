@@ -15,6 +15,8 @@ import AdminDashboard from './Pages/Admin/Adminpages/AdminDashboard/AdminDashboa
 import Coursesdisplay from './Pages/Admin/Adminpages/Coursesdisplay/Coursesdisplay';
 import Addtask from './Pages/Admin/Admin-components/Addtask/Addtask';
 import Taskdisplay from './Pages/Admin/Adminpages/Taskdisplay/Taskdisplay';
+import Signup from './Pages/Signup/Signup';
+
 
 
 const App = () => {
@@ -23,6 +25,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/Coursepage" element={<Coursepage/>} />
         <Route path="/Footer" element={<Footer/>} />

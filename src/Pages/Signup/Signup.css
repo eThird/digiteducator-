@@ -1,0 +1,104 @@
+.signup-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .signup-image {
+    flex: 1;
+  }
+  
+  .signup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .signup-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .signup-form h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .signup-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .input-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-field input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .password-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .error input {
+    border: 1px solid red;
+  }
+  
+  .signup-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .signup-btn:hover {
+    background-color: #333;
+  }
+  
+  .signup-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .social-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .social-signup p {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
