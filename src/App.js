@@ -17,6 +17,7 @@ import Addtask from './Pages/Admin/Admin-components/Addtask/Addtask';
 import Taskdisplay from './Pages/Admin/Adminpages/Taskdisplay/Taskdisplay';
 import Signup from './Pages/Signup/Signup';
 import DisplayCategory from './Components/DisplayCategory/DisplayCategory';
+import FeaturedCourses from './Components/FeaturedCourses/FeaturedCourses';
 
 
 
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/Addtask" element={<Addtask/>}/>
         <Route path="/Taskdisplay" element={<Taskdisplay/>}/>
         <Route path="/DisplayCategory" element={<DisplayCategory/>}/>
+        <Route path="/FeaturedCourses" element={<FeaturedCourses/>}/>
         
         
  
