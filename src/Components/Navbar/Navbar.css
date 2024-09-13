@@ -6,7 +6,7 @@
 
 .navbar {
   width: 100vw; /* Full width */
-  height: 5vh; /* Max height set to 5vh */
+  height: 6vh; /* Max height set to 5vh */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: black;
+  font-family: exo;
 }
 
 .nav-container {
