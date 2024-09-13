@@ -16,6 +16,7 @@ import Coursesdisplay from './Pages/Admin/Adminpages/Coursesdisplay/Coursesdispl
 import Addtask from './Pages/Admin/Admin-components/Addtask/Addtask';
 import Taskdisplay from './Pages/Admin/Adminpages/Taskdisplay/Taskdisplay';
 import Signup from './Pages/Signup/Signup';
+import DisplayCategory from './Components/DisplayCategory/DisplayCategory';
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/Coursesdisplay" element={<Coursesdisplay/>}/>
         <Route path="/Addtask" element={<Addtask/>}/>
         <Route path="/Taskdisplay" element={<Taskdisplay/>}/>
+        <Route path="/DisplayCategory" element={<DisplayCategory/>}/>
         
         
  
