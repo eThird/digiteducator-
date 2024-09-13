@@ -18,6 +18,7 @@ import Taskdisplay from './Pages/Admin/Adminpages/Taskdisplay/Taskdisplay';
 import Signup from './Pages/Signup/Signup';
 import DisplayCategory from './Components/DisplayCategory/DisplayCategory';
 import FeaturedCourses from './Components/FeaturedCourses/FeaturedCourses';
+import StudentFeedback from './Components/StudentFeedback/StudentFeedback';
 
 
 
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/Taskdisplay" element={<Taskdisplay/>}/>
         <Route path="/DisplayCategory" element={<DisplayCategory/>}/>
         <Route path="/FeaturedCourses" element={<FeaturedCourses/>}/>
+        <Route path="/StudentFeedback" element={<StudentFeedback/>}/>
         
         
  

@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './FeaturedCourses.css';
-import courses from './course.json'; // Assuming course.json is in the same folder
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
 
 const FeaturedCourses = () => {
+    const [courses, setCourses] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                const response = await axios.get('http://your-django-backend-url/api/courses/'); // Replace with your Django API URL
+                setCourses(response.data);
+                setLoading(false);
+            } catch (err) {
+                setError(err);
+                setLoading(false);
+            }
+        };
+
+        fetchCourses();
+    }, []);
 
     const handleCourseClick = (courseId) => {
         navigate(`/courseDetail/${courseId}`);
@@ -14,6 +32,9 @@ const FeaturedCourses = () => {
         navigate('/courses');
     };
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error loading courses: {error.message}</p>;
+
     return (
         <div className="featured-courses">
             <div className="header">
@@ -22,8 +43,8 @@ const FeaturedCourses = () => {
             </div>
             <p>Explore our Popular Courses</p>
             <div className="course-grid">
-                {courses.map((course, index) => ( 
-                    <div className="course-card" key={index}>
+                {courses.map((course) => ( 
+                    <div className="course-card" key={course.id}>
                         <div className="course-category">{course.category}</div>
                         <img src={course.image} alt={course.title} className="course-image" />
                         <h3 className="course-title">{course.title}</h3>

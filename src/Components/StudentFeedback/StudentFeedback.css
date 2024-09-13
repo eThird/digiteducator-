@@ -1,0 +1,86 @@
+.student-feedback {
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.student-feedback h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #4A55FF;
+}
+
+.intro-text {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.feedback-container {
+    position: relative;
+    background-color: #4A55FF;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.quote-icon {
+    font-size: 60px;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    color: #000;
+}
+
+.feedback-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    flex-direction: column;
+    top: 15vh;
+    right: 20vw;
+}
+
+.student-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.student-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.student-country {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Add animation */
+@keyframes fade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.feedback-container {
+    animation: fade 1s ease-in-out;
+}

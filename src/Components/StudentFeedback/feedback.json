@@ -1,0 +1,20 @@
+[
+    {
+        "name": "James Thomas",
+        "country": "Germany",
+        "feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....",
+        "photo": "./googleicon.png"
+    },
+    {
+        "name": "Maria Garcia",
+        "country": "Spain",
+        "feedback": "This has been an amazing experience! The materials were helpful and the teachers were great.",
+        "photo": "./googleicon.png"
+    },
+    {
+        "name": "Liu Wei",
+        "country": "China",
+        "feedback": "I learned so much from this course. It was engaging and informative.",
+        "photo": "./googleicon.png"
+    }
+]
