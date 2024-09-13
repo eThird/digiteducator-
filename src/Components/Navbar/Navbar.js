@@ -1,36 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [username, setUsername] = useState('');
-
-  useEffect(() => {
-    // Fetch username from Django backend
-    fetch('/api/get_username')
-      .then(response => response.json())
-      .then(data => setUsername(data.username))
-      .catch(error => console.error('Error fetching username:', error));
-  }, []);
-
-  const handleLogout = () => {
-    // Implement logout functionality here
-    console.log('Logout button clicked');
-  };
-
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src="/DE-logo.png" alt="Digit Educator Logo" className="logo-image" />
-        <Link to="/home">Digit Educator</Link>
+      <div className="navbar_logo">
+        <img src="/DE-logo.png" alt="DigitEducator Logo" />
+        <span>DigitEducator</span>
       </div>
-      <div className="navbar-links">
-       {/* Add navbar links here in future */}
-      </div>
-      <div className="navbar-user">
-        <span>Hello, {username}</span>
-        <button className="logout-button" onClick={handleLogout}>Logout</button>
-      </div>
+      <ul className="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li className="dropdown">
+          <a href="#pages" className="dropbtn">Pages</a>
+          <div className="dropdown-content">
+            <a href="#page1">Page 1 (add link here)</a>
+            <a href="#page2">Page 2 (add link here)</a>
+            <a href="#page3">Page 3 (add link here)</a>
+          </div>
+        </li>
+        <li><a href="#login">Login / Register</a></li>
+        <li className="search-icon">
+          <img src="/search.png" alt="Search" />
+        </li>
+      </ul>
     </nav>
   );
 };

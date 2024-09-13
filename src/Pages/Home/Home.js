@@ -13,8 +13,9 @@ const Home = () => {
 
   return (
     <div className="home-container">
+       <Navbar />
       <div className="home-content">
-        <Navbar />
+     
         <div className='home-elements'>
           <div className="home-left">
             <h1>Grow up your skills by online courses with Digit Educator</h1>
@@ -28,7 +29,7 @@ const Home = () => {
             </div>
           </div>
           <div className="home-right">
-            <img src="/Studentthumbsup.png" alt="Student Thumbs Up" className="student-img" />
+            {/* <img src="/Studentthumbsup.png" alt="Student Thumbs Up" className="student-img" /> */}
             <div className="student-info">
               <img src="/Calander.png" alt="Calendar Icon" className="calendar-icon" />
               <span>2k Assisted Student</span>
