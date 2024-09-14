@@ -19,6 +19,7 @@ import Signup from './Pages/Signup/Signup';
 import DisplayCategory from './Components/DisplayCategory/DisplayCategory';
 import FeaturedCourses from './Components/FeaturedCourses/FeaturedCourses';
 import StudentFeedback from './Components/StudentFeedback/StudentFeedback';
+import LandingPage from './Pages/LandingPage/LandingPage';
 
 
 
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/DisplayCategory" element={<DisplayCategory/>}/>
         <Route path="/FeaturedCourses" element={<FeaturedCourses/>}/>
         <Route path="/StudentFeedback" element={<StudentFeedback/>}/>
+        <Route path="/LandingPage" element={<LandingPage/>}/>
         
         
  
