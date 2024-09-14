@@ -1,72 +1,65 @@
 .footer {
-    background-color: #0000ff;
-    color: #ffffff;
-    padding: 20px 0;
+  background-color: #0000ff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 22%;
+  min-width: 200px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.footer-section address br {
+  margin-bottom: 5px;
+}
+
+.footer-section .social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
     width: 100%;
-    box-sizing: border-box;
-    margin-top: 10%;
-    border-top-style: groove;
-    
+    margin-bottom: 20px;
   }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .footer-left, .footer-right {
-    flex: 1;
-  }
-  
-  .footer-logo-title {
-    display: flex;
-    align-items: center; /* Center the items vertically */
-  }
-  
-  .footer-logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  .footer-title {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .footer-address p, .footer-categories ul, .footer-links ul {
-    margin: 10px 0;
-  }
-  
-  .footer-address p, .footer-categories ul li, .footer-links ul li {
-    font-size: 14px;
-  }
-  
-  .footer-categories ul, .footer-links ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-categories ul li, .footer-links ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-right {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .footer-categories-links {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .footer-categories, .footer-links {
-    flex: 1;
-    margin: 0 10px;
-  }
-  
+}

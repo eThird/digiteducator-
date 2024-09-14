@@ -1,33 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './StudentFeedback.css';
+import feedbackData from './feedback.json'; // Assuming feedback.json is in the same folder
 
 const StudentFeedback = () => {
-    const [feedbacks, setFeedbacks] = useState([]);
     const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
 
     useEffect(() => {
-        // Fetch feedback data from Django backend
-        fetch('http://localhost:8000/api/feedback/')
-            .then(response => response.json())
-            .then(data => setFeedbacks(data))
-            .catch(error => console.error('Error fetching feedback:', error));
+        const interval = setInterval(() => {
+            setCurrentFeedbackIndex((prevIndex) => 
+                (prevIndex + 1) % feedbackData.length // Looping through feedbacks
+            );
+        }, 5000); // Change feedback every 5 seconds
+
+        return () => clearInterval(interval); // Cleanup interval on component unmount
     }, []);
 
-    useEffect(() => {
-        if (feedbacks.length > 0) {
-            const interval = setInterval(() => {
-                setCurrentFeedbackIndex((prevIndex) => 
-                    (prevIndex + 1) % feedbacks.length // Looping through feedbacks
-                );
-            }, 5000); // Change feedback every 5 seconds
-
-            return () => clearInterval(interval); // Cleanup interval on component unmount
-        }
-    }, [feedbacks]);
-
-    if (feedbacks.length === 0) return <div>Loading...</div>;
-
-    const { name, country, feedback, photo } = feedbacks[currentFeedbackIndex];
+    const { name, country, feedback, photo } = feedbackData[currentFeedbackIndex];
 
     return (
         <div className="student-feedback">

@@ -90,10 +90,13 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #3a50f7;
+    height: 15vh;
+    background-image: url('../../../public/Rectanglewithlines.png'); /* Correct URL syntax */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
     color: white;
     padding: 20px 0;
-  }
+}
   
   .stat-item {
     font-size: 1.5rem;
@@ -138,7 +141,69 @@
     width: 100px;
     margin: 10px;
   }
+
+  .category-section{
+    width: 100%;
+    padding: 5%;
+  }
+
+  .GrowYourSkill-Section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    max-height: 30%;
+    padding: 2%;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+  }
+  .GrrowImage-contetn{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    max-height: 20%;
+    justify-content: center;
+  }
+  .GrrowText-contetn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 60vh;
+  }
+  .bennifits{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+  }
+  .GrrowText-contetn button {
+    background-color: orangered;
+    border-radius: 20px;
+    width: 20%;
+    padding: 2%;
+    border: none; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+.GrrowText-contetn button:hover {
+    background-color: darkorange; /* Change background color on hover */
+    transform: translateY(-4px); /* Move button up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
   
+.Featuredcourses-section{
+    width: 100%;
+    padding: 5%;
+}
+
+.feedback-section{
+  margin-bottom: 10%;
+}
+
   /* Media Queries */
   @media (max-width: 768px) {
     .header-section {

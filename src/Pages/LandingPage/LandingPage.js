@@ -1,6 +1,11 @@
 import React from 'react';
 import './LandingPage.css'; // Link to CSS
 import Navbar from '../../Components/Navbar/Navbar'; // Importing the Navbar
+import DisplayCategory from '../../Components/DisplayCategory/DisplayCategory'
+import FeaturedCourses from '../../Components/FeaturedCourses/FeaturedCourses'
+import Footer from '../../Components/Footer/Footer';
+import AboutCompany from '../../Components/AboutCompany/AboutCompany';
+import StudentFeedback from '../../Components/StudentFeedback/StudentFeedback';
 
 const LandingPage = () => {
   return (
@@ -84,6 +89,56 @@ const LandingPage = () => {
           <img src="./Slackicon.png" alt="Slack" />
         </div>
       </div>
+      <div className='category-section'>
+        <DisplayCategory/>
+      </div>
+      <div className='GrowYourSkill-Section'>
+        <div className='GrrowImage-contetn'>
+        <img src="./bookandpeople.png" alt="books and people" />
+        </div>
+        <div className='GrrowText-contetn'>
+        <h2>Grow us your skill with LearnPress LMS</h2>
+        <p>We denounce with righteous indignation and dislike men who
+         are so beguiled and demoralized that cannot trouble.
+         </p>
+         <div className='bennifits'>
+         <img src="./tick.png" alt="Effective Interaction Icon" />
+         <h5>Certifications</h5>
+         </div>
+         <div className='bennifits'>
+         <img src="./tick.png" alt="Effective Interaction Icon" />
+         <h5>Certifications</h5>
+         </div>
+         <div className='bennifits'>
+         <img src="./tick.png" alt="Effective Interaction Icon" />
+         <h5>Certifications</h5>
+         </div>
+         <div className='bennifits'>
+         <img src="./tick.png" alt="Effective Interaction Icon" />
+         <h5>Certifications</h5>
+         </div>
+         <div className='bennifits'>
+         <img src="./tick.png" alt="Effective Interaction Icon" />
+         <h5>Certifications</h5>
+         </div>
+         <button>Explore Now</button>
+        </div>
+
+      </div>
+      <div className='Featuredcourses-section'>
+                <FeaturedCourses/>
+        </div>
+        <div className='About-section'>
+            <AboutCompany/>
+        </div>
+    <div className='feedback-section'>
+        <StudentFeedback/>
+    </div>
+
+      <div className='Footer-container'>
+                <Footer/>
+        </div>
+
     </div>
   );
 };

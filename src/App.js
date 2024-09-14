@@ -20,6 +20,7 @@ import DisplayCategory from './Components/DisplayCategory/DisplayCategory';
 import FeaturedCourses from './Components/FeaturedCourses/FeaturedCourses';
 import StudentFeedback from './Components/StudentFeedback/StudentFeedback';
 import LandingPage from './Pages/LandingPage/LandingPage';
+import AboutCompany from './Components/AboutCompany/AboutCompany';
 
 
 
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/FeaturedCourses" element={<FeaturedCourses/>}/>
         <Route path="/StudentFeedback" element={<StudentFeedback/>}/>
         <Route path="/LandingPage" element={<LandingPage/>}/>
+        <Route path="/AboutCompany" element={<AboutCompany/>}/>
         
         
  

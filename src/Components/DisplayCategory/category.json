@@ -1,0 +1,53 @@
+[
+    {
+      "name": "Art & Design",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Development",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Communication",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Videography",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Photography",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Marketing",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Content Writing",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Finance",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Science",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    },
+    {
+      "name": "Network",
+      "courseCount": 38,
+      "icon": "/Playicon.png"
+    }
+  ]
+  
