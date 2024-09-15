@@ -1,57 +1,47 @@
 [
     {
-        "category": "gdfg",
-        "title": "Create an LMS Website with LearnPress",
-        "instructor": "Determined-Poitras",
-        "duration": "2 Weeks",
-        "students": 156,
-        "image": "https://th.bing.com/th/id/OIP.K_z5i_0IexT07M35QFvVfgAAAA?rs=1&pid=ImgDetMain", 
-        "price": "Free",
-        "originalPrice": "$29.0",
-        "isDiscounted": true
+        "id": 1,
+        "category": { "category_name": "Programming" },
+        "course_image": "./girlstuding.png",
+        "course_name": "Learn React",
+        "instructor": { "instructor_name": "John Doe" },
+        "course_duration": "4 hours",
+        "students_count": 150,
+        "original_price": "$100",
+        "price": "$50"
     },
     {
-        "category": "raphy",
-        "title": "Design a Website with ThimPress",
-        "instructor": "Determined-Poitras",
-        "duration": "2 Weeks",
-        "students": 156,
-        "image": "https://th.bing.com/th/id/OIP.K_z5i_0IexT07M35QFvVfgAAAA?rs=1&pid=ImgDetMain", 
-        "price": "$49.0",
-        "originalPrice": "$59.0",
-        "isDiscounted": true
+        "id": 1,
+        "category": { "category_name": "Programming" },
+        "course_image": "./girlstuding.png",
+        "course_name": "Learn React",
+        "instructor": { "instructor_name": "John Doe" },
+        "course_duration": "4 hours",
+        "students_count": 150,
+        "original_price": "$100",
+        "price": "$50"
     },
     {
-        "category": "Phoy",
-        "title": "Design a Website with ThimPress",
-        "instructor": "Determined-Poitras",
-        "duration": "2 Weeks",
-        "students": 156,
-        "image": "https://th.bing.com/th/id/OIP.K_z5i_0IexT07M35QFvVfgAAAA?rs=1&pid=ImgDetMain", 
-        "price": "$49.0",
-        "originalPrice": "$59.0",
-        "isDiscounted": true
+        "id": 1,
+        "category": { "category_name": "Programming" },
+        "course_image": "./girlstuding.png",
+        "course_name": "Learn React",
+        "instructor": { "instructor_name": "John Doe" },
+        "course_duration": "4 hours",
+        "students_count": 150,
+        "original_price": "$100",
+        "price": "$50"
     },
     {
-        "category": "Photo",
-        "title": "Design a Website with ThimPress",
-        "instructor": "Determined-Poitras",
-        "duration": "2 Weeks",
-        "students": 156,
-        "image": "https://th.bing.com/th/id/OIP.K_z5i_0IexT07M35QFvVfgAAAA?rs=1&pid=ImgDetMain", 
-        "price": "$49.0",
-        "originalPrice": "$59.0",
-        "isDiscounted": true
-    },
-    {
-        "category": "Phot",
-        "title": "Design a Website with ThimPress",
-        "instructor": "Determined-Poitras",
-        "duration": "2 Weeks",
-        "students": 156,
-        "image": "https://th.bing.com/th/id/OIP.K_z5i_0IexT07M35QFvVfgAAAA?rs=1&pid=ImgDetMain", 
-        "price": "$49.0",
-        "originalPrice": "$59.0",
-        "isDiscounted": true
+        "id": 1,
+        "category": { "category_name": "Programming" },
+        "course_image": "./girlstuding.png",
+        "course_name": "Learn React",
+        "instructor": { "instructor_name": "John Doe" },
+        "course_duration": "4 hours",
+        "students_count": 150,
+        "original_price": "$100",
+        "price": "$50"
     }
+  
 ]

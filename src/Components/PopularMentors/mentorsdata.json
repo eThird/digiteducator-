@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Ronald Richards",
+    "role": "UI/UX Designer",
+    "rating": "4.9",
+    "students": "2400",
+     "photo": "./Studentthumbsup.png"
+  },
+  {
+    "name": "Annette Black",
+    "role": "Web Developer",
+    "rating": "4.8",
+    "students": "1800",
+    "photo": "./Studentthumbsup.png"
+  },
+  {
+    "name": "Jacob Jones",
+    "role": "Data Scientist",
+    "rating": "5.0",
+    "students": "3000",
+    "photo": "./Studentthumbsup.png"
+  },
+  {
+    "name": "Jacob Jones",
+    "role": "Data Scientist",
+    "rating": "5.0",
+    "students": "3000",
+    "photo": "./Studentthumbsup.png"
+  },
+  {
+    "name": "Jacob Jones",
+    "role": "Data Scientist",
+    "rating": "5.0",
+    "students": "3000",
+    "photo": "./Studentthumbsup.png"
+  }
+]

@@ -1,25 +1,47 @@
 [
-    {
+  {
       "id": 1,
-      "title": "Product Management Basic - Course",
-      "description": "Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-      "date": "1 - 28 July 2022",
-      "image": "https://th.bing.com/th/id/OIP.K_z5i_0IexT07M35QFvVfgAAAA?rs=1&pid=ImgDetMain"
-    },
-    {
-      "id": 2,
-      "title": "Advanced Marketing Strategies",
-      "description": "Learn advanced marketing strategies with industry experts.",
-      "date": "1 - 28 August 2022",
-      "image": "https://s3.amazonaws.com/coursesity-blog/2019/06/Digital-Marketing.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Introduction to Python Programming",
-      "description": "Begin your programming journey with Python.",
-      "date": "1 - 28 September 2022",
-      "image": "https://www.codingbytes.com/wp-content/uploads/2020/03/python-programming-course.jpg"
-    }
-  
-  ]
-  
+      "category": { "category_name": "Programming" },
+      "course_image": "./girlstuding.png",
+      "course_name": "Learn React",
+      "instructor": { "instructor_name": "John Doe" },
+      "course_duration": "4 hours",
+      "students_count": 150,
+      "original_price": "$100",
+      "price": "$50"
+  },
+  {
+      "id": 1,
+      "category": { "category_name": "Programming" },
+      "course_image": "./girlstuding.png",
+      "course_name": "Learn React",
+      "instructor": { "instructor_name": "John Doe" },
+      "course_duration": "4 hours",
+      "students_count": 150,
+      "original_price": "$100",
+      "price": "$50"
+  },
+  {
+      "id": 1,
+      "category": { "category_name": "Programming" },
+      "course_image": "./girlstuding.png",
+      "course_name": "Learn React",
+      "instructor": { "instructor_name": "John Doe" },
+      "course_duration": "4 hours",
+      "students_count": 150,
+      "original_price": "$100",
+      "price": "$50"
+  },
+  {
+      "id": 1,
+      "category": { "category_name": "Programming" },
+      "course_image": "./girlstuding.png",
+      "course_name": "Learn React",
+      "instructor": { "instructor_name": "John Doe" },
+      "course_duration": "4 hours",
+      "students_count": 150,
+      "original_price": "$100",
+      "price": "$50"
+  }
+
+]
