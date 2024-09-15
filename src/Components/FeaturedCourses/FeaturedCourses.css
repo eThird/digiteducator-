@@ -1,6 +1,14 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+    font-weight: 400; /* Default weight */
+}
+
 .featured-courses {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 100vw;
     margin: 0 auto;
 }
 
@@ -17,6 +25,7 @@
 
 .all-courses-btn {
     padding: 10px 20px;
+    border-radius: 25px;
     border: 1px solid black;
     background: none;
     cursor: pointer;
@@ -28,13 +37,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    margin-top: 20px;
 }
 
 .course-card {
-    flex: 1 1 calc(33.33% - 20px); /* Ensure 3 cards per row, adjusting for gaps */
-    max-width: calc(33.33% - 40vw); /* Set a maximum width for each card */
-    min-width: 300px; /* Prevent the cards from shrinking too small */
+    flex: 1 1 calc(25% - 20px); /* Ensure 4 cards per row, adjusting for gaps */
+    max-width: calc(25% - 50px); /* Set a maximum width for each card */
+    min-width: 200px; /* Adjust the minimum width as necessary */
+    border-radius: 15px; /* Added border radius for rounded corners */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    position: relative; /* Needed for absolute positioning of category */
+    font-weight: 400; /* Ensure regular font weight for card text */
 }
 
 .course-card:hover {
@@ -43,7 +56,7 @@
 
 .course-image {
     width: 100%;
-    height: 150px; /* Adjust image height */
+    height: 200px; /* Adjust image height */
     object-fit: cover; /* Make sure the image covers the entire area */
 }
 
@@ -61,42 +74,79 @@
 .course-title {
     font-size: 1rem;
     margin: 10px 15px;
-    font-weight: 600;
+    font-weight: 400; /* Removed bold styling */
 }
 
-.course-instructor, .course-info {
+.course-instructor {
     font-size: 0.9rem;
-    color: gray;
-    margin: 5px 15px;
+    margin: 5px 15px 10px; /* Added bottom margin */
+    color: black; /* Updated instructor name color to black */
+    font-weight: 400; /* Removed bold styling */
 }
 
 .course-info {
     display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    margin: 5px 10px; /* Reduced left margin */
+}
+
+
+.course-info .course-duration,
+.course-info .students-count {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Adjust font size if needed */
+}
+
+.course-info .course-duration i,
+.course-info .students-count i {
+    color: blue; /* Set icon color to blue */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.course-info .course-duration span,
+.course-info .students-count span {
+    color: black; /* Ensure the text color is black */
+}
+
+.course-price-container {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 15px 20px 20px 15px; /* Apply top, right, bottom, and left margins respectively */
+    padding-top: 10px; /* Adds space between the border and the content */
+    border-top: 1px solid #ddd; /* Light gray line above the button */
 }
 
-.course-price {
-    margin: 10px 15px;
-    font-size: 1.1rem;
-    font-weight: 600;
+
+.original-price {
+    text-decoration: line-through; /* Apply strikethrough */
+    color: #999; /* Light color for the original price */
+    margin-left: 50px; /* Adjust space between original price and current price */
 }
 
-.course-price .discounted {
-    text-decoration: line-through;
-    color: red;
-    margin-right: 10px;
+.price {
+    color: black; /* Fully black color for the current price */
+    font-size: 1.1rem; /* Ensure it's consistent with the original price font size */
+    font-weight: 400; /* Removed bold styling */
+    margin-left: 10px; /* Space between original and current price */
 }
 
 .view-more-btn {
-    padding: 10px;
+    padding: 5px 10px; /* Adjust padding for top/bottom and left/right */
     background-color: black;
     color: white;
     border: none;
     cursor: pointer;
-    margin: 15px;
     text-align: center;
     transition: background-color 0.2s;
+    border-radius: 8px; /* Added border radius for rounded corners */
+    font-weight: 400; /* Ensure regular font weight */
+    font-size: 1rem; /* Adjust font size if needed */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
+
 
 .view-more-btn:hover {
     background-color: gray;
