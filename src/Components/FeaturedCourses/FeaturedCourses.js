@@ -12,7 +12,7 @@ const FeaturedCourses = () => {
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await axios.get('http://your-django-backend-url/api/courses/'); // Replace with your Django API URL
+                const response = await axios.get('http://127.0.0.1:8000/api/courses/'); // Update with your Django API URL
                 setCourses(response.data);
                 setLoading(false);
             } catch (err) {
@@ -45,21 +45,27 @@ const FeaturedCourses = () => {
             <div className="course-grid">
                 {courses.map((course) => ( 
                     <div className="course-card" key={course.id}>
-                        <div className="course-category">{course.category}</div>
-                        <img src={course.image} alt={course.title} className="course-image" />
-                        <h3 className="course-title">{course.title}</h3>
-                        <p className="course-instructor">by {course.instructor}</p>
+                        <div className="course-category">{course.category.category_name}</div>
+                        <img src={course.course_image} alt={course.course_name} className="course-image" />
+                        <h3 className="course-title">{course.course_name}</h3>
+                        <p className="course-instructor">by {course.instructor.instructor_name}</p>
                         <div className="course-info">
-                            <span>{course.duration}</span>
-                            <span>{course.students} Students</span>
+                            <div className="course-info">
+                                <span className="course-duration">
+                                    <i className="fas fa-clock"></i>
+                                    {course.course_duration}
+                                </span>
+                                <span className="students-count">
+                                    <i className="fas fa-users"></i>
+                                    {course.students_count} Students
+                                </span>
+                            </div>
                         </div>
-                        <div className="course-price">
-                            <span className={course.isDiscounted ? "discounted" : ""}>
-                                {course.originalPrice}
-                            </span>
-                            <span className="current-price">{course.price}</span>
+                        <div className="course-price-container">
+                            <button className="view-more-btn" onClick={() => handleCourseClick(course.id)}>View More</button>
+                            <span className="original-price">{course.original_price}</span>
+                            <span className="price">{course.price}</span>
                         </div>
-                        <button className="view-more-btn" onClick={() => handleCourseClick(course.id)}>View More</button>
                     </div>
                 ))}
             </div>
