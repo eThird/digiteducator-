@@ -22,7 +22,7 @@ import StudentFeedback from './Components/StudentFeedback/StudentFeedback';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import AboutCompany from './Components/AboutCompany/AboutCompany';
 import PopularMentors from './Components/PopularMentors/PopularMentors';
-
+import CourseDetail from './Pages/CourseDetail/CourseDetail';
 
 
 const App = () => {
@@ -52,6 +52,7 @@ const App = () => {
         <Route path="/LandingPage" element={<LandingPage/>}/>
         <Route path="/AboutCompany" element={<AboutCompany/>}/>
         <Route path="/PopularMentors" element={<PopularMentors/>}/>
+        <Route path="/CourseDetail" element={<CourseDetail/>}/>
         
         
  

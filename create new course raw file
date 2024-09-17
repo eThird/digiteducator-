@@ -1,68 +1,71 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './CourseDetail.css';
+import data from '../CourseDetail/coursedetail.json';  // Assuming data is stored in this JSON file
 
-const CreateNewCourse = () => {
-  const [title, setTitle] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
+const CourseDetail = () => {
+    return (
+        <div className="course-detail-container">
+            {/* Breadcrumb Navigation */}
+            <div className="breadcrumb">
+                <a href="#">Home</a> &gt; <a href="#">Categories</a> &gt; <span>{data.courseTitle}</span>
+            </div>
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsSubmitting(true);
+            {/* Course Header */}
+            <div className="course-header">
+                <h1>{data.courseTitle}</h1>
+                <p>{data.courseDescription}</p>
+                <div className="course-rating">
+                    <span> {data.rating} ({data.reviewCount} ratings)</span>
+                    <span>{data.totalHours} Total Hours. {data.lectures} Lectures. {data.level}</span>
+                </div>
+                <p>Created by {data.instructor.name}</p>
+                <div className="languages">
+                    {data.languages.map(lang => (
+                        <span key={lang}>{lang}</span>
+                    ))}
+                </div>
+            </div>
 
-    try {
-      await axios.post("/api/course", { title }); // sending data to API
-      navigate("/Admin-coursepage");
-    } catch (error) {
-      console.log("Something went wrong", error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+            {/* Pricing Section */}
+            <div className="course-pricing">
+                <img src={data.courseImage} alt="Course Banner" />
+                <div className="price-box">
+                    <span className="discount-price">${data.price.discounted}</span>
+                    <span className="original-price">${data.price.original}</span>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+                <div className="social-share">
+                    <a href="#"><img src="facebook-icon.png" alt="Share on Facebook" /></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Share on Twitter" /></a>
+                    <a href="#"><img src="google-icon.png" alt="Share on Google" /></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="Share on LinkedIn" /></a>
+                </div>
+            </div>
 
-  return (
-    <div className="create-new-course-container">
-      <h1 className="create-new-course-title">Name your Course</h1>
-      <p className="create-new-course-description">
-        What would you like to name your course? Don't worry, you can change it
-        later.
-      </p>
-      <form onSubmit={handleSubmit} className="create-new-course-form">
-        <div className="form-item">
-          <label className="form-label">Course Title</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="e.g. 'Advanced Web Development'"
-            disabled={isSubmitting}
-            className="form-input"
-            required
-          />
-          <p className="form-description">
-            What will you teach in this course?
-          </p>
+            {/* Course Description */}
+            <div className="course-description">
+                <h3>Course Description</h3>
+                <p>{data.longDescription}</p>
+            </div>
+
+            {/* Instructor Section */}
+            <div className="instructor">
+                <h3>Instructor</h3>
+                <div className="instructor-info">
+                    <img src={data.instructor.image} alt={data.instructor.name} />
+                    <div>
+                        <h4>{data.instructor.name}</h4>
+                        <p>{data.instructor.title}</p>
+                        <p>{data.instructor.description}</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Syllabus */}
+ 
         </div>
-        <div className="form-actions">
-          <button
-            type="button"
-            onClick={() => navigate("/")}
-            className="form-cancel-button"
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            disabled={!title || isSubmitting}
-            className="form-submit-button"
-          >
-            Continue
-          </button>
-        </div>
-      </form>
-    </div>
-  );
+    );
 };
 
-export default CreateNewCourse;
+export default CourseDetail;
