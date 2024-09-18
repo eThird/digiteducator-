@@ -1,0 +1,76 @@
+.courseoverview-maincontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+}
+.tasks-container{
+    width: 30vw;
+                                                                                   ;
+}
+.courseoverview-leftcontainer{
+    width: 60vw;
+    display: flex;
+
+    flex-direction: column;
+}
+.video-section video {
+    width: 100%;  /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border: none;
+}
+
+.course-overview {
+  font-family: Arial, sans-serif;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  margin-bottom: 20px;
+}
+
+.task-list {
+  margin-top: 10px;
+}
+
+.task-item {
+  margin-bottom: 10px;
+}
+
+.quiz-container {
+  margin-top: 10px;
+}
+
+.quiz-item {
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.quiz-item:hover {
+  background-color: #f0f0f0;
+}
+
+.quiz-display {
+  margin-top: 20px;
+}
+
+.quiz-content {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.quiz-options {
+  margin-top: 10px;
+}
+
+.quiz-option {
+  margin-bottom: 5px;
+}

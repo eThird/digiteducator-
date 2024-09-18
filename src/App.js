@@ -23,6 +23,10 @@ import LandingPage from './Pages/LandingPage/LandingPage';
 import AboutCompany from './Components/AboutCompany/AboutCompany';
 import PopularMentors from './Components/PopularMentors/PopularMentors';
 import CourseDetail from './Pages/CourseDetail/CourseDetail';
+import CourseOverview from './Pages/CourseOverview/CourseOverview'
+import Quiz from './Components/Quiz/Quiz';
+import QuizApp from './Components/Quiz/QuizApp';
+import Taskdetail from './Components/Taskdetail/Taskdetail';
 
 
 const App = () => {
@@ -53,6 +57,10 @@ const App = () => {
         <Route path="/AboutCompany" element={<AboutCompany/>}/>
         <Route path="/PopularMentors" element={<PopularMentors/>}/>
         <Route path="/CourseDetail" element={<CourseDetail/>}/>
+        <Route path="/CourseOverview" element={<CourseOverview/>}/>
+        <Route path="/Quiz" element={<Quiz/>}/>
+        <Route path="/QuizApp" element={<QuizApp/>}/>
+        <Route path="/Taskdetail" element={<Taskdetail/>}/>
         
         
  

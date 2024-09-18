@@ -1,116 +1,227 @@
 {
-  "courseTitle": "Advanced Energy Source Design",
-  "companyLogo": "/instagram.png",
-  "tasks": [
+  "courseTitle": "Course Completion",
+  "sections": [
     {
-      "id": 1,
-      "title": "Energy source design and performance implications",
-      "description": "Understand the impact of different energy sources on engine performance.",
-      "difficulty": "Medium",
-      "time": "2 hours",
-      "current": false,
-      "pages": [
+      "title": "Introduction to UX Design",
+      "open": true,
+      "tasks": [
         {
           "id": 1,
-          "title": "Task overview",
-          "whatYouLearn": [
-            "Relationship between aviation and greenhouse gases",
-            "The different types of alternative jet fuels"
-          ],
-          "whatYouDo": [
-            "Compare and select a new energy source for the advanced concept engine program",
-            "Generate a comprehensive list of alternative energy sources",
-            "Draft a short memo (<300 words) to your lead engineer with your recommendation"
+          "title": "What is User Experience (UX) Design?",
+          "description": "Learn the basics of UX Design.",
+          "time": "4min",
+          "current": true,
+          "completed": true,
+          "video": "https://youtu.be/Abq7jDhNejE?si=oZ02-KYaL_vFfC89",
+          "videooverview": "Video Overview",
+          "KeyLearnings": "Key Learnings and Objective",
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "What do you understand by the term 'User Experience'?",
+              "Options": [
+                "Option 1 - It is about designing the look of the product.",
+                "Option 2 - It involves the overall experience of the user interacting with the product.",
+                "Option 3 - It focuses solely on user interface design."
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "Which of the following is NOT a key principle of UX Design?",
+              "Options": [
+                "Option 1 - User-Centered Design",
+                "Option 2 - Iterative Design",
+                "Option 3 - Aesthetic-Only Design"
+              ]
+            }
           ]
         },
         {
           "id": 2,
-          "title": "Task introduction video",
-          "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          "title": "Historical Overview of UX Design",
+          "description": "Explore the history of UX Design.",
+          "time": "4min",
+          "current": true,
+          "completed": false,
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "Who is considered one of the pioneers of UX Design?",
+              "Options": [
+                "Option 1 - Steve Jobs",
+                "Option 2 - Don Norman",
+                "Option 3 - Tim Berners-Lee"
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "In which decade did the term 'User Experience' become popular?",
+              "Options": [
+                "Option 1 - 1980s",
+                "Option 2 - 1990s",
+                "Option 3 - 2000s"
+              ]
+            }
+          ]
         },
         {
           "id": 3,
-          "title": "Welcome! Before we get started...",
-          "content": "This is some introductory text that will help you get started. It provides an overview of the course and what to expect."
-        },
-        {
-          "id": 4,
-          "topicTitle": "Topic Title",
-          "topicExplanation": "This is the explanation for the topic. It provides detailed information about the topic and its relevance."
-        },
-        {
-          "id": 5,
-          "title": "What you'll need to do",
-          "assignmentExplanation": "This page provides detailed instructions on how to complete the assignment, including any specific requirements and steps to follow."
-        },
-        {
-          "id": 6,
-          "title": "Time to get to work",
-          "content": "This is where the main content goes.",
-          "downloadLink": "/path/to/assignment.docx",
-          "resourcesTitle": "Here are some resources to help you",
-          "resourcesContent": "This is some content to help with the assignment.",
-          "usefulLinksTitle": "Useful Links:",
-          "usefulLinks": [
-            { "url": "https://example.com", "text": "Example Link" }
+          "title": "Understanding User-Centered Design",
+          "description": "Understand the key principles of user-centered design.",
+          "time": "4min",
+          "current": true,
+          "completed": false,
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "What is the primary focus of user-centered design?",
+              "Options": [
+                "Option 1 - Aesthetic appeal",
+                "Option 2 - Meeting user needs and preferences",
+                "Option 3 - Technology innovation"
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "Which method is commonly used in user-centered design?",
+              "Options": [
+                "Option 1 - Usability testing",
+                "Option 2 - A/B testing",
+                "Option 3 - Competitive analysis"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": 2,
-      "title": "Next Generation Fuels",
-      "description": "Explore and evaluate next-gen fuels for aviation.",
-      "difficulty": "High",
-      "time": "3 hours",
-      "current": true,
-      "pages": [
-        {
-          "id": 1,
-          "title": "Task overview",
-          "whatYouLearn": [
-            "Relationship between aviation and greenhouse gases",
-            "The different types of alternative jet fuels"
-          ],
-          "whatYouDo": [
-            "Compare and select a new energy source for the advanced concept engine program",
-            "Generate a comprehensive list of alternative energy sources",
-            "Draft a short memo (<300 words) to your lead engineer with your recommendation"
-          ]
-        },
-        {
-          "id": 2,
-          "title": "Task introduction video",
-          "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
-        },
-        {
-          "id": 3,
-          "title": "Welcome! Before we get started...",
-          "content": "This is some introductory text that will help you get started. It provides an overview of the course and what to expect."
-        },
+      "title": "Basics of User-Centered Design",
+      "open": false,
+      "tasks": [
         {
           "id": 4,
-          "topicTitle": "Topic Title",
-          "topicExplanation": "This is the explanation for the topic. It provides detailed information about the topic and its relevance."
+          "title": "The Role of UX Design in Digital Products",
+          "description": "Understand how UX design applies to digital products.",
+          "time": "4min",
+          "current": false,
+          "completed": false,
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "What is a key benefit of UX design in digital products?",
+              "Options": [
+                "Option 1 - Increased user satisfaction",
+                "Option 2 - Higher production costs",
+                "Option 3 - Limited market reach"
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "Which of the following best describes UX design?",
+              "Options": [
+                "Option 1 - Designing for user interaction and satisfaction",
+                "Option 2 - Focusing on backend programming",
+                "Option 3 - Prioritizing marketing strategies"
+              ]
+            }
+          ]
         },
         {
           "id": 5,
-          "title": "What you'll need to do",
-          "assignmentExplanation": "This page provides detailed instructions on how to complete the assignment, including any specific requirements and steps to follow."
-        },
-        {
-          "id": 6,
-          "title": "Time to get to work",
-          "content": "This is where the main content goes.",
-          "downloadLink": "/path/to/assignment.docx",
-          "resourcesTitle": "Here are some resources to help you",
-          "resourcesContent": "This is some content to help with the assignment.",
-          "usefulLinksTitle": "Useful Links:",
-          "usefulLinks": [
-            { "url": "https://example.com", "text": "Example Link" }
+          "title": "Introduction to UX Design Tools and Techniques",
+          "description": "Learn about the tools and techniques used in UX Design.",
+          "time": "4min",
+          "current": false,
+          "completed": false,
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "Which tool is commonly used for wireframing in UX design?",
+              "Options": [
+                "Option 1 - Sketch",
+                "Option 2 - Excel",
+                "Option 3 - Photoshop"
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "What is the purpose of user personas in UX design?",
+              "Options": [
+                "Option 1 - To represent target users and their needs",
+                "Option 2 - To define design color schemes",
+                "Option 3 - To manage project budgets"
+              ]
+            }
           ]
         }
-        
+      ]
+    },
+    {
+      "title": "Elements of User Experience",
+      "open": false,
+      "tasks": [
+        {
+          "id": 6,
+          "title": "Introduction to the Elements of UX",
+          "description": "Learn about the different elements of user experience.",
+          "time": "5min",
+          "current": false,
+          "completed": false,
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "Which element is NOT typically considered a part of UX?",
+              "Options": [
+                "Option 1 - Usability",
+                "Option 2 - Aesthetics",
+                "Option 3 - Backend infrastructure"
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "What does 'usability' refer to in UX design?",
+              "Options": [
+                "Option 1 - How easy and efficient a product is to use",
+                "Option 2 - The product's visual appeal",
+                "Option 3 - The cost of the product"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Visual Design Principles",
+      "open": false,
+      "tasks": [
+        {
+          "id": 7,
+          "title": "Introduction to Visual Design",
+          "description": "Learn about visual design principles.",
+          "time": "6min",
+          "current": false,
+          "completed": false,
+          "Quizzes": [
+            {
+              "QuesNo": 1,
+              "Question": "Which principle focuses on the arrangement of elements to guide user attention?",
+              "Options": [
+                "Option 1 - Visual Hierarchy",
+                "Option 2 - Color Theory",
+                "Option 3 - Typography"
+              ]
+            },
+            {
+              "QuesNo": 2,
+              "Question": "What is the role of 'white space' in visual design?",
+              "Options": [
+                "Option 1 - To create breathing room and improve readability",
+                "Option 2 - To add decorative elements",
+                "Option 3 - To increase the text density"
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
