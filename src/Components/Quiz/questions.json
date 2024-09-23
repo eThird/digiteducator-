@@ -1,14 +1,52 @@
 [
     {
         "question": "What is the capital of France?",
-        "options": ["Berlin", "Madrid", "Paris", "Lisbon"]
+        "options": ["Berlin", "Madrid", "Paris", "Rome"],
+        "correctOption": "Paris"
     },
     {
-        "question": "What is 2 + 2?",
-        "options": ["3", "4", "5", "6"]
+        "question": "Who wrote 'Hamlet'?",
+        "options": ["Charles Dickens", "J.K. Rowling", "William Shakespeare", "Leo Tolstoy"],
+        "correctOption": "William Shakespeare"
     },
     {
-        "question": "What is the largest ocean?",
-        "options": ["Atlantic", "Indian", "Arctic", "Pacific"]
+        "question": "What is the largest planet in our solar system?",
+        "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+        "correctOption": "Jupiter"
+    },
+    {
+        "question": "Which element has the chemical symbol 'O'?",
+        "options": ["Oxygen", "Osmium", "Oganesson", "Osmium"],
+        "correctOption": "Oxygen"
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+        "correctOption": "Leonardo da Vinci"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": ["Iron", "Diamond", "Gold", "Platinum"],
+        "correctOption": "Diamond"
+    },
+    {
+        "question": "In what year did the Titanic sink?",
+        "options": ["1905", "1912", "1918", "1925"],
+        "correctOption": "1912"
+    },
+    {
+        "question": "Which is the longest river in the world?",
+        "options": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+        "correctOption": "Nile"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "options": ["6", "8", "10", "12"],
+        "correctOption": "8"
+    },
+    {
+        "question": "Who discovered penicillin?",
+        "options": ["Marie Curie", "Alexander Fleming", "Isaac Newton", "Albert Einstein"],
+        "correctOption": "Alexander Fleming"
     }
 ]

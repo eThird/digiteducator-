@@ -6,7 +6,7 @@ import Coursepage from './Pages/Course/Coursepage'
 import Footer from './Components/Footer/Footer';
 import Overview from './Pages/Overviewpage/Overview';
 import Pagination from './Components/Paginations/Pagination';
-import Tasktracker from './Components/Tasktracker/Tasktracker';
+
 import Sidebar from './Pages/Admin/Admin-components/Sidebar/Sidebar';
 import Admin from './Pages/Admin/Admin';
 import Createcourse from './Pages/Admin/Adminpages/Createcourse/Createcourse';
@@ -41,7 +41,7 @@ const App = () => {
         <Route path="/Footer" element={<Footer/>} />
         <Route path="/Overview" element={<Overview/>} />
         <Route path="/Pagination" element={<Pagination/>} />
-        <Route path="/Tasktracker" element={<Tasktracker/>}/>
+
         <Route path="/Sidebar" element={<Sidebar/>}/>
         <Route path="/Admin" element={<Admin/>}/>
         <Route path="/Createcourse" element={<Createcourse/>}/>
