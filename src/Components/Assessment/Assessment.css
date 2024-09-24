@@ -1,0 +1,106 @@
+.Assessment-maincontainer {
+    width: 100%;
+    max-width: 800px;
+    
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.Assessment-overview {
+    
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.Assessment-overview h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overview-detail p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.Assessment-Instructions {
+    margin-bottom: 20px;
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+
+.Assessment-Instructions h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.Instruction-detail ol {
+    padding-left: 20px;
+}
+
+.Instruction-detail li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.Assessment-download-upload {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Assessment-download-section,
+.Assessment-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Assessment-download-upload img {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.download-here, .Upload-here {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.download-here:hover, .Upload-here:hover {
+    transform: scale(1.05);
+}
+
+h6 {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.upload-success {
+    color: green;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: thin;
+}
+
+.file-display {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.file-name {
+    margin-right: 10px;
+}
+
+.remove-file {
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}

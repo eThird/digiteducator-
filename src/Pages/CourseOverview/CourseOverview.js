@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './CourseOverview.css';
 import Taskdetail from '../../Components/Taskdetail/Taskdetail'; // Import Taskdetail
 import QuizApp from '../../Components/Quiz/QuizApp';
+import Assessment from '../../Components/Assessment/Assessment';
 
 const CourseOverview = () => {
     const [tasks, setTasks] = useState([]);
@@ -57,7 +58,9 @@ const CourseOverview = () => {
                 );
                 break;
             case 'Assignments':
-                setTabContent('Assignment instructions and submissions will appear here.');
+                setTabContent(
+                    <Assessment/>
+                );
                 break;
             case 'Study Materials':
                 setTabContent('Study materials such as PDFs and links will be displayed here.');

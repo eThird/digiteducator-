@@ -1,0 +1,11 @@
+{
+    "overview": "After discussing the task with a senior engineer, you have received a few helpful parameters and conversions to get you started in your research. Additionally, they provided you with a template to help you gather more data to guide the decision-making process. These are all provided below.",
+    "instructions": [
+      "Use the 'Fuel Comparison Template' below.",
+      "Add other energy sources and metrics as you see fit (use your engineering judgment to decide what is essential!).",
+      "Use consistent units (SI or Imperial) for all of the metrics, and state your unit assumption when presenting the data.",
+      "Take notes on various implications of the energy sources, such as infrastructure requirements, relative difficulty to manufacture, etc.",
+      "Once you have compiled all the data for the various fuel/energy sources, decide which energy source you think should be selected for the next-generation propulsion system."
+    ]
+  }
+  
