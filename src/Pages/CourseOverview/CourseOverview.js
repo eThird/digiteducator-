@@ -4,6 +4,7 @@ import './CourseOverview.css';
 import Taskdetail from '../../Components/Taskdetail/Taskdetail'; // Import Taskdetail
 import QuizApp from '../../Components/Quiz/QuizApp';
 import Assessment from '../../Components/Assessment/Assessment';
+import Studymaterial from '../../Components/Studymaterial/Studymaterial'
 
 const CourseOverview = () => {
     const [tasks, setTasks] = useState([]);
@@ -63,7 +64,9 @@ const CourseOverview = () => {
                 );
                 break;
             case 'Study Materials':
-                setTabContent('Study materials such as PDFs and links will be displayed here.');
+                setTabContent(
+                    <Studymaterial/>
+                );
                 break;
             default:
                 setTabContent('');

@@ -1,0 +1,48 @@
+.Studymaterial-container {
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.documents-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between documents */
+}
+
+.documents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    padding: .5%;
+    gap: 20px;
+    border-radius: 3px;
+    width: calc(50% - 10px); /* Two items per row */
+    position: relative; /* Needed for tooltip positioning */
+}
+
+.download-icon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+a:hover .tooltip {
+    display: block; /* Show tooltip on hover of the link */
+}

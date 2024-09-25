@@ -28,6 +28,7 @@ import Quiz from './Components/Quiz/Quiz';
 import QuizApp from './Components/Quiz/QuizApp';
 import Taskdetail from './Components/Taskdetail/Taskdetail';
 import Assessment from './Components/Assessment/Assessment';
+import Studymaterial from './Components/Studymaterial/Studymaterial';
 
 
 const App = () => {
@@ -63,6 +64,7 @@ const App = () => {
         <Route path="/QuizApp" element={<QuizApp/>}/>
         <Route path="/Taskdetail" element={<Taskdetail/>}/>
         <Route path="/Assessment" element={<Assessment/>}/>
+        <Route path="/Studymaterial" element={<Studymaterial/>}/>
         
         
  
