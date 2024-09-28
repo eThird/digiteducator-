@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import StudentProfile from "./Pages/StudentProfile/StudentProfile";
+import EnrolledCourses from "./Pages/EnrolledCourses/EnrolledCourses";
 import './StudentDashboard.css';
 
 const StudentDashboard = () => {
@@ -10,7 +11,7 @@ const StudentDashboard = () => {
       case 'Profile':
         return <StudentProfile/>;
       case 'My Courses':
-        return 'Students enrolled courses will be displayed here';
+        return <EnrolledCourses/>;
 
       default:
         return 'student dashboard';

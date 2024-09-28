@@ -31,7 +31,7 @@ import Assessment from './Components/Assessment/Assessment';
 import Studymaterial from './Components/Studymaterial/Studymaterial';
 import StudentDashboard from './Pages/StudentDashboard/StudentDashboard';
 import StudentProfile from './Pages/StudentDashboard/Pages/StudentProfile/StudentProfile';
-import EnrolledCourses from './Pages/StudentDashboard/Pages/MyCourses/EnrolledCourses';
+import EnrolledCourses from './Pages/StudentDashboard/Pages/EnrolledCourses/EnrolledCourses';
 
 
 const App = () => {
