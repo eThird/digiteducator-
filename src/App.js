@@ -30,6 +30,8 @@ import Taskdetail from './Components/Taskdetail/Taskdetail';
 import Assessment from './Components/Assessment/Assessment';
 import Studymaterial from './Components/Studymaterial/Studymaterial';
 import StudentDashboard from './Pages/StudentDashboard/StudentDashboard';
+import StudentProfile from './Pages/StudentDashboard/Pages/StudentProfile/StudentProfile';
+import EnrolledCourses from './Pages/StudentDashboard/Pages/MyCourses/EnrolledCourses';
 
 
 const App = () => {
@@ -67,6 +69,8 @@ const App = () => {
         <Route path="/Assessment" element={<Assessment/>}/>
         <Route path="/Studymaterial" element={<Studymaterial/>}/>
         <Route path="/StudentDashboard" element={<StudentDashboard/>}/>
+        <Route path="/StudentProfile" element={<StudentProfile/>}/>
+        <Route path="/EnrolledCourses" element={<EnrolledCourses/>}/>
         
         
  
