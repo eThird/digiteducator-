@@ -1,26 +1,31 @@
-/* Taskdetail.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 .details {
-    max-width: 100%;
-   
+    max-width: 110%; /* Set to 100% to utilize full width */
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Margin on the left */
+    margin-right: -50px; /* Increased margin on the right to move the card further from the right edge */
+    border: 1px solid #ddd; /* Add a light gray border */
+    border-radius: 8px; /* Keep rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .video-overview, .key-learnings {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners for inner sections */
+    border: 1px solid #ddd; /* Optional: add border for inner sections */
+    background-color: #fff; /* Optional: set background color for better visibility */
+    font-weight: normal; /* Use normal font weight (not bold) */
 }
 
-h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
+.details h3 {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    margin-left: 1px; /* Adjust left margin */
+    font-size: 1.5em; /* Maintain font size */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: normal; /* Use normal font weight (not bold) */
 }
 
 p {

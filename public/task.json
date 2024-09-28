@@ -12,7 +12,7 @@
           "time": "4min",
           "current": true,
           "completed": true,
-          "video": "https://youtu.be/Abq7jDhNejE?si=oZ02-KYaL_vFfC89",
+          "video": "https://www.youtube.com/embed/roz9sXFkTuE",
           "videooverview": "Video Overview",
           "KeyLearnings": "Key Learnings and Objective",
           "Quizzes": [
@@ -42,7 +42,8 @@
           "description": "Explore the history of UX Design.",
           "time": "4min",
           "current": true,
-          "completed": false,
+          "completed": true,
+          "video": "https://youtu.be/Abq7jDhNejE?si=oZ02-KYaL_vFfC89",
           "Quizzes": [
             {
               "QuesNo": 1,

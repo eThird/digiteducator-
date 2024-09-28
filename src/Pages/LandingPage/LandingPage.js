@@ -1,26 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LandingPage.css'; // Link to CSS
 import Navbar from '../../Components/Navbar/Navbar'; // Importing the Navbar
-import DisplayCategory from '../../Components/DisplayCategory/DisplayCategory'
-import FeaturedCourses from '../../Components/FeaturedCourses/FeaturedCourses'
+import DisplayCategory from '../../Components/DisplayCategory/DisplayCategory';
+import FeaturedCourses from '../../Components/FeaturedCourses/FeaturedCourses';
 import Footer from '../../Components/Footer/Footer';
 import AboutCompany from '../../Components/AboutCompany/AboutCompany';
 import StudentFeedback from '../../Components/StudentFeedback/StudentFeedback';
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  const [courses, setCourses] = useState([
+    // Add your course data here. Example:
+    { id: 1, title: 'React for Beginners' },
+    { id: 2, title: 'Advanced JavaScript' },
+    { id: 3, title: 'CSS Grid Masterclass' }
+    // Add more courses as necessary
+  ]);
+
+  // Handle course search functionality
+  const handleSearch = (query) => {
+    const filteredCourses = courses.filter(course =>
+      course.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setCourses(filteredCourses);
+  };
+
+  // Join Course Handler
+  const handleJoinCourse = () => {
+    navigate('/courses'); // Replace with the actual path of your courses page
+  };
+
+  // Scroll to section
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offset = 100; // Adjust this value as needed
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="landing-container">
-      <Navbar /> {/* Adding Navbar at the top */}
-      
+      <Navbar scrollToSection={scrollToSection} onSearch={handleSearch} />
+
       {/* Header Section */}
-      <div className="header-section">
+      <div className="header-section" id="home">
         <div className="text-content">
           <h1>
-            Online <span className="highlight-text">Learning</span> you can access anywhere easily!
+            <span className="regular-text">Online</span> <span className="highlight-text">Learning</span><br />
+            <span className="blue-bold-text">you can access</span><span className="regular-text"> any</span><br />
+            <span className="regular-text">where easily!</span>
           </h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....</p>
           <div className="cta-container">
-            <button className="cta-button">Join Course</button>
+            <button className="cta-button" onClick={handleJoinCourse}>
+              JOIN COURSE
+            </button>
             <div className="play-button">
               <img src="/playicon.png" alt="Play Button" />
               <span>See how it works?</span>
@@ -37,13 +79,16 @@ const LandingPage = () => {
       {/* Stats Section */}
       <div className="stats-section">
         <div className="stat-item">150+ <br /> Total Courses</div>
-        <div className="stat-item">250 <br /> Total Instructor</div>
-        <div className="stat-item">35K+ <br /> Total Student</div>
+        <div className="stat-item">250 <br /> Total Instructors</div>
+        <div className="stat-item">35K+ <br /> Total Students</div>
       </div>
 
       {/* Why we are best section */}
       <div className="why-best-section">
-        <h2>Why <span className="highlight-text">we are</span> best from others?</h2>
+        <h2>
+          <span className="bold-text blue-text">Why we are </span>
+          <span className="regular-text">best from others?</span>
+        </h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
         <div className="why-cards">
           <div className="why-card">
@@ -89,56 +134,46 @@ const LandingPage = () => {
           <img src="./Slackicon.png" alt="Slack" />
         </div>
       </div>
+
+      {/* Category and Course Sections */}
       <div className='category-section'>
-        <DisplayCategory/>
+        <DisplayCategory />
       </div>
+
+      <div className='course-section' id="course-section">
+        <FeaturedCourses courses={courses} />
+      </div>
+
+      {/* Skill Growth Section */}
       <div className='GrowYourSkill-Section'>
         <div className='GrrowImage-contetn'>
-        <img src="./bookandpeople.png" alt="books and people" />
+          <img src="./bookandpeople.png" alt="books and people" />
         </div>
         <div className='GrrowText-contetn'>
-        <h2>Grow us your skill with LearnPress LMS</h2>
-        <p>We denounce with righteous indignation and dislike men who
-         are so beguiled and demoralized that cannot trouble.
-         </p>
-         <div className='bennifits'>
-         <img src="./tick.png" alt="Effective Interaction Icon" />
-         <h5>Certifications</h5>
-         </div>
-         <div className='bennifits'>
-         <img src="./tick.png" alt="Effective Interaction Icon" />
-         <h5>Certifications</h5>
-         </div>
-         <div className='bennifits'>
-         <img src="./tick.png" alt="Effective Interaction Icon" />
-         <h5>Certifications</h5>
-         </div>
-         <div className='bennifits'>
-         <img src="./tick.png" alt="Effective Interaction Icon" />
-         <h5>Certifications</h5>
-         </div>
-         <div className='bennifits'>
-         <img src="./tick.png" alt="Effective Interaction Icon" />
-         <h5>Certifications</h5>
-         </div>
-         <button>Explore Now</button>
+          <h2>Grow your skill with LearnPress LMS</h2>
+          <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
+          <div className='bennifits'>
+            <img src="./tick.png" alt="Tick" />
+            <h5>Certifications</h5>
+          </div>
+          <button onClick={handleJoinCourse}>Explore Now</button>
         </div>
-
       </div>
-      <div className='Featuredcourses-section'>
-                <FeaturedCourses/>
-        </div>
-        <div className='About-section'>
-            <AboutCompany/>
-        </div>
-    <div className='feedback-section'>
-        <StudentFeedback/>
-    </div>
 
+      {/* About Section */}
+      <div className='About-section' id="about">
+        <AboutCompany />
+      </div>
+
+      {/* Feedback Section */}
+      <div className='feedback-section'>
+        <StudentFeedback />
+      </div>
+
+      {/* Footer Section */}
       <div className='Footer-container'>
-                <Footer/>
-        </div>
-
+        <Footer />
+      </div>
     </div>
   );
 };

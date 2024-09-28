@@ -7,22 +7,22 @@ const AboutCompany = () => {
     <div className="about-company-section">
       <h2 className="about-title">About <span>Company</span></h2>
       <p className="about-description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s....
       </p>
 
       <div className="about-video-container">
-        <iframe 
-          className="about-video" 
-          src={aboutData.videoLink} 
-          title="About video" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        <iframe
+          className="about-video"
+          src={aboutData.videoLink}
+          title="About video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
       </div>
 
       <div className="enrollment-section">
-        
+
         <img src={`${process.env.PUBLIC_URL}/bluedisk.png`} alt="Blue circle" className="blue-circle"/>
         <img src={`${process.env.PUBLIC_URL}/girlwithbooks.png`} alt="Student" className="student-image"/>
 

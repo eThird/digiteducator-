@@ -20,11 +20,13 @@ const StudentFeedback = () => {
     return (
         <div className="student-feedback">
             <h2>
-                <span className="highlight">What</span> our students Say
+                <span className="highlight">What</span> <span className="student-say">our students say</span>
             </h2>
+
             <p className="intro-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....</p>
             
             <div className="feedback-container">
+                <div className="yellow-circle"></div> {/* Add yellow circle div */}
                 <div className="quote-icon">“</div>
                 <div className="feedback-text">
                     <p>{feedback}</p>
@@ -35,6 +37,7 @@ const StudentFeedback = () => {
                     <p className="student-country">{country}</p>
                 </div>
             </div>
+
         </div>
     );
 };

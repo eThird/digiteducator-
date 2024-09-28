@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import Coursepage from '../Course/Coursepage';
 import Socicalmedialinks_coloured from '../../Components/Socialmedia/Socialmedialinks_coloured';
+import FeaturedCourses from '../../Components/FeaturedCourses/FeaturedCourses'
 const Home = () => {
   const coursePageRef = useRef(null);
 
@@ -15,7 +16,7 @@ const Home = () => {
     <div className="home-container">
        <Navbar />
       <div className="home-content">
-     
+
         <div className='home-elements'>
           <div className="home-left">
             <h1>Grow up your skills by online courses with Digit Educator</h1>
@@ -47,8 +48,8 @@ const Home = () => {
         <Socicalmedialinks_coloured />
       </div>
 
-      <div ref={coursePageRef}>
-        <Coursepage />
+      <div className='course-section'>
+        <FeaturedCourses/>
       </div>
 
       <Footer />

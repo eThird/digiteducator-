@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Container for the shopping cart */
+.shopping-cart-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Set Poppins as default font */
+}
+
+/* Left section - Cart items */
+.cart-items {
+  flex: 0.7;
+}
+
+/* Header - Shopping Cart title and breadcrumb */
+.shopping-cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Reduce the bottom margin */
+}
+
+/* Styling for the Shopping Cart title */
+.shopping-cart-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0; /* Remove margin */
+  margin-top: -20px;
+}
+
+.breadcrumb {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6c757d;
+  margin-right: 640px;
+}
+
+/* Styling for the card containing cart items */
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+/* Divider line styling */
+.divider {
+  border: 0; /* Remove default border */
+  border-top: 1px solid #e0e0e0; /* Add a top border */
+  margin: 15px 0; /* Adjust margins for spacing */
+  width: 97%; /* Set the desired width */
+  margin-left: auto; /* Center the divider */
+  margin-right: auto; /* Center the divider */
+}
+
+/* Individual cart item styling */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item img {
+  width: 120px;
+  height: 70px;
+  margin-right: 20px;
+  margin-top: -55px;
+  border-radius: 7px;
+}
+
+.course-details {
+  flex: 1;
+}
+
+.course-details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.course-details p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.shopping_course-rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 5px 0;
+  color: blue; /* Set color to blue for the rating */
+}
+
+.course-rating .rating {
+  margin-right: 5px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.course-rating .stars {
+  color: #ff9800;
+  margin-right: 5px;
+}
+
+.course-rating .rating-count {
+  color: #6c757d;
+}
+
+.course-actions {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.course-actions span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.course-actions span:hover {
+  text-decoration: underline;
+}
+
+.course-price {
+  font-size: 1.2rem; /* Adjust font size */
+
+}
+
+.original-price {
+  color: red; /* Color for original price */
+  text-decoration: line-through; /* Strikethrough effect */
+  font-size: 1rem; /* Slightly smaller font size */
+
+}
+
+.discounted-price {
+  color: green; /* Color for discounted price */
+  font-weight: bold; /* Make the discounted price bold */
+}
+
+/* Container for Order Summary and Title */
+.order-summary-container {
+  flex: 0.3;
+  padding: 10px;
+}
+
+/* Styling for the "Order Details" title */
+.order-details-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold; /* Bold text */
+  font-size: 24px;
+  margin-bottom: 10px; /* Add some space between the title and the card */
+  margin-top: 26px;
+}
+
+/* Right section - Order Summary */
+.order-summary {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: white; /* Ensure background matches the rest of the design */
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.summary-item.total {
+  font-weight: bold;
+  border-top: 1px solid #e0e0e0; /* Add a line above the total */
+  padding-top: 10px; /* Add some space between the line and the content */
+  margin-top: 15px; /* Add some margin for spacing from the previous items */
+}
+
+/* Coupon Code Section */
+.coupon-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.coupon-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.apply-coupon-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-coupon-button:hover {
+  background-color: #0056b3;
+}
+
+/* Message after coupon is applied */
+.coupon-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.coupon-message::before {
+  color: #28a745;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.coupon-message.success {
+  background-color: #d4edda; /* Light green background */
+  border-color: #c3e6cb; /* Slightly darker green border */
+  color: #155724; /* Dark green text */
+}
+
+.coupon-message.success:hover {
+  background-color: #c3e6cb; /* Slightly darker on hover */
+}
+
+
+/* Default blue checkout button */
+.blue-button {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Green "Enroll for Free" button */
+.green-button {
+  background-color: #28a745;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.blue-button:hover,
+.green-button:hover {
+  opacity: 0.9;
+}
+
+
+/* Course card in order summary */
+.course-card2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out; /* Add hover effect transition */
+  border: 1px solid #d0d0d0; /* Light border */
+}
+
+.course-card2:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.course-card2 img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded image */
+}
+
+.course-card2 .course-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns content evenly */
+}
+
+.course-card2 .course-info h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  font-weight: bold; /* Make the font bold */
+}
+
+.course-card2 .course-info .course-meta {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Aligns details across the same line */
+}
+
+.course-card2 .course-info .course-meta p {
+  margin: 0;
+}

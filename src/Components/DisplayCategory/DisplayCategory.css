@@ -1,75 +1,88 @@
-.category-container {
-    text-align: center;
-    padding: 20px;
-  }
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); /* Import Poppins font */
 
-  .header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2%;
-  }
+/* Container and Header Styling */
+.category-container {
+  text-align: center;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to entire section */
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
 
 .title {
   color: black;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400; /* Normal weight */
   margin: 0;
   flex: 1;
   text-align: left;
 }
-  
+
 .subtitle {
   color: rgb(116, 116, 116);
   font-size: 1.2rem;
   margin: 0;
-  text-align: center;
+  text-align: right; /* Align text to the right */
   flex: 1;
 }
-  
-  .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .category-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .icon-container {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
-  
-  .category-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .category-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  
-  .course-count {
-    font-size: 0.9rem;
-    color: rgb(56, 55, 55);
-  }
-  
+
+
+/* Category Grid and Card Styling */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 220px; /* Fixed width for square shape */
+  height: 200px; /* Fixed height to match width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.category-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.course-count {
+  font-size: 0.9rem;
+  color: rgb(56, 55, 55);
+}

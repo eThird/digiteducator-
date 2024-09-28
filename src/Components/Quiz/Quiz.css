@@ -1,6 +1,6 @@
 .quiz-container {
-    max-width: 100%;
-    margin: auto;
+    max-width: 120%; /* Increase max-width for more space */
+    margin: 0px -45px 20px 20px; /* Left: 30px, Right: 20px */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -10,43 +10,64 @@
 }
 
 .question-container {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 24px; /* Set font size for the question */
+    margin-bottom: 20px; /* Space below the question */
+    color: #333; /* Text color */
+}
+
+.question-container p {
+    font-weight: bold; /* Make question text bold */
+    margin: 0; /* Remove default margin to align better */
+    color: black;
 }
 
 .options-container {
     margin-bottom: 20px;
 }
 
+.options-container ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
 .option {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #007BFF;
+    padding: 20px; /* Increased padding for a larger clickable area */
+    margin: 5px 0; /* Maintain vertical spacing between options */
+    border: 1px solid #ccc; /* Set a default border color */
     border-radius: 5px;
-    background-color: #f8f9fa;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s; /* Add border-color transition */
     cursor: pointer;
+    width: 100%; /* Make the option fill the width of its container */
+    font-weight: normal; /* Make option text normal (not bold) */
+    text-align: left; /* Align text to the left */
 }
 
+/* Hover effects for borders */
 .option:hover {
-    background-color: #007BFF;
-    color: white;
+    border-color: #007BFF; /* Change border color on hover */
+    background-color: #007BFF; /* Maintain hover background color */
+    color: white; /* Hover text color */
 }
 
+/* Styles for correct and wrong options */
 .correct {
-    background-color: #28a745 !important;
+    background-color: #28a745 !important; /* Green for correct */
     color: white;
+    border-color: #28a745; /* Match border color for correct answers */
 }
 
 .wrong {
-    background-color: #dc3545 !important;
+    background-color: #dc3545 !important; /* Red for wrong */
     color: white;
+    border-color: #dc3545; /* Match border color for wrong answers */
 }
 
 .navigation-buttons {
-    display: flex;
-    justify-content: end;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Optional: Add space above navigation buttons */
+    width: 100%; /* Ensure it takes the full width */
 }
 
 .nav-button {
@@ -65,8 +86,38 @@
 }
 
 .question-number-display {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
+    position: relative; /* Position relative for absolute positioning of the bar */
+    width: 100%; /* Full width of the container */
+    height: 25px; /* Set a height for the progress representation */
+    background-color: #e0e0e0; /* Light grey background for the progress track */
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px 0; /* Vertical spacing */
+    overflow: hidden; /* Hide overflow for the inner progress */
 }
+
+.question-number-display h2 {
+    position: absolute; /* Position text over the bar */
+    width: 100%; /* Full width for text */
+    text-align: center; /* Center align text */
+    margin: 0; /* Remove default margin */
+    color: #333; /* Text color */
+    font-weight: normal; /* Set font-weight to normal for smaller text */
+    font-size: 14px; /* Smaller font size for the heading */
+    top: 50%; /* Center the text vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+
+
+.quiz-closed-message {
+    padding: 20px;
+    border: 1px solid #28a745; /* Green border for completion */
+    border-radius: 8px;
+    background-color: white;
+    color: #155724; /* Darker green text */
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    margin: 20px;
+}
+

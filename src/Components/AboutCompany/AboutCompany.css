@@ -1,139 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); /* Import Poppins font */
+
 .about-company-section {
-    width: 100%;
-    padding: 20px;
+    width: 100vw; /* Full viewport width */
+    padding: 20px 0px 20px 0px;
+    margin: 0 60px 0 0; /* No left margin, 20px right margin */
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .about-title {
-    font-size: 32px;
-    font-weight: bold;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+
+.about-title {
+    font-size: 52px;
     text-align: center;
-  }
-  
-  .about-title span {
-    color: #4a90e2; /* Blue color for 'Company' */
-  }
-  
-  .about-description {
+    font-family: 'Poppins', sans-serif;
+    color: blue;
+    font-weight: bold; /* Make 'About' bold */
+    width: 100%; /* Span full width */
+}
+
+.about-title span {
+    color: black;
+    font-size: 52px;
+}
+
+.about-description {
     text-align: center;
     font-size: 16px;
     margin-bottom: 20px;
-  }
-  
-  .about-video-container {
+}
+
+.about-video-container {
     position: relative;
-    width: 50%;
-    height: 60vh;
+    width: 70%;
+    height: 80vh;
     margin-bottom: 40px;
+    margin-left: auto; /* Aligns container to the right */
+    margin-right: 10%; /* Adjust this value to move the container to the right */
     z-index: 1;
-  }
-  
-  .about-video {
+}
+
+.about-video {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-  }
-  
-  .enrollment-section {
+    border-radius: 30px;
+}
+
+
+
+.enrollment-section {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
-    height: 90vh;
+    width: 100vw; /* Full viewport width */
+    height: 74vh;
     background-color: #ffdd00;
     justify-content: space-between;
-    padding-right: 20px;
-  }
-  
-  .blue-circle {
+    padding-right: 20px; /* No padding on left side */
+    margin: 0; /* No left margin */
+}
+
+.blue-circle {
     position: absolute;
     top: -65%;
-    
-    width: 500px;
-    
-  }
-  
-  .student-image {
+    left: 1.6%;
+    width: 570px;
+}
+
+.student-image {
     height: 680px;
+    top: 10%; /* Adjust this value to move the image down */
+    left: 20%; /* Increased left margin to move the image more to the right */
     border-radius: 10px;
-   
     z-index: 1;
-    
-  }
-  
-  .enrollment-content {
+}
+
+
+.enrollment-content {
     width: 40%;
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    
-    
-   
-  
-  }
-  
-  .enrollment-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .enrollment-content p {
-    margin-bottom: 20px;
-  }
-  .Enrolment-list {
+    gap: 20px; /* Space between all child elements */
+}
+
+.enrollment-content h1 {
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
+    font-weight: bold; /* Make text bold */
+    font-size: 50px; /* Adjust font size as needed */
+    margin-top: -50px; /* Adjust this value to move the heading up */
+}
+
+
+.enrollment-content p {
+    margin-bottom: 40px; /* Add space below the paragraph */
+}
+
+.Enrolment-list {
     color: black;
-    background-color: #f4f4f4; /* Lighter grey background for a cleaner look */
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: row;
     gap: 20px;
-    height: 60px; /* Slightly taller for better visual balance */
-    border-radius: 12px; /* Slightly larger radius for a more modern look */
+    height: 60px;
+    border-radius: 12px;
     align-items: center;
-    padding: 0 15px; /* Added padding for spacing inside the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+
 .number-div {
-  width: 40px; /* Fixed width for a more consistent size */
-  height: 40px; /* Same height as width to make it a perfect square */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 2px solid grey; /* Adjusted border style */
-  background-color: white; /* Background color for the number circle */
-  border-radius: 50%; /* Rounded corners for a circular shape */
-  font-weight: bold; /* Bold font for emphasis */
-  font-size: 16px; /* Adjusted font size for better readability */
-  color: #333; /* Darker text color for better contrast */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid grey;
+    background-color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
 }
-  
-  .left-arrow1 {
+
+.left-arrow1 {
     position: absolute;
     left: 56%;
     bottom: 38%;
     width: 40px;
-  }
+}
+
 .left-arrow2 {
     position: absolute;
     left: 56%;
-    bottom: 13%;
+    bottom: 15%;
     width: 40px;
-  }
-  
-  .right-arrow1 {
+}
+
+
+.right-arrow1 {
     position: absolute;
     right: -20px;
     top: -50px;
     width: 60px;
-  }
+}
 
-  .right-arrow2 {
+.right-arrow2 {
     position: absolute;
     right: -20px;
-    top: 120px;
+    top: 150px; /* Further down from the previous position */
     width: 55px;
-  }
-  
+}
+
+

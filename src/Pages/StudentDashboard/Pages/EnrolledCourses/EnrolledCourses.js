@@ -21,11 +21,11 @@ const EnrolledCourses = () => {
             ) : (
                 <div className="course-flex-container">
                     {courses.map((course, index) => (
-                        <div key={index} className="course-card">
-                            <div className='course-image'><img
+                        <div key={index} className="enrolled-course-card">
+                            <div className='enrolled-course-image'><img
                                 src={course.imageSrc} // Add image path
                                 alt={course.title}
-                                className="course-image"
+                                className="enrolled-course-image"
                             /></div>
                             <h5>{course.title}</h5>
                             <p>By {course.instructor}</p>
@@ -37,7 +37,7 @@ const EnrolledCourses = () => {
                                     labelColor="transparent"
                                 />
                             </div>
-                            <div className="course-rating">
+                            <div className="enrolled-course-rating">
                             <span className="stars">
                                 <img src='./star.png' alt='rating icon'/>
                                 <img src='./star.png' alt='rating icon'/>

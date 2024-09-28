@@ -1,38 +1,88 @@
+/* Container for study material */
 .Studymaterial-container {
     width: 100%;
     padding: 1%;
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
 }
 
+/* Styling for document container */
 .documents-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Space between documents */
+    padding: 20px;
+    background-color: white; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card-like shadow */
+    border: 1px solid #ddd; /* 1px light grey border */
+    width: calc(100% + 50px); /* Increase width by 50px */
+    margin-left: auto; /* Keep the element centered from the left */
+    margin-right: -50px; /* Offset the right margin to expand the width */
+    margin-bottom: 20px; /* Add some space below the card */
 }
 
+/* Document items styling */
 .documents {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgb(245, 245, 245);
-    padding: .5%;
-    gap: 20px;
-    border-radius: 3px;
-    width: calc(50% - 10px); /* Two items per row */
-    position: relative; /* Needed for tooltip positioning */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Cursor change on hover */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+    padding: 10px;
+    background-color: rgb(245, 245, 245); /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border */
+    width: 80%;
+    margin: 10px 0; /* Space between each document */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
-.download-icon {
-    height: 30px;
-    width: 30px;
+/* Document title styling */
+.documents h6 {
+    margin-left: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+
+/* Download button */
+.download-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Button color */
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
     cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
 }
 
+/* Hover effect for button */
+.download-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Icon for download */
+.download-icon {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Tooltip styling */
 .tooltip {
     display: none;
     position: absolute;
-    bottom: 100%; /* Position above the icon */
+    bottom: 100%; /* Above the icon */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.7);
@@ -43,6 +93,8 @@
     z-index: 1;
 }
 
-a:hover .tooltip {
-    display: block; /* Show tooltip on hover of the link */
+.download-icon:hover .tooltip {
+    display: block;
 }
+
+

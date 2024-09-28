@@ -1,36 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
 import './Taskdetail.css';
 
-const Taskdetail = () => {
-    const [videoOverview, setVideoOverview] = useState('');
-    const [keyLearning, setKeyLearning] = useState('');
-
-    useEffect(() => {
-        fetch('/taskdetails.json')
-        .then(response => {
-            console.log(response); // Add this line to check the response
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const taskDetail = data[0] || {};
-            setVideoOverview(taskDetail.videoOverview || ''); 
-            setKeyLearning(taskDetail.keyLearning || ''); 
-        })
-        .catch(error => console.error('Error fetching tasks:', error));
-    }, []);
-
+const Taskdetail = ({ lectureDescription, tasks, courseTitle }) => {
     return (
         <div className="details">
             <div className="video-overview">
                 <h3>Video Overview</h3>
-                <p>{videoOverview}</p>
+                <p>{lectureDescription || 'No video overview available.'}</p>
             </div>
             <div className="key-learnings">
                 <h3>Key Learning Objectives</h3>
-                <p>{keyLearning}</p>
+                <p>{tasks.keyLearning || 'No key learning objectives available.'}</p>
             </div>
         </div>
     );

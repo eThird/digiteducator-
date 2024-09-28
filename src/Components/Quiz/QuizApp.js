@@ -1,83 +1,127 @@
-import React, { useState } from "react";
-import Quiz from "./Quiz"; // Adjust the path as necessary
-import quizData from "../Quiz/questions.json"; // Adjust the path as necessary
+import React, { useState, useEffect } from 'react';
+import './Quiz.css'; // Make sure to import the CSS file
 
-const QuizApp = () => {
+const QuizApp = ({ quizData }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [isAnswered, setIsAnswered] = useState(false);
-    const [score, setScore] = useState(0); // Track user's score
-    const [isQuizFinished, setIsQuizFinished] = useState(false); // Track if quiz is finished
-    const [quizClosed, setQuizClosed] = useState(false); // Track if quiz is closed
+    const [score, setScore] = useState(0);
+    const [isQuizFinished, setIsQuizFinished] = useState(false);
+    const [quizClosed, setQuizClosed] = useState(false);
+    const [loading, setLoading] = useState(true); // Loading state
 
-    const currentQuestion = quizData[currentIndex];
-    const correctOption = currentQuestion.correctOption;
+    useEffect(() => {
+        // Simulating data fetch delay for example purposes
+        setTimeout(() => {
+            setLoading(false); // Data fetched, set loading to false
+        }, 1000);
+    }, []);
+
+    // Ensure quizData is defined and has content
+    const totalQuestions = quizData?.length || 0;
+    const currentQuestion = totalQuestions > 0 ? quizData[currentIndex] : null;
 
     const handleSelectOption = (option) => {
         setSelectedOption(option);
-        setIsAnswered(true); // Mark the question as answered
-        if (option === correctOption) {
-            setScore(score + 1); // Increment score if the correct answer is selected
+        setIsAnswered(true);
+        if (option === currentQuestion.correct_option) {
+            setScore(score + 1);
         }
     };
 
     const handleNext = () => {
-        if (selectedOption) {
-            if (currentIndex < quizData.length - 1) {
-                setCurrentIndex(currentIndex + 1);
-                setSelectedOption(null); // Reset for next question
-                setIsAnswered(false);
-            } else {
-                setIsQuizFinished(true); // Mark quiz as finished
-            }
+        if (currentIndex < totalQuestions - 1) {
+            setCurrentIndex(currentIndex + 1);
+            setSelectedOption(null);
+            setIsAnswered(false);
+        } else {
+            setIsQuizFinished(true);
         }
     };
 
     const handlePrevious = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
-            setSelectedOption(null); // Reset for previous question
+            setSelectedOption(null);
             setIsAnswered(false);
         }
     };
 
     const handleCloseQuiz = () => {
-        // Display message instead of resetting the quiz
         setQuizClosed(true);
     };
 
+    const nextDisabled = isAnswered ? false : true;
     const previousDisabled = currentIndex === 0;
-    const nextLabel = currentIndex === quizData.length - 1 ? "Finish" : "Next";
-    const nextDisabled = !selectedOption; // Disable Next button if no option is selected
+    const nextLabel = isQuizFinished ? 'Finish Quiz' : 'Next';
 
+    // Loading state to prevent rendering until data is ready
+    if (loading) {
+        return <div>Loading quiz...</div>;
+    }
+
+    // If quiz closed
     if (quizClosed) {
         return (
-            <div className="quiz-container">
-                <h2>Quiz is over. Please move to the next task.</h2>
+            <div className="quiz-closed-message">
+                Well Done! You've Completed the Quiz!
             </div>
         );
     }
 
+    // Calculate progress bar width
+    const progressBarWidth = `${((currentIndex + 1) / totalQuestions) * 100}%`;
+
     return (
-        <div>
-            <Quiz 
-                question={currentQuestion.question}
-                questionNumber={currentIndex + 1} 
-                totalQuestions={quizData.length}
-                options={currentQuestion.options}
-                selectedOption={selectedOption}
-                correctOption={correctOption}
-                onSelectOption={handleSelectOption}
-                onNext={handleNext}
-                onPrevious={handlePrevious}
-                previousDisabled={previousDisabled}
-                nextDisabled={nextDisabled} // Pass nextDisabled state
-                nextLabel={nextLabel}
-                isAnswered={isAnswered}
-                isQuizFinished={isQuizFinished} // Pass quiz finished state
-                score={score} // Pass the score to the component
-                onCloseQuiz={handleCloseQuiz} // Pass close function to show message
-            />
+        <div className="quiz-container">
+            {totalQuestions > 0 ? (
+                !isQuizFinished ? (
+                    <div>
+                        <div className="question-number-display">
+                            <h2 style={{ fontSize: '14px' }}>Question {currentIndex + 1}/{totalQuestions}</h2>
+                            <div className="progress-bar" style={{ width: progressBarWidth }} />
+                        </div>
+
+                        <div className="question-container">
+                            <p>{currentQuestion.question}</p>
+                        </div>
+                        <div className="options-container">
+                            {/* Directly render options without <ul> and <li> */}
+                            {Array.isArray(currentQuestion.options) && currentQuestion.options.length > 0 ? (
+                                currentQuestion.options.map((option, index) => (
+                                    <div
+                                        key={index}
+                                        className={`option ${isAnswered ? (option === currentQuestion.correct_option ? 'correct' : selectedOption === option ? 'wrong' : '') : ''}`}
+                                        onClick={() => handleSelectOption(option)}>
+                                        {option}
+                                    </div>
+                                ))
+                            ) : (
+                                <div>No options available for this question.</div>
+                            )}
+
+                        </div>
+                        <div className="navigation-buttons">
+                            {currentIndex > 0 && (
+                                <button className="nav-button" onClick={handlePrevious} disabled={previousDisabled}>
+                                    Previous
+                                </button>
+                            )}
+                            <button className="nav-button" onClick={handleNext} disabled={nextDisabled} style={{ marginLeft: 'auto' }}>
+                                {nextLabel}
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <div>
+                        <h2>Quiz Finished!</h2>
+                        <p>Your final score is {score}/{totalQuestions}</p>
+                        <button className="nav-button" onClick={handleCloseQuiz}>Close Quiz</button>
+                    </div>
+                )
+            ) : (
+                <div>No quiz available for this syllabus.</div>
+            )}
         </div>
     );
 };

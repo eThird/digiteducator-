@@ -1,73 +1,125 @@
 .studentdashboard-main-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  
-  .studentdashboard-sidebar {
-    width: 20vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #F8FAFC;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    gap: 40px;
-  }
-  
-  .studentdashboard-detail-container {
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-  }
-  
-  .student-profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .student-image-container {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-  }
-  
-  .student-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  h4 {
-    font-size: 18px;
-    color: #333;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
-  
-  .student-sidebar-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .sidebar-option {
-    padding: 12px;
-   
-    font-size: 16px;
-    color: #4a5568;
-    cursor: pointer;
-  }
-  
-  .sidebar-option.active, 
-  .sidebar-option:hover {
-    background-color: #0F172A;
-    color: white;
-  }
-  
+.studentdashboard-sidebar {
+  width: 300px; /* Fixed width for the sidebar */
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  background-color: #F8FAFC;
+  border-radius: 20px; /* Rounded corners */
+  padding: 15px; /* Reduced padding for less height */
+  gap: 10px; /* Decreased gap between items */
+  margin-top: 20px; /* Margin from top */
+  margin-left: 50px; /* Increased margin from left */
+  overflow: hidden; /* Prevents overflow and maintains height */
+}
+
+.student-profile-section, /* Adjust child components as needed */
+.student-sidebar-options {
+  margin: 0; /* Ensure no margins are applied */
+  padding: 0; /* Remove padding if any */
+}
+
+
+
+
+.student-profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% + 40px); /* Add this line to extend the width */
+  margin-left: -20px; /* Use negative margin to adjust for padding */
+  border-bottom: 1px solid #ddd; /* Add a bottom border after the name */
+  padding-bottom: 10px; /* Add padding for spacing */
+  padding-left: 20px; /* Keep padding for internal spacing */
+  padding-right: 20px; /* Keep padding for internal spacing */
+}
+
+
+.student-image-container {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.student-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h4 {
+  font-size: 18px;
+  color: #333;
+}
+
+.share-profile-btn {
+  padding: 8px 16px;
+  background-color: #0F172A;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.student-sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%; /* Ensure sidebar options take full width */
+}
+
+.sidebar-option {
+  padding: 12px;
+  font-size: 16px;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  width: 100%; /* Ensure each button takes full width */
+  border: none; /* Remove all borders */
+  position: relative; /* Needed for pseudo-element positioning */
+}
+
+.sidebar-option:first-child {
+  border-top: none; /* Remove the border for the first button */
+}
+
+.sidebar-option.active,
+.sidebar-option:hover {
+  background-color: #0F172A;
+  color: white;
+}
+
+/* Straight border line between buttons */
+.sidebar-option::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the button */
+  left: 0; /* Start from the left edge */
+  right: 0; /* Extend to the right edge */
+  height: 1px; /* Height of the border line */
+  background-color: #ddd; /* Color of the border line */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebar-option:hover::after,
+.sidebar-option.active::after {
+  background-color: #0F172A; /* Change color on hover */
+}
+
+/* Optional: Remove border for the last option */
+.sidebar-option:last-child::after {
+  display: none; /* Hide the bottom border for the last button */
+}
+
+.studentdashboard-detail-container{
+    width:100%;
+    display:flex;
+}

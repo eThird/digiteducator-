@@ -1,30 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection }) => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleNavLinkClick = (section) => {
+    // Only call scrollToSection if it's passed as a prop
+    if (scrollToSection) {
+      scrollToSection(section);
+      setMobileMenuOpen(false); // Close mobile menu after clicking a link
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar_logo">
-        <img src="/DE-logo.png" alt="DigitEducator Logo" />
-        <span>DigitEducator</span>
+        <a href="/LandingPage">
+          <img
+            src="https://www.digiteducator.com/Digiteducator%20Logo%20Website.png"
+            alt="DigitEducator Logo"
+          />
+        </a>
       </div>
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li className="dropdown">
-          <a href="#pages" className="dropbtn">Pages</a>
-          <div className="dropdown-content">
-            <a href="#page1">Page 1 (add link here)</a>
-            <a href="#page2">Page 2 (add link here)</a>
-            <a href="#page3">Page 3 (add link here)</a>
-          </div>
-        </li>
-        <li><a href="#login">Login / Register</a></li>
-        <li className="search-icon">
+      <div className={`nav-container ${isMobileMenuOpen ? 'active' : ''}`}>
+        <ul className="nav-links">
+          <li><a onClick={() => handleNavLinkClick('home')}>Home</a></li>
+          <li><a onClick={() => handleNavLinkClick('course-section')}>Courses</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a onClick={() => handleNavLinkClick('about')}>About</a></li>
+        </ul>
+      </div>
+      <div className="login-register">
+        <a href="/login" className="button">Login / Register</a>
+        <div className="search-icon">
           <img src="/search.png" alt="Search" />
-        </li>
-      </ul>
+        </div>
+        <div className="hamburger" onClick={toggleMobileMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
   );
 };

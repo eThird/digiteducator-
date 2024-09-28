@@ -1,3 +1,6 @@
+/* Import Poppins font if not already included */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 .student-feedback {
     text-align: center;
     padding: 40px;
@@ -11,8 +14,19 @@
 }
 
 .highlight {
-    color: #4A55FF;
+    color: blue;
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+    font-size: 52px; /* Bigger font size */
+    font-weight: bold; /* Make text bold */
 }
+
+.student-say {
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+    font-size: 52px; /* Same font size */
+    font-weight: normal; /* No bold */
+    color: inherit; /* Inherit color from parent or use specific color */
+}
+
 
 .intro-text {
     font-size: 16px;
@@ -41,6 +55,28 @@
     left: -20px;
     color: #000;
 }
+
+
+.feedback-container {
+    position: relative;
+    background-image: url('../../../public/Rectanglewithlines.png');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image in the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* Adjust height if necessary */
+    height: auto; /* Or a fixed height if needed */
+}
+
+
 
 .feedback-text {
     font-size: 16px;

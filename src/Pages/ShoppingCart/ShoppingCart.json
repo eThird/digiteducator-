@@ -1,0 +1,45 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to User Experience Design",
+      "author": "John Doe",
+      "rating": 4.6,
+      "ratingsCount": 250,
+      "price": 45.00,
+      "totalHours": 22,
+      "lectures": 155,
+      "level": "All levels",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "title": "Introduction to User Experience Design",
+      "author": "John Doe",
+      "rating": 4.6,
+      "ratingsCount": 250,
+      "price": 45.00,
+      "totalHours": 22,
+      "lectures": 155,
+      "level": "All levels",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "title": "Introduction to User Experience Design",
+      "author": "John Doe",
+      "rating": 4.6,
+      "ratingsCount": 250,
+      "price": 45.00,
+      "totalHours": 22,
+      "lectures": 155,
+      "level": "All levels",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "orderDetails": {
+    "totalPrice": 300.0,
+    "discount": 10.0,
+    "tax": 20.0
+  }
+}

@@ -12,7 +12,7 @@ const FeaturedCourses = () => {
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/courses/'); // Update with your Django API URL
+                const response = await axios.get('http://127.0.0.1:8000/api/popular_courses/'); // Update with your Django API URL
                 setCourses(response.data);
                 setLoading(false);
             } catch (err) {
@@ -25,11 +25,11 @@ const FeaturedCourses = () => {
     }, []);
 
     const handleCourseClick = (courseId) => {
-        navigate(`/courseDetail/${courseId}`);
+       navigate(`/course-detail/${courseId}`);
     };
 
     const handleAllCoursesClick = () => {
-        navigate('/courses');
+        navigate('/courses'); // Updated to navigate to "/courses"
     };
 
     if (loading) return <p>Loading...</p>;
@@ -43,7 +43,7 @@ const FeaturedCourses = () => {
             </div>
             <p>Explore our Popular Courses</p>
             <div className="course-grid">
-                {courses.map((course) => ( 
+                {courses.map((course) => (
                     <div className="course-card" key={course.id}>
                         <div className="course-category">{course.category.category_name}</div>
                         <img src={course.course_image} alt={course.course_name} className="course-image" />
@@ -62,7 +62,7 @@ const FeaturedCourses = () => {
                             </div>
                         </div>
                         <div className="course-price-container">
-                            <button className="view-more-btn" onClick={() => handleCourseClick(course.id)}>View More</button>
+                            <button className="view-more-btn" onClick={() => handleCourseClick(course.id)}>View Course</button>
                             <span className="original-price">{course.original_price}</span>
                             <span className="price">{course.price}</span>
                         </div>

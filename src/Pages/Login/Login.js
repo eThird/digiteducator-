@@ -1,69 +1,93 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './login.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  });
+
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:8000/login/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
+    const { email, password } = formData;
 
-    if (response.ok) {
-      navigate('/home');
-    } else {
-      setError('Wrong email id or password');
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/login/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        navigate('/home');
+      } else {
+        const data = await response.json();
+        setError(data.message || 'Login failed, please try again.');
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again later.');
     }
   };
 
   return (
-    <div className='login-page'>
+    <div className="login-page">
       <div className="login-container">
         <div className="login-image">
           <img src="/girlsitting.png" alt="Girl Studying" />
         </div>
         <div className="login-form">
-          <h2>Sign in to your account</h2>
+          <h2>Login to your account</h2>
           <form onSubmit={handleSubmit}>
             <div className="input-container">
               <label>Email</label>
               <input
                 type="email"
-                placeholder="Username or Email ID"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
-            <div className="input-container">
+            <div className={`input-container ${error && 'error'}`}>
               <label>Password</label>
               <input
                 type="password"
+                name="password"
                 placeholder="Enter Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={formData.password}
+                onChange={handleChange}
                 required
               />
             </div>
             {error && <div className="error-message">{error}</div>}
-            <button type="submit" className="login-button">Sign In</button>
+            <button type="submit" className="login-button">Login</button>
           </form>
           <div className="social-login">
-            <p>Sign in with</p>
+            <p>Or login with</p>
             <div className="social-icons">
               <img src="/facebookicon.png" alt="Facebook" />
               <img src="/googleicon.png" alt="Google" />
               <img src="/microsofticon.png" alt="Microsoft" />
             </div>
           </div>
+          <div className="signup-option">
+              Don't have an account? <Link to="/signup" className="signup-text">Sign up</Link>
+            </div>
+
+
         </div>
       </div>
     </div>

@@ -3,17 +3,16 @@
       {
         "title": "Beginner's Guide to Design",
         "instructor": "Ronald Richards",
-        "imageSrc": "./girlstuding.png", 
+        "imageSrc": "./girlstuding.png",
         "ratings": 1200,
-        "progress": 50 
+        "progress": 90
       },
       {
         "title": "Advanced Web Development",
         "instructor": "Sarah Connor",
         "imageSrc": "./girlstuding.png",
         "ratings": 900,
-        "progress": 80
+        "progress": 40
       }
     ]
   }
-  

@@ -1,152 +1,335 @@
-.courseoverview-maincontainer{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.courseoverview-maincontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1%;
+    gap: 20px; /* Add gap between child items */
 }
-.tasks-container{
-    width: 30vw;
-                                                                                   ;
-}
-.courseoverview-leftcontainer{
+
+.courseoverview-leftcontainer {
     width: 60vw;
     display: flex;
-
     flex-direction: column;
+    margin-bottom: 20px; /* Add bottom margin */
+    padding-left: 20px; /* Add left padding to the left container */
+    padding-right: 10px; /* Optional: Add right padding to left container */
 }
+
+.tasks-container {
+    width: 30vw;
+    margin-bottom: 20px; /* Add bottom margin */
+    padding-left: 20px;  /* Add left padding to the tasks container */
+    margin-top: 18px;    /* Add top margin */
+    margin-right: 50px;  /* Add right margin */
+
+}
+
+.courseoverview-leftcontainer h3 {
+    font-size: 1.5em;    /* Font size */
+    color: #333;         /* Text color */
+    margin-bottom: 10px; /* Space below the heading */
+    margin-left: 20px;   /* Space on the left side */
+}
+
+.video-section {
+    margin: 0; /* Remove any default margin for the video section */
+    padding: 0; /* Remove any default padding for the video section */
+}
+
+.about-video {
+    margin: 10px auto 0; /* Set margin: 10px for the top, auto for left and right, and 0 for bottom */
+    display: block; /* Ensure the video behaves like a block element */
+    border-radius: 8px; /* Slightly round the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transform: translateY(-10px); /* Move the video slightly upwards */
+
+}
+
+
 .video-section video {
-    width: 100%;  /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-    border: none;
+    width: 105%;         /* Set to 100% for full-width within the container */
+    height: auto;       /* Maintain aspect ratio */
+    margin-left: 18px;
+    border: none;       /* Remove border */
+    border-radius: 15px; /* Match border-radius with about-video */
+    box-shadow: none;   /* Remove shadow for consistency */
 }
+
+
 
 .course-overview {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .tabs {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .tab {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .task-list {
-  margin-top: 10px;
-}
-
-.task-item {
-  margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px; /* Indentation for task list */
 }
 
 .quiz-container {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .quiz-item {
-  cursor: pointer;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .quiz-item:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .quiz-display {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .quiz-content {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .quiz-options {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .quiz-option {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .task-tracker {
-  width: 100%;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+    width: 100%;
+    background-color: #f9f9f9; /* Change to your desired background color */
+    border-radius: 15px;
+    border: 1px solid #ddd; /* Add a border */
+    padding: 20px;
+    margin-bottom: 20px; /* Space below task tracker */
+    margin-top: 30px;    /* Add top margin for task tracker */
+    margin-right: 60px;  /* Add right margin */
 }
 
-.course-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 10px;
+.course-title1 {
+    margin-left: 5px;  /* Adjust the value as needed */
+    font-size: 23px;    /* Optional: Customize font size */
+    font-weight: bold;   /* Optional: Make the title bold */
+    color: #000;        /* Optional: Set the color */
 }
 
 .section {
-  border-bottom: 1px solid #ddd;
+    position: relative; /* Required for the absolute positioning of ::after */
+    border-bottom: none; /* Remove default border if exists */
+}
+
+
+
+.section::after {
+    content: '';
+    position: absolute; /* Absolute positioning to position relative to the section */
+    left: -20px;       /* Adjust this value to increase the left offset */
+    right: -20px;      /* Adjust this value to increase the right offset */
+    bottom: -1px;      /* Adjust position to sit below the section */
+    height: 1px;       /* Border height */
+    background: #ddd;  /* Border color */
+    z-index: 1;        /* Ensure it stays above other content */
 }
 
 .section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 10px 0;
+   display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start (left) */
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.section-header h2 {
+    font-family: 'Poppins', sans-serif; /* Change font to Poppins */
+    font-size: 1em;                   /* Font size */
+    font-weight: bold; /* Make the text bold */
+    color: #333;                        /* Text color */
+    margin: 0;                          /* Reset margin */
+    padding-left: 10px;                 /* Add padding on the left for spacing */
 }
 
 .arrow-icon {
-  width: 15px;
-  transition: transform 0.3s ease;
+    width: 15px;
+    transition: transform 0.3s ease;
 }
 
 .arrow-icon.open {
-  transform: rotate(180deg);
-}
-
-.task-list {
-  padding-left: 15px;
+    transform: rotate(180deg);
 }
 
 .task-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  color: #000;
+    display: flex;
+    align-items: center;
+    padding: 10px 0; /* Vertical padding for tasks */
+    color: #000; /* Text color */
+    margin-bottom: 10px; /* Space below each task */
 }
 
-.task-item.current {
-  background-color: #F0F8FF;
-}
 
 .task-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Adjust width if necessary */
+    font-size: 0.9em; /* Change to desired font size, adjust as needed */
 }
 
+
 .checkbox {
-  margin-right: 10px;
+    width: 10px; /* Set width for the checkbox */
+    height: 10px; /* Set height for the checkbox */
+    margin-right: 10px; /* Right margin */
+    transform: scale(1.5); /* Scale up the checkbox */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 .video-icon {
-  width: 15px;
-  margin-right: 5px;
+    width: 15px; /* Icon width */
+    margin-right: 5px; /* Margin between icon and text */
 }
 
 .task-meta {
-  display: flex;
-  align-items: center;
-  color: #999;
+    display: flex; /* Flex display for meta info */
+    align-items: center; /* Center items vertically */
 }
 
 .time {
-  margin-left: 5px;
+    margin-left: 5px; /* Margin left of time text */
 }
+
+
+/* Container for tabs */
+.detailing-tabs {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    gap: 20px; /* Space between tabs */
+    margin-top: 2%;
+    margin-left: 2%;
+    max-width: 50vw; /* Restrict width to 50% of viewport width */
+
+
+}
+
+
+
+/* Style for individual tabs */
+.description-tab {
+    font-size: 16px; /* Adjust font size if needed */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark text color for readability */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 10px 20px; /* Padding for better spacing */
+    border-radius: 8px; /* Rounded corners for tabs */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    text-align: center; /* Center text horizontally */
+    border: 1px solid #ddd; /* Add a border around the tabs */
+}
+
+/* Hover effect for tabs */
+.description-tab:hover {
+    background-color: #f0f0f0; /* Light background color on hover */
+    color: #007bff; /* Change text color on hover */
+}
+
+/* Active tab style */
+.description-tab.active {
+    background-color: #007bff; /* Highlight color for active tab */
+    color: #fff; /* White text for active tab */
+}
+
+/* Style for buttons in the page */
+.button {
+    font-size: 16px; /* Adjust font size if needed */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* White text color */
+    background-color: blue;
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for better spacing */
+    border-radius: 20px; /* Rounded corners for buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+    transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
+
+.tabs-divider {
+    border: none; /* Remove default border */
+    border-top: 1px solid #e0e0e0; /* Light gray line */
+    margin: 20px 0; /* Margin above and below the line */
+    margin-left: 20px; /* Reduced left margin */
+    width: 103%; /* Full width */
+}
+
+.progress-bar-container {
+    background-color: #f9f9f9; /* Light background for the container */
+    border-radius: 20px; /* Increased border radius for a more rounded appearance */
+    overflow: hidden; /* Ensures progress doesn't overflow */
+    position: relative; /* For positioning the text inside */
+    border: 1px solid #ccc; /* Add a border line around the progress bar */
+    margin-bottom: 10px; /* Adds space below the progress bar */
+    margin-top: 30px;
+}
+
+.progress-bar {
+    height: 25px; /* Height of the progress bar */
+    background-color: #2196F3; /* Blue color for the progress */
+    text-align: center; /* Center the text inside */
+    transition: width 0.4s ease; /* Smooth transition for the progress */
+    border-radius: 25px; /* Fully rounded from both sides */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Add shadow to progress bar for depth */
+}
+
+/* Style for the text */
+.progress-text {
+    position: absolute; /* Position text absolutely inside the container */
+    left: 10px; /* Position percentage text on the left */
+    color: #333; /* Darker color for better contrast */
+    font-weight: bold; /* Make the text bold */
+    font-size: 14px; /* Adjust font size for better readability */
+    line-height: 25px; /* Center text vertically */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.remaining-text {
+    position: absolute; /* Position text absolutely inside the container */
+    right: 10px; /* Position remaining lectures text on the right */
+    color: #333; /* Darker color for better contrast */
+    font-weight: bold; /* Make the text bold */
+    font-size: 14px; /* Adjust font size for better readability */
+    line-height: 25px; /* Center text vertically */
+}
+
+/* Hover effect on progress bar */
+.progress-bar-container:hover .progress-bar {
+    background-color: #1976D2; /* Darker shade of blue on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+
+
+
+
+
+

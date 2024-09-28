@@ -5,7 +5,7 @@
         "course_image": "./girlstuding.png",
         "course_name": "Learn React",
         "instructor": { "instructor_name": "John Doe" },
-        "course_duration": "4 hours",
+        "course_duration": "4",
         "students_count": 150,
         "original_price": "$100",
         "price": "$50"
@@ -16,7 +16,7 @@
         "course_image": "./girlstuding.png",
         "course_name": "Learn React",
         "instructor": { "instructor_name": "John Doe" },
-        "course_duration": "4 hours",
+        "course_duration": "4",
         "students_count": 150,
         "original_price": "$100",
         "price": "$50"
@@ -27,7 +27,7 @@
         "course_image": "./girlstuding.png",
         "course_name": "Learn React",
         "instructor": { "instructor_name": "John Doe" },
-        "course_duration": "4 hours",
+        "course_duration": "4",
         "students_count": 150,
         "original_price": "$100",
         "price": "$50"
@@ -38,10 +38,10 @@
         "course_image": "./girlstuding.png",
         "course_name": "Learn React",
         "instructor": { "instructor_name": "John Doe" },
-        "course_duration": "4 hours",
+        "course_duration": "4",
         "students_count": 150,
         "original_price": "$100",
         "price": "$50"
     }
-  
+
 ]

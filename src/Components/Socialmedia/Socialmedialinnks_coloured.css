@@ -3,6 +3,7 @@
     justify-content: center;
     gap: 20px;
     margin-top: 10px;
+    margin-right: 120px; /* Add margin to the right */
 }
 
 .social-media-icons a img {

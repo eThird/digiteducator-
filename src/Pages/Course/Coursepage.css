@@ -1,248 +1,384 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+    font-weight: 400; /* Default weight */
+}
+
 .course-page-maincontainer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px;
 }
 
 .mainarea {
-  display: flex;
-  padding: 20px;
-  flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Add gap between sidebar and course area */
+    padding: 20px;
+    flex: 1;
 }
 
 .Sidebar-area {
-  width: 25%;
-  padding-right: 20px;
+    width: 25%;
+    padding-right: 20px;
 }
 
 .filter-section {
-  background-color: #f8f8f8;
-  padding: 15px;
-  border-radius: 8px;
+    background-color: white; /* White background like a card */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 50px; /* Space from the top */
+    margin-left: 20px; /* Space from the left */
+    border: 1px solid #e0e0e0; /* Light border to resemble a card */
 }
+
 
 .filter-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: 2px solid #4F46E5; /* Blue border */
-  border-radius: 8px;
-  color: #4F46E5;
-  padding: 8px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1.5px solid #4F46E5; /* Blue border */
+    border-radius: 10px;
+    color: #4F46E5;
+    padding: 8px 20px;
+    font-weight: 400; /* Regular font weight */
+    cursor: pointer;
+    font-size: 1rem; /* Consistent font size */
+    position: absolute; /* Position the button relative to its container */
+    top: 110px; /* Adjust as needed */
+    left: 50px; /* Adjust as needed */
 }
 
-.filter-btn:hover {
-  background-color: #0056b3;
-}
 
-.filter-group {
-  margin-bottom: 20px;
+.filter-button i {
+    margin-right: 8px; /* Space between icon and text */
 }
 
 .filter-header {
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 15px;
-  background-color: #f9fafb;
-  border-radius: 5px;
-  border: 1px solid #E5E7EB;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-
-.filter-header img{
-  height: 10px;
-  width: 10px;
-}
-
-.filter-header.open i {
-  transform: rotate(180deg);
+    font-size: 16px;
+    font-weight: 600; /* Bold header */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-radius: 5px;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    color: #4F46E5; /* Blue font color */
 }
 
 .filter-header:hover {
-  background-color: #e9ecef;
+    background-color: #e0e7ff; /* Change background on hover */
 }
 
-.filter-header:hover i {
-  font-size: 12px; /* Ensure size stays consistent on hover */
-}
-
-.filter-header.open i {
-  transform: rotate(180deg);
-}
-
-.filter-content {
-  padding: 0 15px 10px;
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.filter-content:last-child {
-  border-bottom: none;
-}
-
-.filter-content label {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-}
-
-.filter-content input[type="checkbox"] {
-  margin-right: 10px;
-  accent-color: #4F46E5;
+.filter-header img {
+    height: 10px;
+    width: 10px;
+    transition: transform 0.3s; /* Smooth rotation transition */
 }
 
 .rotated {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+    filter: hue-rotate(210deg) brightness(0.5); /* Adjust hue for blue color */
 }
 
+
+.filter-group {
+    border-bottom: 1px solid #e0e0e0; /* Light gray line between groups */
+    padding-bottom: 10px; /* Space below the group */
+    margin-bottom: 10px; /* Space between groups */
+}
+
+.filter-content {
+    padding: 0 15px 10px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.filter-content:last-child {
+    border-bottom: none;
+}
+
+.filter-content label {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    gap: 7px;
+}
+
+.filter-content input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #4F46E5; /* Blue accent color for checkbox */
+}
+
+.courses-rating {
+    font-size: 16px; /* Font size for the rating */
+    font-weight: 500; /* Medium weight for better visibility */
+    color: #4F46E5; /* Color that matches your theme */
+    display: flex; /* Flex display to align text and image */
+    align-items: center; /* Center align items vertically */
+
+    gap: 5px;
+}
+
+.star-icon {
+    height: 16px; /* Adjust height of the star icon */
+    width: 16px; /* Adjust width of the star icon */
+    margin-left: 5px; /* Space between rating number and star */
+}
+
+
+
+
 .show-more {
-  color: #4F46E5;
-  font-size: 12px;
-  cursor: pointer;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
+    color: #4F46E5;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .show-more i {
-  font-size: 12px;
-  margin-left: 5px;
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 .course-area {
-  width: 75%;
+    width: 75%;
+    padding: 20px;
+    max-width: 100%;
 }
 
 .Sortby-section {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px; /* Adjusted bottom margin */
+    margin-right: 30px;
+    margin-top: -20px; /* Added top margin to control spacing from top */
 }
 
+
 .sort-dropdown {
-  margin-left: 10px;
-  padding: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 8px; /* Added border-radius for consistency */
 }
 
 .courses-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .courses-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(33.333% - 20px);
-  
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33% - 20px); /* Adjust width for larger cards */
+    max-width: calc(33% - 20px); /* Set a maximum width for each card */
+    min-width: 300px; /* Increased minimum width */
+    border-radius: 15px; /* Added border radius for rounded corners */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    position: relative; /* Needed for absolute positioning of category */
+    font-weight: 400; /* Ensure regular font weight for card text */
+    transition: transform 0.3s ease;
+    height: 400px; /* Set a specific height for the card */
 }
 
 .courses-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Slight hover effect */
 }
 
-.course-image {
-  width: 100%;
-  height: 30%;
-  border-radius: 4px;
-  margin-bottom: 15px;
+.coursepage-image-container {
+    padding: 15px; /* Padding from all sides */
+    border-radius: 15px; /* Match the card's border radius */
+    background-color: white; /* Optional: You can change this to match your card's background */
+}
+
+.coursepage-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.courses-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
 }
 
 .courses-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 0 10px;
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space between title and rating */
+    align-items: center; /* Center align items vertically */
+    font-size: 1rem;
+    margin: -10px 20px 10px; /* Reduced top margin */
+    font-weight: 700; /* Set bold font weight */
+    color: blue; /* Set text color to blue */
 }
 
 .courses-instructor {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
+    font-size: 0.9rem;
+    margin: 5px 20px 10px; /* Added bottom margin */
+    color: black; /* Updated instructor name color to black */
+    font-weight: 400; /* Ensure regular font weight */
 }
 
 .courses-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
+    font-size: 1rem; /* Increase the font size */
+    font-weight: 500; /* Make the text slightly bold */
+    margin-left: 19px;
+    color: black; /* Ensure the text color is black */
 }
 
 .course-details-btn {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
+    display: block;
+    width: 32%;
+    padding: 6px 3px; /* Adjusted padding */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 400;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px; /* Positioned 10px from the bottom */
+    left: 20px; /* Aligned to the left with 10px padding */
+    transform: none; /* Remove horizontal centering */
 }
 
 .course-details-btn:hover {
-  background-color: #0056b3;
+    background-color: gray;
+}
+
+.course-pricing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+.original-price {
+  font-size: 0.9rem;
+  color: gray;
+  text-decoration: line-through; /* Strikethrough for original price */
+  margin-right: 10px; /* Space between original and current price */
+}
+
+.price {
+  font-size: 1.1rem;
+  color: green; /* Color for the discounted price */
+  font-weight: bold; /* Emphasize the discounted price */
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+    z-index: 1;
+    background-color: white;
+    padding: 10px; /* Optional: padding for a cleaner look */
 }
 
 .pagination-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 8px; /* Added border radius for rounded corners */
+    transition: background-color 0.3s ease;
+    font-weight: 400; /* Ensure regular font weight */
+    font-size: 1rem; /* Adjust font size if needed */
 }
 
 .pagination-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background-color: #0056b3;
+    background-color: gray;
 }
 
-/* Media Queries for Responsiveness */
+
+
+/* Mobile Responsive Adjustments */
+
+/* Tablets and below */
 @media (max-width: 1024px) {
-  .courses-card {
-    width: calc(50% - 20px);
-  }
+    .courses-card {
+        flex: 1 1 calc(50% - 20px); /* Adjust width for smaller screens */
+        max-width: calc(50% - 20px); /* Set a maximum width for each card */
+    }
 }
 
+/* Mobile view adjustments */
 @media (max-width: 768px) {
-  .mainarea {
-    flex-direction: column;
-  }
+    .mainarea {
+        flex-direction: column;
+    }
 
-  .Sidebar-area {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+    .Sidebar-area {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-  .course-area {
-    width: 100%;
-  }
+    .course-area {
+        width: 100%;
+    }
 
-  .courses-card {
-    width: 100%;
-  }
+    .courses-card {
+        flex: 1 1 100%; /* Full width for small screens */
+        max-width: 100%;
+    }
+
+    .course-details-btn {
+        width: 100%; /* Full width button on small screens */
+        bottom: 15px;
+    }
+
+    .filter-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .pagination-btn {
+        padding: 8px 15px;
+    }
+}
+
+/* Mobile extra small screens */
+@media (max-width: 576px) {
+    .filter-header, .courses-title, .courses-instructor, .filter-button, .pagination-btn {
+        font-size: 12px; /* Reduce font size on extra small screens */
+    }
+
+    .courses-card {
+        height: auto; /* Let the card height be flexible */
+    }
+
+    .course-details-btn {
+        font-size: 12px; /* Adjust button font size */
+    }
+
+    .course-pricing {
+        font-size: 0.9rem; /* Smaller price display */
+    }
 }

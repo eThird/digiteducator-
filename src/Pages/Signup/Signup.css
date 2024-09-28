@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
+  padding: 20px; /* Ensure padding on smaller screens */
 }
 
 .signup-container {
@@ -20,11 +21,11 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensures no overflow */
+  overflow: hidden;
 }
 
 .signup-image img {
-  width: 100%; /* Adjusted from 50% to reduce gap */
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-top-left-radius: 10px;
@@ -32,8 +33,8 @@
 }
 
 .signup-form {
-  width: 60%; /* Adjusted from 50% to reduce gap */
-  padding: 4.5%; /* Reduced padding */
+  width: 60%;
+  padding: 4.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,19 +42,18 @@
 
 .signup-form h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px; /* Adjusted spacing */
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .name-container {
   display: flex;
-  flex: 1;
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
 }
 
 .input-container {
-  margin-bottom: 15px; /* Adjusted spacing */
+  margin-bottom: 15px;
 }
 
 .input-container label {
@@ -74,7 +74,7 @@
 .signup-button {
   width: 100%;
   padding: 12px;
-  background-color: black;
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 5px;
@@ -84,7 +84,7 @@
 }
 
 .signup-button:hover {
-  background-color: #333;
+  background-color: darkblue;
 }
 
 .social-signup {
@@ -117,15 +117,76 @@
   border: 1px solid red;
 }
 
+/* "Already have an account? Login" section */
+.login-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.login-text {
+  color: #007bff; /* Blue text */
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-text:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .signup-container {
     flex-direction: column;
+    max-width: 90vw;
     height: auto;
+    padding: 20px; /* Ensure padding for small screens */
   }
 
-  .signup-image img, .signup-form {
+  .signup-image img {
+    width: 100%; /* Ensure full width of the image */
+    height: auto; /* Allow the height to adjust naturally */
+    border-radius: 0; /* Remove rounded corners on small screens */
+    margin-bottom: 20px; /* Add spacing between image and form */
+  }
+
+  .signup-form {
     width: 100%;
     padding: 20px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .signup-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .input-container input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .signup-button {
+    font-size: 0.9rem;
+  }
+
+  .social-icons img {
+    width: 20px; /* Smaller social icons for better fit */
+  }
+
+  .login-option {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .signup-container {
+    padding: 15px; /* Less padding for smaller screens */
   }
 }

@@ -1,106 +1,147 @@
 .Assessment-maincontainer {
     width: 100%;
     max-width: 800px;
-    
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
-.Assessment-overview {
-    
+.assignment-card {
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    margin-left: 20px;
+    max-width: 105%;
+    width: 103%;
 }
 
-.Assessment-overview h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.overview-detail p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.Assessment-Instructions {
-    margin-bottom: 20px;
-    background-color: #f3f3f3;
+.assignment-overview {
     padding: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    margin-left: 20px;
+    max-width: 105%;
+    width: 103%;
 }
 
-.Assessment-Instructions h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.assignment-overview h2 {
+    font-size: 24px; /* Font size for headings */
+    margin-top: 5px; /* Top margin for h2 */
 }
 
-.Instruction-detail ol {
-    padding-left: 20px;
+.assignment-overview p {
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for better readability */
 }
 
-.Instruction-detail li {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+.assignment-instructions {
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 20px 0; /* Updated margin to create space above */
+    margin-left: 20px;
+    max-width: 105%;
+    width: 103%;
+}
+
+.assignment-instructions h2 {
+    font-size: 24px; /* Font size for headings */
+    margin-bottom: 10px; /* Bottom margin for h2 */
+}
+
+.instruction-list {
+    padding-left: 20px; /* Indent for the instruction list */
+}
+
+.instruction-list li {
+    font-size: 16px; /* Font size for list items */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 10px; /* Space below each list item */
 }
 
 .Assessment-download-upload {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Space between download and upload sections */
+    margin-top: 20px; /* Space above the section */
+    padding: 20px; /* Reduced padding for the section */
+    background-color: white; /* White background */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    border: 1px solid #ddd; /* Light border */
 }
 
 .Assessment-download-section,
 .Assessment-upload-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text */
 }
 
 .Assessment-download-upload img {
-    height: 40px;
-    width: 40px;
-    margin-bottom: 10px;
+    height: 30px; /* Smaller icon height */
+    width: 30px; /* Smaller icon width */
+    margin-bottom: 10px; /* Space below the icon */
 }
 
-.download-here, .Upload-here {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.2s;
+.download-here, .upload-here {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    cursor: pointer; /* Changes cursor on hover */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+    padding: 10px; /* Reduced padding for a smaller card */
+    background-color: rgb(245, 245, 245); /* Light background for visibility */
+    border-radius: 8px; /* Rounded corners for a card effect */
+    border: 1px solid #ddd; /* Light border around the card */
+    width: 80%; /* Set a specific width for the small card */
+    margin: 10px 0; /* Removes auto centering and keeps top/bottom spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
-.download-here:hover, .Upload-here:hover {
-    transform: scale(1.05);
+
+.download-here img, .upload-here img {
+    height: 24px; /* Smaller icon size */
+    width: 24px; /* Smaller icon size */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.download-here h6, .upload-here h6 {
+    font-size: 14px; /* Smaller font size for the text */
+    margin: 0; /* Remove default margin */
+}
+
+.download-here:hover, .upload-here:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
 }
 
 h6 {
-    margin: 0;
-    font-size: 16px;
-    color: #000;
+    margin: 0; /* Removes margin for h6 */
+    font-size: 16px; /* Font size for h6 */
+    color: #000; /* Black color for text */
 }
 
 .upload-success {
-    color: green;
-    margin-top: 10px;
-    font-size: 12px;
-    font-weight: thin;
+    color: green; /* Green text for success message */
+    margin-top: 10px; /* Space above success message */
+    font-size: 12px; /* Font size for success message */
 }
 
 .file-display {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    font-size: 16px;
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    margin-top: 10px; /* Space above file display */
+    font-size: 16px; /* Font size for file display */
 }
 
 .file-name {
-    margin-right: 10px;
+    margin-right: 10px; /* Space to the right of the file name */
 }
 
 .remove-file {
-    cursor: pointer;
-    color: red;
-    font-size: 20px;
+    cursor: pointer; /* Changes cursor on hover */
+    color: red; /* Red color for remove icon */
+    font-size: 20px; /* Font size for remove icon */
 }

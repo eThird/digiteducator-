@@ -1,224 +1,289 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 /* General */
 .landing-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Header Section */
-  .header-section {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+/* Header Section */
+.header-section {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
     flex-wrap: wrap;
-  }
-  
-  .text-content {
+}
+
+.text-content {
     max-width: 500px;
     justify-content: center;
     display: flex;
     flex-direction: column;
     padding: 1%;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
+    margin-left: 100px; /* Adjust this value to control the margin from the left */
+}
+
+h1 {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    color: black; /* Default color for text */
+}
+
+.highlight-text, .blue-bold-text {
+    color: blue; /* Set the text color to blue */
+    font-weight: bold; /* Makes the text bold */
+}
+
+
+.blue-text {
+    color: blue;
+    font-weight: bold;
+    font-size: 2.5rem; /* Adjust the size as needed */
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 2.5rem; /* Same size for consistency */
+}
+
+.regular-text {
+    font-weight: normal;
     color: black;
-  }
-  
-  .highlight-text {
-    color: #3a50f7; /* Blue text */
-  }
-  
-  p {
+    font-size: 2.5rem; /* Same size as the bold text */
+}
+
+
+
+
+p {
     margin: 10px 0;
-  }
-  
-  .cta-container {
+}
+
+
+.cta-container {
     display: flex;
     align-items: center;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     background-color: #3a50f7;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     margin-right: 20px;
-  }
-  
-  .play-button {
+    border-radius: 50px; /* Makes the button rounded */
+    font-size: 1rem;
+    text-align: center;
+}
+
+.play-button {
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-  
-  .play-button img {
-    width: 30px;
-    margin-right: 10px;
-  }
-  
-  .image-content {
+    font-size: 1.2rem;
+}
+
+.play-button img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.play-button span {
+    font-weight: bold;
+}
+
+.image-content {
     position: relative;
     width: 30%;
     bottom: -1vh;
-  }
-  
-  .image-content img {
+    top: -1vh;
+    padding-right: 30px;
+}
+
+.image-content img {
     max-width: 100%;
-  }
-  
-  .yellow-circle {
+}
+
+.yellow-circle {
     position: absolute;
     bottom: -7vh;
     right: 0vw;
-  }
-  
-  .orange-star {
+}
+
+.orange-star {
     position: absolute;
     bottom: 5vh;
     right: 25vw;
     width: 15%;
-  }
-  
-  /* Stats Section */
-  .stats-section {
+}
+
+/* Stats Section */
+.stats-section {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 15vh;
-    background-image: url('../../../public/Rectanglewithlines.png'); /* Correct URL syntax */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
+    background-color: #3a50f7;
     color: white;
     padding: 20px 0;
+    height: 15vh;
+    background-image: url('../../../public/Rectanglewithlines.png'); /* Correct URL syntax */
+    background-size: cover;
+    background-position: center;
+    margin-top: -16px; /* Adjust this value to control how much higher you want it */
 }
-  
-  .stat-item {
+
+
+.stat-item {
     font-size: 1.5rem;
     text-align: center;
-  }
-  
-  /* Why we are best Section */
-  .why-best-section {
+}
+
+/* Why we are best Section */
+.why-best-section {
     padding: 40px;
     text-align: center;
-  }
-  
-  .why-cards {
+}
+
+.why-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
-  }
-  
-  .why-card {
+}
+
+.why-card {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .why-card:hover {
+}
+
+.why-card:hover {
     transform: translateY(-5px);
-  }
-  
-  /* Companies Section */
-  .companies-section {
-    padding: 2%;
+}
+
+/* Companies Section */
+/* Companies Section */
+.companies-section {
     text-align: center;
     width: 100%;
-    
-  }
-  
-  .company-logos img {
-    width: 100px;
-    margin: 10px;
-  }
+}
 
-  .category-section{
+.companies-section h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.company-logos img {
+    width: 150px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+.company-logos img:last-child {
+    margin-right: 0;
+}
+
+
+/* Category Section */
+.category-section {
     width: 100%;
     padding: 5%;
-  }
+}
 
-  .GrowYourSkill-Section{
+.GrowYourSkill-Section {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     max-height: 30%;
-    padding: 2%;
+    padding: 2%; /* Reduced padding */
     gap: 10%;
     align-items: center;
     justify-content: center;
-  }
-  .GrrowImage-contetn{
+}
+
+
+.GrowYourSkill-Section button:hover {
+    background-color: #e0e0e0; /* Change color on hover */
+}
+
+
+.GrrowImage-contetn {
     display: flex;
     flex-direction: column;
     height: 20vh;
     max-height: 20%;
     justify-content: center;
-  }
-  .GrrowText-contetn{
+}
+
+.GrrowText-contetn {
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 60vh;
-  }
-  .bennifits{
+}
+
+.bennifits {
     display: flex;
     flex-direction: row;
     gap: 2px;
-  }
-  .GrrowText-contetn button {
+}
+
+.GrrowText-contetn button {
     background-color: orangered;
     border-radius: 20px;
     width: 20%;
     padding: 2%;
-    border: none; 
-    color: white; 
-    font-size: 16px; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
 .GrrowText-contetn button:hover {
-    background-color: darkorange; /* Change background color on hover */
-    transform: translateY(-4px); /* Move button up on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    background-color: darkorange;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-  
-.Featuredcourses-section{
+
+/* Featured Courses Section */
+.Featuredcourses-section {
     width: 100%;
     padding: 5%;
 }
 
-.feedback-section{
-  margin-bottom: 10%;
+/* Feedback Section */
+.feedback-section {
+    margin-bottom: 10%;
 }
 
-  /* Media Queries */
-  @media (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 768px) {
     .header-section {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .why-cards {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     .why-cards {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
+}

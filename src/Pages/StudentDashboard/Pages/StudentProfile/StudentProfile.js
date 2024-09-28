@@ -32,7 +32,7 @@ const StudentProfile = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleInputChange}
-              placeholder="Label"
+              placeholder="First Name"
             />
           </div>
           <div className="input-group">
@@ -42,7 +42,7 @@ const StudentProfile = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleInputChange}
-              placeholder="Label"
+              placeholder="Last Name"
             />
           </div>
         </div>
@@ -54,7 +54,7 @@ const StudentProfile = () => {
             name="branch"
             value={formData.branch}
             onChange={handleInputChange}
-            placeholder="Label"
+            placeholder="E.g. CSE"
           />
         </div>
 
@@ -64,7 +64,7 @@ const StudentProfile = () => {
             name="description"
             value={formData.description}
             onChange={handleInputChange}
-            placeholder="Label"
+            placeholder="Write something about you..."
           />
         </div>
 
@@ -93,20 +93,14 @@ const StudentProfile = () => {
           </div>
 
           <div className="image-upload-section">
-            <label>Add/Change Image</label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              placeholder="Label"
-            />
-            
+              <div className="upload-container">
+                <label>Add/Change Image</label>
+                <input type="file" accept="image/*" onChange={handleImageChange} />
+                <button className="upload-button">Choose File</button> {/* Added button here */}
+              </div>
+              <button className="save-button">Save Changes</button> {/* Save button on the right */}
           </div>
-        </div>
-
-        <button type="button" className="save-button" onClick={handleSave}>
-          Save 
-        </button>
+          </div>
       </form>
     </div>
   );

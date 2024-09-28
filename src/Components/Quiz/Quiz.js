@@ -1,23 +1,23 @@
 import React from "react";
 import './Quiz.css';
 
-const Quiz = ({ 
-    question, 
-    questionNumber, 
-    totalQuestions, 
-    options, 
-    selectedOption, 
-    correctOption, 
-    onSelectOption, 
-    onNext, 
-    onPrevious, 
-    previousDisabled, 
+const Quiz = ({
+    question,
+    questionNumber,
+    totalQuestions,
+    options,
+    selectedOption,
+    correctOption,
+    onSelectOption,
+    onNext,
+    onPrevious,
+    previousDisabled,
     nextDisabled, // Disable Next button if no option is selected
-    nextLabel, 
-    isAnswered, 
-    isQuizFinished, 
-    score, 
-    onCloseQuiz 
+    nextLabel,
+    isAnswered,
+    isQuizFinished,
+    score,
+    onCloseQuiz
 }) => {
     if (isQuizFinished) {
         return (
@@ -38,11 +38,11 @@ const Quiz = ({
             </div>
             <div className="options-container">
                 {options.map((option, index) => (
-                    <div 
-                        key={index} 
-                        className={`option ${isAnswered ? 
-                            (option === correctOption ? 'correct' : option === selectedOption ? 'wrong' : '') 
-                            : ''}`} 
+                    <div
+                        key={index}
+                        className={`option ${isAnswered ?
+                            (option === correctOption ? 'correct' : option === selectedOption ? 'wrong' : '')
+                            : ''}`}
                         onClick={() => !isAnswered && onSelectOption(option)} // Prevent changes after selecting
                     >
                         {option}
@@ -50,9 +50,9 @@ const Quiz = ({
                 ))}
             </div>
             <div className="navigation-buttons">
-                {/* <button 
-                    className="nav-button" 
-                    onClick={onPrevious} 
+                {/* <button
+                    className="nav-button"
+                    onClick={onPrevious}
                     disabled={previousDisabled}
                 >
                     Previous

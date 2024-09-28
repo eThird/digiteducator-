@@ -88,7 +88,7 @@
     display: flex;
     gap: 20px;
     font-size: 0.9rem;
-    margin: 5px 10px; /* Reduced left margin */
+    margin: 5px 7px; /* Reduced left margin */
 }
 
 
@@ -114,10 +114,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 20px 20px 15px; /* Apply top, right, bottom, and left margins respectively */
+    margin: 15px 15px 20px 15px; /* Top, right (reduced), bottom, left margins */
     padding-top: 10px; /* Adds space between the border and the content */
     border-top: 1px solid #ddd; /* Light gray line above the button */
 }
+
 
 
 .original-price {
@@ -130,11 +131,11 @@
     color: black; /* Fully black color for the current price */
     font-size: 1.1rem; /* Ensure it's consistent with the original price font size */
     font-weight: 400; /* Removed bold styling */
-    margin-left: 10px; /* Space between original and current price */
+    margin-right: 10px;
 }
 
 .view-more-btn {
-    padding: 5px 10px; /* Adjust padding for top/bottom and left/right */
+    padding: 7px 8px; /* Adjust padding for top/bottom and left/right */
     background-color: black;
     color: white;
     border: none;

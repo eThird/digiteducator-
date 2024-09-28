@@ -1,17 +1,17 @@
 import React from 'react';
 import './Footer.css';
-import Socialmedialinks_coloured from '../../Components/Socialmedia/Socialmedialinks_coloured'
+import Socialmedialinks_coloured from '../../Components/Socialmedia/Socialmedialinks_coloured';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section footer-brand">
-        <img src="/DE-logo.png" alt="Byway Logo" className="footer-logo" />
-        <p className="footer-text">
+        <img src="https://www.digiteducator.com/Digiteducator%20Logo%20Website.png" alt="Byway Logo" className="footer-logo" />
+        <p1 className="footer-text">
           Empowering learners through accessible and engaging online education.
           <br />
           Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.
-        </p>
+        </p1>
       </div>
       
       <div className="footer-section">

@@ -1,6 +1,8 @@
 .mentors-container {
   padding: 20px;
   background-color: #f1f4f8;
+  border-radius: 30px; /* Adds a rounded shape to the container */
+  overflow: hidden;    /* Ensures content inside the rounded container does not overflow */
   max-height: fit-content;
 }
 
@@ -34,8 +36,9 @@
 
 .mentor-photo {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 230px; /* Set a fixed height */
+  border-radius: 5%; /* Keeps the image shape rounded */
+  object-fit: cover;  /* Ensures the image covers the space while maintaining aspect ratio */
 }
 
 .mentor-info {

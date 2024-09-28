@@ -1,39 +1,60 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
+
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { firstName, lastName, email, password, confirmPassword } = formData;
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError('Passwords do not match');
       return;
     }
 
-    const response = await fetch('http://localhost:8000/signup/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ firstName, lastName, email, password }),
-    });
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/signup/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          first_name: firstName,
+          last_name: lastName,
+          email,
+          password,
+        }),
+      });
 
-    if (response.ok) {
-      navigate('/home');
-    } else {
-      setError('Signup failed, please try again.');
+      if (response.ok) {
+        navigate('/login');
+      } else {
+        const data = await response.json();
+        setError(data.message || 'Signup failed, please try again.');
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again later.');
     }
   };
 
   return (
-    <div className='signup-page'>
+    <div className="signup-page">
       <div className="signup-container">
         <div className="signup-image">
           <img src="/girlstuding.png" alt="Girl Studying" />
@@ -46,9 +67,10 @@ const Signup = () => {
                 <label>First Name</label>
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First Name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  value={formData.firstName}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -56,9 +78,10 @@ const Signup = () => {
                 <label>Last Name</label>
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  value={formData.lastName}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -67,29 +90,32 @@ const Signup = () => {
               <label>Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
-            <div className={`input-container ${password !== confirmPassword && error ? 'error' : ''}`}>
+            <div className={`input-container ${error && 'error'}`}>
               <label>Password</label>
               <input
                 type="password"
+                name="password"
                 placeholder="Enter Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={formData.password}
+                onChange={handleChange}
                 required
               />
             </div>
-            <div className={`input-container ${password !== confirmPassword && error ? 'error' : ''}`}>
+            <div className={`input-container ${error && 'error'}`}>
               <label>Confirm Password</label>
               <input
                 type="password"
+                name="confirmPassword"
                 placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                value={formData.confirmPassword}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -103,6 +129,9 @@ const Signup = () => {
               <img src="/googleicon.png" alt="Google" />
               <img src="/microsofticon.png" alt="Microsoft" />
             </div>
+          </div>
+          <div className="login-option">
+            Already have an account? <Link to="/login" className="login-text">Login</Link>
           </div>
         </div>
       </div>
