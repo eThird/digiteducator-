@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = ({ scrollToSection }) => {
+  // State to track if the student is logged in
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -9,11 +11,16 @@ const Navbar = ({ scrollToSection }) => {
   };
 
   const handleNavLinkClick = (section) => {
-    // Only call scrollToSection if it's passed as a prop
     if (scrollToSection) {
       scrollToSection(section);
       setMobileMenuOpen(false); // Close mobile menu after clicking a link
     }
+  };
+
+  const handleLogout = () => {
+    // Logic for logging out the student can go here
+    setIsLoggedIn(false);
+    // You can also clear local storage or session info here if needed
   };
 
   return (
@@ -35,15 +42,20 @@ const Navbar = ({ scrollToSection }) => {
         </ul>
       </div>
       <div className="login-register">
-        <a href="/login" className="button">Login / Register</a>
-        <div className="search-icon">
-          <img src="/search.png" alt="Search" />
-        </div>
-        <div className="hamburger" onClick={toggleMobileMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        {/* Conditional rendering based on login status */}
+        {isLoggedIn ? (
+          <>
+            <a href="/dashboard" className="button">Student Dashboard</a>
+            <a onClick={handleLogout} className="button">Logout</a>
+          </>
+        ) : (
+          <a href="/login" className="button">Login / Register</a>
+        )}
+      </div>
+      <div className="hamburger" onClick={toggleMobileMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   );
