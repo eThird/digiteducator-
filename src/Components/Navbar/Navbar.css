@@ -1,9 +1,8 @@
-/* Define colors */
 :root {
   --color: #111;
-  --primary: #00F0B5; /* Blue color for hover effect */
-  --hover-bg: blue; /* General hover background */
-  --hover-text: white; /* General hover text color */
+  --primary: #00F0B5;
+  --hover-bg: blue;
+  --hover-text: white;
 }
 
 * {
@@ -13,17 +12,17 @@
 }
 
 .navbar {
-  width: 100vw; /* Full width */
-  height: 9vh; /* Height of navbar */
+  width: 100vw;
+  height: 9vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
-  position: sticky; /* Stick the navbar to the top */
-  top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensure navbar stays on top */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar_logo {
@@ -33,17 +32,17 @@
 }
 
 .navbar_logo img {
-  width: 290px; /* Increased logo size */
-  height: auto; /* Maintain aspect ratio */
+  width: 290px;
+  height: auto;
   margin-right: 10px;
-  margin-top: 3px; /* Adjust logo vertical alignment */
-  margin-left: 20px; /* Spacing on left */
+  margin-top: 3px;
+  margin-left: 20px;
 }
 
 .nav-container {
   display: flex;
   flex-grow: 1;
-  justify-content: center; /* Center the nav links */
+  justify-content: center;
 }
 
 .nav-links {
@@ -56,7 +55,7 @@
 
 .nav-links li {
   position: relative;
-  margin: 0 10px; /* Reduced gap between links */
+  margin: 0 10px;
 }
 
 .nav-links a {
@@ -75,54 +74,11 @@
   transition: all 0.3s ease;
 }
 
-/* Dropdown Menu Styling */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  min-width: 150px;
-  z-index: 1;
-  border-radius: 5px;
-  padding-top: 10px; /* Spacing for the dropdown */
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: lightgray;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dropdown:hover .dropdown-content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Button and Login/Register Styling */
 .login-register {
   display: flex;
   align-items: center;
   margin-left: auto;
+  gap: 10px;
 }
 
 .button {
@@ -145,80 +101,73 @@
 .button:hover {
   background-color: darkblue;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px); /* Lift effect */
+  transform: translateY(-2px);
 }
 
-/* Logout button specifically */
-.logout-button {
-  background-color: red;
+/* Hamburger icon styling for small screens */
+.hamburger {
+  display: none; /* Hidden by default, only visible on small screens */
 }
 
-.logout-button:hover {
-  background-color: darkred;
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+  transition: all 0.3s ease;
 }
 
-/* .search-icon {
-  margin-left: 20px;
-} */
-
-/* .search-icon img {
-  width: 40px;
-  cursor: pointer;
-  margin-right: 25px;
-} */
-
-
-
-
-
-/* Add this to the existing CSS */
-
-/* Show hamburger and hide nav links by default on small screens */
 @media (max-width: 820px) {
   .nav-container {
-    display: none; /* Hide the navigation links */
+    display: none; /* Hide nav links on small screens */
   }
 
+  .navbar_logo img {
+    width: 230px;
+
+    margin-left: 10px;
+  }
   .hamburger {
-    display: block; /* Show the hamburger icon */
+    display: flex; 
+    flex-direction: column;/* Show hamburger on small screens */
     cursor: pointer;
     z-index: 1001;
   }
 
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: black; /* Visible hamburger icon color */
-    margin: 4px 0;
-    transition: all 0.3s ease;
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
   }
 
-  /* When hamburger menu is active, show the nav links */
-  .nav-links.active {
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-container.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 9vh; /* Below the navbar */
+    top: 9vh;
     right: 0;
-    background-color: rgb(222, 215, 215);
-    width: 100%; /* Full screen width */
+    background-color: rgb(255, 255, 255);
+    width: 100%;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
-    z-index: 999; /* Ensure it's on top */
+    z-index: 999;
   }
 
-  /* Hide login and register buttons on small screens */
   .login-register {
-    display: none;
+    display: none; /* Hide login-register on small screens */
   }
 }
 
-/* Ensure the hamburger is hidden on larger screens */
 @media (min-width: 821px) {
   .hamburger {
-    display: none; /* Hide the hamburger icon on larger screens */
+    display: none; /* Hide hamburger on large screens */
   }
 }
-

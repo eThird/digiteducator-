@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = ({ scrollToSection }) => {
-  // State to track if the student is logged in
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Check if user is logged in when the component mounts
     const loggedInStatus = localStorage.getItem('isLoggedIn');
     setIsLoggedIn(loggedInStatus === 'true');
   }, []);
@@ -24,9 +22,8 @@ const Navbar = ({ scrollToSection }) => {
   };
 
   const handleLogout = () => {
-    // Logic for logging out the student
     setIsLoggedIn(false);
-    localStorage.removeItem('isLoggedIn'); // Clear login status
+    localStorage.removeItem('isLoggedIn');
   };
 
   return (
@@ -48,7 +45,6 @@ const Navbar = ({ scrollToSection }) => {
         </ul>
       </div>
       <div className="login-register">
-        {/* Conditional rendering based on login status */}
         {isLoggedIn ? (
           <>
             <a href="/dashboard" className="button">Student Dashboard</a>
@@ -58,7 +54,10 @@ const Navbar = ({ scrollToSection }) => {
           <a href="/login" className="button">Login / Register</a>
         )}
       </div>
-      <div className="hamburger" onClick={toggleMobileMenu}>
+      <div
+        className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+        onClick={toggleMobileMenu}
+      >
         <span></span>
         <span></span>
         <span></span>
