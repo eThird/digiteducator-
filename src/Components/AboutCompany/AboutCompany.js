@@ -7,8 +7,8 @@ const AboutCompany = () => {
     <div className="about-company-section">
       <h2 className="about-title">About <span>Company</span></h2>
       <p className="about-description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s....
+      Digit Educator (DE) is a career-growing platform dedicated to helping students succeed in every possible 
+      way—whether it's through education, skill-building, mentorship, or providing opportunities for practical experience that prepares them for the real world and enhances their employability.
       </p>
 
       <div className="about-video-container">
@@ -28,14 +28,16 @@ const AboutCompany = () => {
 
         <div className="enrollment-content">
           <h1>Effortless Enrollment</h1>
-          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry...</p>
+          <p>Get started on your 
+            journey with Digit Educator in just 5 simple steps!🚀
+          </p>
         <div className='Enrolment-list'>
           <div className='number-div'>01</div>
-          <div>Choose a Program</div>
+          <div>Sign Up</div>
         </div>
         <div className='Enrolment-list'>
           <div className='number-div'>02</div>
-          <div>Choose a Program</div>
+          <div>Sign In</div>
         </div>
         <div className='Enrolment-list'>
           <div className='number-div'>03</div>
@@ -43,11 +45,11 @@ const AboutCompany = () => {
         </div>
         <div className='Enrolment-list'>
           <div className='number-div'>04</div>
-          <div>Choose a Program</div>
+          <div>Pick an Instructor</div>
         </div>
         <div className='Enrolment-list'>
           <div className='number-div'>05</div>
-          <div>Choose a Program</div>
+          <div>Start Learnng</div>
         </div>
         </div>
 

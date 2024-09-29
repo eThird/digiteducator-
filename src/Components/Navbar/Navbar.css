@@ -118,6 +118,10 @@
   transition: all 0.3s ease;
 }
 
+.login-register-mobile {
+  display: none;
+}
+
 @media (max-width: 820px) {
   .nav-container {
     display: none; /* Hide nav links on small screens */
@@ -154,20 +158,65 @@
     top: 9vh;
     right: 0;
     background-color: rgb(255, 255, 255);
-    width: 100%;
+    width: 60%;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     z-index: 999;
   }
 
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  
+  }
+
+  .nav-links li{
+    width: 90%;
+    border-top: 1px solid black;
+  }
+
   .login-register {
     display: none; /* Hide login-register on small screens */
   }
+
+  .login-register-desktop {
+    display: none; /* Hide desktop login/register on mobile */
+  }
+
+  .nav-container.active .login-register-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    
+  }
+
+  .login-register-mobile .button {
+    width: 90%; /* Adjust button width for mobile */
+    margin: 0 auto;
+    border-radius: 0px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 1.0em;
+    border-top: 1px solid black;
+  }
 }
+
+
 
 @media (min-width: 821px) {
   .hamburger {
     display: none; /* Hide hamburger on large screens */
+    
+  }
+
+  .login-register-mobile {
+    display: none; /* Hide mobile login/register on large screens */
   }
 }

@@ -37,23 +37,38 @@ const Navbar = ({ scrollToSection }) => {
         </a>
       </div>
       <div className={`nav-container ${isMobileMenuOpen ? 'active' : ''}`}>
-        <ul className="nav-links">
-          <li><a onClick={() => handleNavLinkClick('home')}>Home</a></li>
-          <li><a onClick={() => handleNavLinkClick('course-section')}>Courses</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a onClick={() => handleNavLinkClick('about')}>About</a></li>
-        </ul>
-      </div>
-      <div className="login-register">
-        {isLoggedIn ? (
-          <>
-            <a href="/dashboard" className="button">Student Dashboard</a>
-            <a onClick={handleLogout} className="button logout-button">Logout</a>
-          </>
-        ) : (
-          <a href="/login" className="button">Login / Register</a>
-        )}
-      </div>
+  <ul className="nav-links">
+    <li><a onClick={() => handleNavLinkClick('home')}>Home</a></li>
+    <li><a onClick={() => handleNavLinkClick('course-section')}>Courses</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a onClick={() => handleNavLinkClick('about')}>About</a></li>
+  </ul>
+
+  {/* Include the login-register section inside nav-container for mobile view */}
+  <div className="login-register-mobile">
+    {isLoggedIn ? (
+      <>
+        <a href="/dashboard" className="button">Student Dashboard</a>
+        <a onClick={handleLogout} className="button logout-button">Logout</a>
+      </>
+    ) : (
+      <a href="/login" className="button">Login / Register</a>
+    )}
+  </div>
+</div>
+
+{/* Keep the login-register for desktop view outside */}
+<div className="login-register-desktop">
+  {isLoggedIn ? (
+    <>
+      <a href="/dashboard" className="button">Student Dashboard</a>
+      <a onClick={handleLogout} className="button logout-button">Logout</a>
+    </>
+  ) : (
+    <a href="/login" className="button">Login / Register</a>
+  )}
+</div>
+
       <div
         className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
         onClick={toggleMobileMenu}

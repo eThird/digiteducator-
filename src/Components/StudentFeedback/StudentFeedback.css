@@ -1,10 +1,9 @@
-/* Import Poppins font if not already included */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 .student-feedback {
+    width: 100%;
     text-align: center;
     padding: 40px;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+  /* Optional: Set background to make the feedback box stand out */
 }
 
 .student-feedback h2 {
@@ -14,109 +13,92 @@
 }
 
 .highlight {
-    color: blue;
-    font-family: 'Poppins', sans-serif; /* Poppins font */
-    font-size: 52px; /* Bigger font size */
-    font-weight: bold; /* Make text bold */
+    color: #1A3DEB; /* Darker blue to match the "What" text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
 }
 
 .student-say {
-    font-family: 'Poppins', sans-serif; /* Poppins font */
-    font-size: 52px; /* Same font size */
-    font-weight: normal; /* No bold */
-    color: inherit; /* Inherit color from parent or use specific color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: inherit;
 }
 
-
 .intro-text {
-    font-size: 16px;
-    color: #888;
+    font-size: 18px;
+    color: #777;
     margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the text */
 }
 
 .feedback-container {
     position: relative;
     background-color: #4A55FF;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 600px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    max-width: 800px;
     margin: 0 auto;
     color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../../public/Rectanglewithlines.png'); /* Image background */
+    background-size: cover;
+    background-position: center;
 }
 
 .quote-icon {
-    font-size: 60px;
+    font-size: 80px;
     position: absolute;
-    top: -30px;
-    left: -20px;
+    top: -50px; /* Adjusted to move closer to the box */
+    left: 30px; /* Move quote to the left */
     color: #000;
+    opacity: 0.1; /* Faded effect for the quote symbol */
 }
-
-
-.feedback-container {
-    position: relative;
-    background-image: url('../../../public/Rectanglewithlines.png');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image in the container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 1000px;
-    margin: 0 auto;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* Adjust height if necessary */
-    height: auto; /* Or a fixed height if needed */
-}
-
-
 
 .feedback-text {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 20px 0;
+    padding: 0 20px;
 }
 
 .student-info {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #000;
     flex-direction: column;
-    top: 15vh;
-    right: 20vw;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .student-photo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid white; /* Add a border around the image */
 }
 
 .student-name {
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .student-country {
-    font-size: 14px;
-    color: #bbb;
+    font-size: 16px;
+    color: #ddd;
 }
 
-/* Add animation */
-@keyframes fade {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-.feedback-container {
-    animation: fade 1s ease-in-out;
+.yellow-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFCF59;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: 1;
 }

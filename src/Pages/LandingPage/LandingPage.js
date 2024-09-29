@@ -54,11 +54,11 @@ const LandingPage = () => {
       <div className="header-section" id="home">
         <div className="text-content">
           <h1>
-            <span className="regular-text">Online</span> <span className="highlight-text">Learning</span><br />
-            <span className="blue-bold-text">you can access</span><span className="regular-text"> any</span><br />
-            <span className="regular-text">where easily!</span>
+            <span className="regular-text">Worlds</span> <span className="highlight-text">Most</span><br />
+            <span className="blue-bold-text">Actionable</span><span className="regular-text"> career</span><br />
+            <span className="regular-text">development courses</span>
           </h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....</p>
+          <p>Don't just learn, experience. Don't just get qualified, get hired. Join DigitEducator and embark on a journey towards a successful career</p>
           <div className="cta-container">
             <button className="cta-button" onClick={handleJoinCourse}>
               JOIN COURSE
@@ -86,40 +86,40 @@ const LandingPage = () => {
       {/* Why we are best section */}
       <div className="why-best-section">
         <h2>
-          <span className="bold-text blue-text">Why we are </span>
+          <span className="bold-text-blue-text">Why we are </span>
           <span className="regular-text">best from others?</span>
         </h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+      
         <div className="why-cards">
           <div className="why-card">
             <img src="./digitalplatformicon.png" alt="Digital Platform Icon" />
-            <h3>Digital Platform</h3>
-            <p>Lorem Ipsum is simply dummy text...</p>
+            <h3>Assured Success</h3>
+            <p>Land your dream job. We believe in you and invest in your future.</p>
           </div>
           <div className="why-card">
             <img src="./optimalicon.png" alt="Optimal Ideation Icon" />
-            <h3>Optimal Ideation</h3>
-            <p>Lorem Ipsum is simply dummy text...</p>
+            <h3>Learn from the Best</h3>
+            <p>Gain insights from industry experts with 10+ years of experience at leading companies. </p>
           </div>
           <div className="why-card">
             <img src="./favourableicon.png" alt="Favorable Setting Icon" />
-            <h3>Favorable Setting</h3>
-            <p>Lorem Ipsum is simply dummy text...</p>
+            <h3>Build your portfolio</h3>
+            <p>Project based learning to build portfolio, showcase tangible results to the recruiters.</p>
           </div>
           <div className="why-card">
             <img src="./efffectiveinteractionicon.png" alt="Effective Interaction Icon" />
-            <h3>Effective Interaction</h3>
-            <p>Lorem Ipsum is simply dummy text...</p>
+            <h3>Do, Learn, Succeed</h3>
+            <p>Immerse yourself in practical projects which make the theory come to life and validated by experts.</p>
           </div>
           <div className="why-card">
             <img src="./Flexibletimeicon.png" alt="Flexible Time Icon" />
             <h3>Flexible Time</h3>
-            <p>Lorem Ipsum is simply dummy text...</p>
+            <p>Learn any time-any where</p>
           </div>
           <div className="why-card">
             <img src="./reliableicon.png" alt="Reliable Icon" />
             <h3>Reliable</h3>
-            <p>Lorem Ipsum is simply dummy text...</p>
+            <p>meets the needs and expectations of everyone it serves. </p>
           </div>
         </div>
       </div>
@@ -150,13 +150,26 @@ const LandingPage = () => {
           <img src="./bookandpeople.png" alt="books and people" />
         </div>
         <div className='GrrowText-contetn'>
-          <h2>Grow your skill with LearnPress LMS</h2>
-          <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
+          <h2>Grow us your skill 
+          with Digit Educator</h2>
+          <p>Stop the theory trap! Get insider knowledge from industry veterans.</p>
           <div className='bennifits'>
             <img src="./tick.png" alt="Tick" />
-            <h5>Certifications</h5>
+            <h5>Assured Success</h5>
           </div>
-          <button onClick={handleJoinCourse}>Explore Now</button>
+          <div className='bennifits'>
+            <img src="./tick.png" alt="Tick" />
+            <h5>Learn from the Best</h5>
+          </div>
+          <div className='bennifits'>
+            <img src="./tick.png" alt="Tick" />
+            <h5>Do, Learn, Succeed</h5>
+          </div>
+          <div className='bennifits'>
+            <img src="./tick.png" alt="Tick" />
+            <h5>Find Your Perfect Fit</h5>
+          </div>
+          <button  onClick={handleJoinCourse}>Explore course</button>
         </div>
       </div>
 
