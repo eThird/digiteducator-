@@ -31,6 +31,8 @@ const Login = () => {
       });
 
       if (response.ok) {
+        // Set login status to true in localStorage
+        localStorage.setItem('isLoggedIn', 'true');
         navigate('/home');
       } else {
         const data = await response.json();
@@ -84,10 +86,8 @@ const Login = () => {
             </div>
           </div>
           <div className="signup-option">
-              Don't have an account? <Link to="/signup" className="signup-text">Sign up</Link>
-            </div>
-
-
+            Don't have an account? <Link to="/signup" className="signup-text">Sign up</Link>
+          </div>
         </div>
       </div>
     </div>
