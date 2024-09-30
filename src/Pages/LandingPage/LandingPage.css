@@ -269,6 +269,7 @@ p {
 
 /* Feedback Section */
 .feedback-section {
+    width: 90%;
     margin-bottom: 10%;
 }
 

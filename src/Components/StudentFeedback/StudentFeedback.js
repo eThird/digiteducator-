@@ -22,20 +22,25 @@ const StudentFeedback = () => {
             <h2>
                 <span className="highlight">What</span> <span className="student-say">our students say</span>
             </h2>
-
-            <p className="intro-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....</p>
+             <p className="intro-text">
+                We value your insights and feedback to 
+                continuously improve our learning experience. Please share your thoughts on the course content, teaching methods, and any suggestions you may have. Your feedback is 
+                crucial in helping us enhance the quality of our programs!
+            </p>
             
+
             <div className="feedback-container">
-                <div className="quote-icon">“</div>
-                <div className="feedback-text">
-                    <p>{feedback}</p>
-                </div>
-                <div className="student-info">
+                    <div className="quote-icon">“</div>
+                    <div className="feedback-text">
+                        <p>{feedback}</p>
+                    </div>
+            </div>
+            <div className='student-info-container'>
+                <div className="student-information">
                     <img src={photo} alt={name} className="student-photo" />
                     <p className="student-name">{name}</p>
                     <p className="student-country">{country}</p>
                 </div>
-                <div className="yellow-circle"></div> {/* Yellow circle in top-right */}
             </div>
 
         </div>
