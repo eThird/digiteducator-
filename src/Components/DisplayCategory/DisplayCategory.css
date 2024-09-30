@@ -103,12 +103,13 @@
 
   }
   .category-grid {
-
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(auto, minmax(200px, 1fr));
     gap: 20px;
     justify-content: center;
-    align-items: start;
-    margin-right: 20px;
+    align-items: center;
+    margin-right: 0px;
   }
   
   .category-card {

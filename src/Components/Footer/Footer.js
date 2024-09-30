@@ -4,9 +4,9 @@ import Socialmedialinks_coloured from '../../Components/Socialmedia/Socialmedial
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-section footer-brand">
-        <img src="https://www.digiteducator.com/Digiteducator%20Logo%20Website.png" alt="Byway Logo" className="footer-logo" />
+    <div className="footer">
+      <div className="footer-brand">
+        <img src="./image.png" alt="digit-logo" className="footer-logo" />
         <p1 className="footer-text">
           Empowering learners through accessible and engaging online education.
           <br />
@@ -43,7 +43,7 @@ const Footer = () => {
         </address>
         <Socialmedialinks_coloured/>
       </div>
-    </footer>
+    </div>
   );
 };
 

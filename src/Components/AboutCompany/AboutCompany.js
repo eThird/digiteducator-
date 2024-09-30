@@ -24,7 +24,7 @@ const AboutCompany = () => {
       <div className="enrollment-section">
 
         <img src={`${process.env.PUBLIC_URL}/bluedisk.png`} alt="Blue circle" className="blue-circle"/>
-        <img src={`${process.env.PUBLIC_URL}/girlwithbooks.png`} alt="Student" className="student-image"/>
+        <img src={`${process.env.PUBLIC_URL}/girlwithbooks.png`} alt="Student" className="About-student-image"/>
 
         <div className="enrollment-content">
           <h1>Effortless Enrollment</h1>

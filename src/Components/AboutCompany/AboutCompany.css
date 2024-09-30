@@ -56,30 +56,32 @@
     align-items: center;
     width: 100vw; /* Full viewport width */
     height: 74vh;
+   gap: 20px;
     background-color: #ffdd00;
     justify-content: space-between;
-    padding-right: 20px; /* No padding on left side */
-    margin: 0; /* No left margin */
+    padding-right: 40px; /* No padding on left side */
+  
 }
 
 .blue-circle {
     position: absolute;
-    top: -65%;
+    top: -63%;
     left: 1.6%;
-    width: 570px;
+    width: 400px;
 }
 
-.student-image {
-    height: 680px;
-    top: 10%; /* Adjust this value to move the image down */
-    left: 20%; /* Increased left margin to move the image more to the right */
+.About-student-image {
+   height: 555px;
+    
     border-radius: 10px;
     z-index: 1;
 }
 
 
-.enrollment-content {
-    width: 40%;
+enrollment-content
+ {
+    
+    width: 50%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -90,7 +92,7 @@
     font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
     font-weight: bold; /* Make text bold */
     font-size: 50px; /* Adjust font size as needed */
-    margin-top: -50px; /* Adjust this value to move the heading up */
+     /* Adjust this value to move the heading up */
 }
 
 
@@ -177,14 +179,14 @@
         height: 60vh;
     }
     .enrollment-section {
-
+   
         flex-direction: column;
-
+        
         width: 100vw; /* Full viewport width */
         height: 84vh;
-
+    
         padding-right: 10px; /* No padding on left side */
-        margin: 0; /* No left margin */
+        margin:0; /* No left margin */
     }
     .blue-circle {
         position: absolute;
@@ -194,7 +196,7 @@
         
     }
     
-    .student-image {
+    .About-student-image {
     display: none;
     }
     
