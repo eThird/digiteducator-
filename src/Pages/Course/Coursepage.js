@@ -465,13 +465,14 @@ const Coursepage = () => {
                       <div className="courses-info">
                          {course.total_hours} Total hours. {course.total_lecture} Lectures. {course.course_level}
                       </div>
-
+                      <div className='course-viewbutton-pricing'>
                       <button onClick={() => handleCourseClick(course.id)} className="course-details-btn">
-                        View Course
-                      </button>
-                      <div className="course-pricing">
-                        <span className="original-price">{course.original_price}</span>
-                        <span className="price">{course.price}</span>
+                          View Course
+                        </button>
+                        <div className="course-pricing">
+                          <span className="original-price">{course.original_price}</span>
+                          <span className="price">{course.price}</span>
+                        </div>
                       </div>
                     </div>
                   ))}

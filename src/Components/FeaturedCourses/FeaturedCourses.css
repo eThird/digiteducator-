@@ -111,6 +111,7 @@
 }
 
 .course-price-container {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,14 +123,15 @@
 
 
 .original-price {
+    font-size: .5rem;
     text-decoration: line-through; /* Apply strikethrough */
     color: #999; /* Light color for the original price */
-    margin-left: 50px; /* Adjust space between original price and current price */
+    margin-left: 1%; /* Adjust space between original price and current price */
 }
 
 .price {
     color: black; /* Fully black color for the current price */
-    font-size: 1.1rem; /* Ensure it's consistent with the original price font size */
+    font-size: .6rem; /* Ensure it's consistent with the original price font size */
     font-weight: 400; /* Removed bold styling */
     margin-right: 10px;
 }
