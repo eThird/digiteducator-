@@ -80,16 +80,41 @@
   margin-left: auto;
   gap: 10px;
 }
-
-.button {
+.login-register-desktop {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+.login-register-desktop-icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-menu {
+  width: 20vw;
+  position: absolute; /* Position dropdown below the icon */
+  top: 100%; /* Align dropdown below the icon */
+  right:0vw; /* Align to the left */
+  background-color: white; /* Background color for dropdown */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  padding: 10px; /* Padding around dropdown items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+
+.login-register-button{
+ 
+  display: flex;
+  
   padding: 10px 15px;
-  color: white;
-  background-color: blue;
-  border-radius: 24px;
+  color:blue;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid black;
   text-transform: uppercase;
-  font-size: 17px;
+  font-size: 17px;gap: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
   transition: all 0.2s ease;
@@ -191,15 +216,18 @@
   .nav-container.active .login-register-mobile {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding-top: 20px;
+    gap: 20px;
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
     
   }
 
-  .login-register-mobile .button {
+  .login-register-button {
     width: 90%; /* Adjust button width for mobile */
     margin: 0 auto;
     border-radius: 0px;
+    border: 0px;
     background-color: white;
     color: black;
     font-weight: 500;
