@@ -6,48 +6,67 @@ const EnrolledCourses = () => {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        // Load the data from the JSON file
-        fetch('./enrolledCourses.json') // Adjust the path according to your setup
-            .then((response) => response.json())
-            .then((data) => setCourses(data.courses))
-            .catch((error) => console.error('Error fetching data:', error));
+        const fetchEnrolledCourses = async () => {
+            const token = localStorage.getItem('token'); // Get the token from local storage
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/enrolled-courses/', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`, // Use Bearer token for authentication
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch enrolled courses');
+                }
+
+                const data = await response.json();
+                setCourses(data); // Set the fetched courses to state
+            } catch (error) {
+                console.error('Error fetching enrolled courses:', error);
+            }
+        };
+
+        fetchEnrolledCourses();
     }, []);
 
     return (
         <div className="enrolled-courses">
-            <h2>Courses</h2>
+            <h2>Enrolled Courses</h2>
             {courses.length === 0 ? (
                 <p>Please enroll in a course to view the content.</p>
             ) : (
                 <div className="course-flex-container">
                     {courses.map((course, index) => (
                         <div key={index} className="enrolled-course-card">
-                            <div className='enrolled-course-image'><img
-                                src={course.imageSrc} // Add image path
-                                alt={course.title}
-                                className="enrolled-course-image"
-                            /></div>
-                            <h5>{course.title}</h5>
-                            <p>By {course.instructor}</p>
+                            <div className='enrolled-course-image'>
+                                <img
+                                    src={course.course_image} // Add image path
+                                    alt={course.course_name}
+                                    className="enrolled-course-image"
+                                />
+                            </div>
+                            <h5>{course.course_name}</h5>
+                            <p>By {course.instructor.instructor_name}</p>
                             <div className="course-progress">
                                 <ProgressBar
-                                    completed={course.progress} // Progress from JSON
+                                    completed={course.progress} // Placeholder for actual progress if available
                                     bgColor="#2563EB" // Progress bar color
                                     height="4px"
                                     labelColor="transparent"
                                 />
                             </div>
                             <div className="enrolled-course-rating">
-                            <span className="stars">
-                                <img src='./star.png' alt='rating icon'/>
-                                <img src='./star.png' alt='rating icon'/>
-                                <img src='./star.png' alt='rating icon'/>
-                                <img src='./star.png' alt='rating icon'/>
-                                <img src='./star.png' alt='rating icon'/>
-                            </span>
-                                <span>{course.ratings} Ratings</span>
+                                <span className="stars">
+                                    {/* Render rating stars */}
+                                    {Array.from({ length: 5 }, (_, i) => (
+                                        <img key={i} src='./star.png' alt='rating icon' />
+                                    ))}
+                                </span>
+                                <span>{course.total_ratings_count} Ratings</span>
                             </div>
-
                         </div>
                     ))}
                 </div>

@@ -65,6 +65,7 @@ const LandingPage = () => {
             </button>
             <div className="play-button">
               <img src="/playicon.png" alt="Play Button" />
+
               <span>See how it works?</span>
             </div>
           </div>
@@ -89,7 +90,7 @@ const LandingPage = () => {
           <span className="bold-text-blue-text">Why we are </span>
           <span className="regular-text">best from others?</span>
         </h2>
-      
+
         <div className="why-cards">
           <div className="why-card">
             <img src="./digitalplatformicon.png" alt="Digital Platform Icon" />
@@ -150,7 +151,7 @@ const LandingPage = () => {
           <img src="./bookandpeople.png" alt="books and people" />
         </div>
         <div className='GrrowText-contetn'>
-          <h2>Grow us your skill 
+          <h2>Grow us your skill
           with Digit Educator</h2>
           <p>Stop the theory trap! Get insider knowledge from industry veterans.</p>
           <div className='bennifits'>

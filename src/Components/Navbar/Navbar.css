@@ -105,9 +105,9 @@
 
 
 .login-register-button{
- 
+
   display: flex;
-  
+
   padding: 10px 15px;
   color:blue;
   background-color: white;
@@ -158,7 +158,7 @@
     margin-left: 10px;
   }
   .hamburger {
-    display: flex; 
+    display: flex;
     flex-direction: column;/* Show hamburger on small screens */
     cursor: pointer;
     z-index: 1001;
@@ -197,7 +197,7 @@
     align-items: center;
     height: 100%;
     margin: 0;
-  
+
   }
 
   .nav-links li{
@@ -220,7 +220,7 @@
     padding-top: 0px;
     align-items: center;
     justify-content: center;
-    
+
   }
 
   .login-register-button {
@@ -241,7 +241,7 @@
 @media (min-width: 821px) {
   .hamburger {
     display: none; /* Hide hamburger on large screens */
-    
+
   }
 
   .login-register-mobile {

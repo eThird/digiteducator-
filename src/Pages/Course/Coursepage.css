@@ -245,11 +245,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    padding:2%;
     align-items: center;
 }
 .course-details-btn {
-    
+
     width: 40%;
     padding: 6px 3px; /* Adjusted padding */
     background-color: black;
@@ -260,7 +260,7 @@
     transition: background-color 0.3s ease;
     font-weight: 400;
     font-size: 1rem;
-    
+    margin-left:5px;
  /* Aligned to the left with 10px padding */
     transform: none; /* Remove horizontal centering */
 }
@@ -352,7 +352,7 @@
     .courses-card {
         flex: 1 1 100%; /* Full width for small screens */
         max-width: 100%;
-        
+
     }
 
     .course-details-btn {

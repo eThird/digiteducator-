@@ -23,11 +23,11 @@ const StudentFeedback = () => {
                 <span className="highlight">What</span> <span className="student-say">our students say</span>
             </h2>
              <p className="intro-text">
-                We value your insights and feedback to 
-                continuously improve our learning experience. Please share your thoughts on the course content, teaching methods, and any suggestions you may have. Your feedback is 
+                We value your insights and feedback to
+                continuously improve our learning experience. Please share your thoughts on the course content, teaching methods, and any suggestions you may have. Your feedback is
                 crucial in helping us enhance the quality of our programs!
             </p>
-            
+
 
             <div className="feedback-container">
                     <div className="quote-icon">“</div>

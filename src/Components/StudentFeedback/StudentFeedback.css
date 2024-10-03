@@ -7,7 +7,7 @@
     padding: 40px;
     gap: 20px;
     font-family: 'Poppins', sans-serif;
-   
+
 }
 .student-feedback h2 {
     font-size: 32px;
@@ -58,7 +58,7 @@
     padding: 2%;
     background-image: url('../../../public/Rectanglewithlines.png');
     background-size: cover;
-    
+
 }
 
 .feedback-text p{
@@ -67,7 +67,7 @@
     margin: 20px 0;
     padding: 0 20px;
     width: 100%; /* Take up more width for the feedback text */
-    color: white;
+    color:white;
 }
 
 .student-info-container{
@@ -80,7 +80,7 @@
 
 .student-information {
    width: 18%;
-   
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +97,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
-    
+
 }
 .student-name {
     font-weight: 700;
@@ -113,17 +113,17 @@
         font-size: 20px;
         font-weight: 700;
 
-    }  
+    }
 
     .highlight {
         font-size: 30px;
 
     }
-    
+
     .student-say {
         font-size: 30px;
     }
-    
+
     .intro-text {
         font-size: 15px;
         text-align: center;
@@ -135,20 +135,20 @@
 
     }
 
-    
+
     .feedback-text p{
         font-size: 15px;
         line-height: 1.5;
         color: #ffffff;
         /* Take up more width for the feedback text */
     }
-    
-    
+
+
     .student-information {
        width: 60%;
         /* Space between text and student info */
         margin-top: -50px;
-        
+
 
     }
     .student-photo {
@@ -157,11 +157,11 @@
         margin-top: 10px;
     }
     .student-name {
-  
+
         font-size: 18px;
     }
     .student-country {
         font-size: 15px;
-        
+
     }
 }

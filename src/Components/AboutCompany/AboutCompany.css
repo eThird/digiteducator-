@@ -29,6 +29,7 @@
     text-align: center;
     font-size: 16px;
     margin-bottom: 20px;
+    margin-left:20px;
 }
 
 .about-video-container {
@@ -60,7 +61,7 @@
     background-color: #ffdd00;
     justify-content: space-between;
     padding-right: 40px; /* No padding on left side */
-  
+
 }
 
 .blue-circle {
@@ -72,7 +73,7 @@
 
 .About-student-image {
    height: 555px;
-    
+
     border-radius: 10px;
     z-index: 1;
 }
@@ -80,7 +81,7 @@
 
 enrollment-content
  {
-    
+
     width: 50%;
     text-align: left;
     display: flex;
@@ -166,9 +167,9 @@ enrollment-content
     }
     .about-title {
         font-size: 40px;
-        
+
     }
-    
+
     .about-title span {
 
         font-size: 40px;
@@ -179,12 +180,12 @@ enrollment-content
         height: 60vh;
     }
     .enrollment-section {
-   
+
         flex-direction: column;
-        
+
         width: 100vw; /* Full viewport width */
         height: 84vh;
-    
+
         padding-right: 10px; /* No padding on left side */
         margin:0; /* No left margin */
     }
@@ -193,14 +194,14 @@ enrollment-content
         top: -65%;
         left: 1.6%;
         width: 300px;
-        
+
     }
-    
+
     .About-student-image {
     display: none;
     }
-    
-    
+
+
     .enrollment-content {
         width: 100%;
         text-align: center;
@@ -209,18 +210,18 @@ enrollment-content
         z-index:1 ;
         padding: 10px;
     }
-    
+
     .enrollment-content h1 {
 
         font-size: 30px; /* Adjust font size as needed */
         margin-top: 0px; /* Adjust this value to move the heading up */
     }
-    
-    
+
+
     .enrollment-content p {
         margin-bottom: 40px;
         color: black; /* Add space below the paragraph */
     }
-    
-   
+
+
 }

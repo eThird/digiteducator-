@@ -9,7 +9,13 @@ const DisplayCategory = () => {
     fetch('http://127.0.0.1:8000/api/category/')
       .then((response) => response.json())
       .then((data) => {
-        setCourses(data); // Set the fetched course data to state
+        console.log(data); // Log the response
+        if (Array.isArray(data)) {
+          setCourses(data); // Set the fetched course data to state
+        } else {
+          console.error('Expected an array but received:', data);
+          setCourses([]); // Reset courses if the data is not valid
+        }
       })
       .catch((error) => console.error('Error fetching courses:', error));
   }, []);
@@ -19,8 +25,8 @@ const DisplayCategory = () => {
   const categoryMap = new Map();
 
   courses.forEach(course => {
-    const category = course.category;
-    if (category && !categoryMap.has(category.category_name)) {
+    const category = course.category; // Ensure this is defined
+    if (category && category.category_name && !categoryMap.has(category.category_name)) {
       categoryMap.set(category.category_name, true);
       uniqueCategories.push(category);
     }

@@ -7,7 +7,7 @@ const AboutCompany = () => {
     <div className="about-company-section">
       <h2 className="about-title">About <span>Company</span></h2>
       <p className="about-description">
-      Digit Educator (DE) is a career-growing platform dedicated to helping students succeed in every possible 
+      Digit Educator (DE) is a career-growing platform dedicated to helping students succeed in every possible
       way—whether it's through education, skill-building, mentorship, or providing opportunities for practical experience that prepares them for the real world and enhances their employability.
       </p>
 
@@ -28,7 +28,7 @@ const AboutCompany = () => {
 
         <div className="enrollment-content">
           <h1>Effortless Enrollment</h1>
-          <p>Get started on your 
+          <p>Get started on your
             journey with Digit Educator in just 5 simple steps!🚀
           </p>
         <div className='Enrolment-list'>

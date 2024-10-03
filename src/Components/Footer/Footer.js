@@ -13,7 +13,7 @@ const Footer = () => {
           Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.
         </p1>
       </div>
-      
+
       <div className="footer-section">
         <h3>Get Help</h3>
         <ul>

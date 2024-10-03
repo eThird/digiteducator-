@@ -65,10 +65,56 @@ const ShoppingCart = () => {
     }
   };
 
+    const handleEnroll = async () => {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const token = localStorage.getItem('token');
+
+        if (isLoggedIn !== 'true') {
+            alert('You must be logged in to enroll in a course.');
+            return;
+        }
+
+        if (!token) {
+            alert('Authentication token not found. Please log in again.');
+            return;
+        }
+
+        try {
+            console.log('Token being sent:', token); // Debugging log
+
+            const response = await fetch(`http://127.0.0.1:8000/api/enroll/${courseId}/`, {
+                method: 'POST',
+                credentials: 'include', // Optional, for cookies-based authentication
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`, // Ensure the token is sent correctly
+                },
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error('Error response:', errorData); // Debugging log
+                throw new Error(errorData.detail || 'Failed to enroll in course');
+            }
+
+            const data = await response.json();
+            alert(data.message || 'Enrolled successfully!');
+            navigate(`/course-overview/${courseId}`);
+        } catch (error) {
+            console.error('Enrollment error:', error);
+            alert('Error enrolling in course: ' + error.message);
+        }
+    };
+
+
+  // Handle button clicks
   const handleButtonClick = () => {
     if (discount === 100) {
-      // Redirect to Course Overview when Enroll for Free is clicked
-      navigate(`/course-overview/${courseId}`);
+      // Call the enroll function when "Enroll for Free" is clicked
+      handleEnroll();
+    } else {
+      // Do nothing on "Proceed to Checkout" button click
+      console.log('Proceed to checkout button clicked');
     }
   };
 
@@ -100,7 +146,7 @@ const ShoppingCart = () => {
               <img src={course.course_image} alt={course.title} />
               <div className="course-details">
                 <h3>{course.course_name}</h3>
-                <p>By {course.instructor.instructor_name}</p>
+                <p>By {course.instructor?.instructor_name}</p> {/* Optional chaining to prevent undefined error */}
                 <div className="shopping_course-rating">
                   <span className="rating">{course.course_rating}</span>
                   <span className="stars">⭐⭐⭐⭐⭐</span>
@@ -163,7 +209,6 @@ const ShoppingCart = () => {
             >
               {discount === 100 ? 'Enroll for Free' : 'Proceed to Checkout'}
             </button>
-
           </div>
         </div>
       </div>
