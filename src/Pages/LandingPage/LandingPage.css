@@ -137,7 +137,7 @@ p {
     color: white;
     padding: 20px 0;
     height: 15vh;
-    background-image: url('../../../public/Rectanglewithlines.png'); /* Correct URL syntax */
+    background-image: url('../../Assets/Rectanglewithlines.png'); /* Correct URL syntax */
     background-size: cover;
     background-position: center;
     margin-top: -16px; /* Adjust this value to control how much higher you want it */

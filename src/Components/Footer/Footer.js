@@ -1,17 +1,18 @@
 import React from 'react';
 import './Footer.css';
 import Socialmedialinks_coloured from '../../Components/Socialmedia/Socialmedialinks_coloured';
+import footerLogo from '../../Assets/image.png'; // Adjust the path to your logo image
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-brand">
-        <img src="./image.png" alt="digit-logo" className="footer-logo" />
-        <p1 className="footer-text">
+        <img src={footerLogo} alt="Digit Logo" className="footer-logo" />
+        <p className="footer-text">
           Empowering learners through accessible and engaging online education.
           <br />
           Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.
-        </p1>
+        </p>
       </div>
 
       <div className="footer-section">
@@ -41,7 +42,7 @@ const Footer = () => {
           Tel: +1(123) 456-7890 <br />
           Mail: bywayedu@webkul.in
         </address>
-        <Socialmedialinks_coloured/>
+        <Socialmedialinks_coloured />
       </div>
     </div>
   );
